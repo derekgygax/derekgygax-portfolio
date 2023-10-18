@@ -1,6 +1,8 @@
 
-export default function Home() {
+const HomePage: React.FC = () => {
   return (
     <div>Derek Gygax page</div>
   )
 }
+
+export default HomePage;
