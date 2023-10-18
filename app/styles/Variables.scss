@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Playfair+Display:700,900|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+
+// whole page
+$bg-whole-page: #FFFFFF;
+$font-family-whole-page: 'Open Sans', sans-serif;
+
+
+
+
+// header height
+$header-height: 100px;
+
+// page width
+$max-width: 90vw;
+
+// font family
+$font-family-form: "Roboto", sans-serif;
+
+
+
+
+
+
+
+
+
+
+
+
+// BELOW ARE THINGS IN THE PAST YOU DON'T KNOW IF YOU WILL NEED!!
+// font colors
+$font-white: #FFFFFF;
+
+// it's used in places with the wrong name
+$container-havles-to-vertical: 1050px;
+$container-halves-phone: 800px;
+
+$short-vertical-phone: 800px;
+
+$screen-min-height: 700px;
+
+//breakpoints
+$break-tablet: 768px;
+$break-mobile: 576px;
