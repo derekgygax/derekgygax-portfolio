@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Playfair+Display:700,900|Roboto:300,400');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-@import '../app/styles/Variables.scss';
+@import './styles/Variables.scss';
 
 // TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
 // TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
@@ -26,7 +26,7 @@ body {
   font-family: $font-family-whole-page;
   background-size: cover;
   background-attachment: fixed;
-  color: $white;
+  color: $font-color-whole-page;
   font-size: 14px;
 }
 
