@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     title: 'Derek Gygax Portfolio',
     siteName: 'Derek Gygax Portfolio',
     description: 'Portfolio for Derek Gygax',
-    images: '/assets/derekGygaxPortfolio.png'
     // TODO add this
     // url: 'https://57west.us',
   },
