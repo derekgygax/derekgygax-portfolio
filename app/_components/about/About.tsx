@@ -1,4 +1,4 @@
-import { Section } from "@/app/_layout/section/Section";
+import { Section } from "@/app/_layouts/section/Section";
 
 export const About: React.FC = () => {
   return (

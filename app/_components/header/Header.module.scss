@@ -6,4 +6,50 @@
   position: fixed;
   width: 100%;
   z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  // align-items: center;
+  // background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  // font-style: normal;
+  // font-weight: 100;
+  // width: 600px;
+}
+
+.menuNavbarLink {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px 0;
+  margin: 0px 15px;
+  letter-spacing: 1px;
+  color: $white;
+  font-size: 15px;
+  font-weight: 700;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  @media screen and (max-width: $container-halves-phone ) {
+    font-size: 14px;
+  }
+
+  &:hover {
+    border-bottom: 2px solid $red;
+  }
 }

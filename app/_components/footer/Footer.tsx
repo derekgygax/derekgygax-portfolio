@@ -1,4 +1,4 @@
-import { Container } from "@/app/_layout/container/Container"
+import { Container } from "@/app/_layouts/container/Container"
 
 export const Footer: React.FC = () => {
   return (

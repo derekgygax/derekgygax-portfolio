@@ -1,0 +1,17 @@
+[
+  {
+    "label": "About",
+    "id": "id",
+    "href": "about"
+  },
+  {
+    "label": "Experience",
+    "id": "workExperience",
+    "href": "workExperience"
+  },
+  {
+    "label": "Contact",
+    "id": "contact",
+    "href": "contact"
+  }
+]

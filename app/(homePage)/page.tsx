@@ -1,7 +1,7 @@
 
 import { About } from "../_components/about/About";
 import { Contact } from "../_components/contact/Contact";
-import { Experience } from "../_components/experience/Experience";
+import { WorkExperience } from "../_components/workExperience/WorkExperience";
 import { Hero } from "../_components/hero/Hero";
 
 const HomePage: React.FC = () => {
@@ -10,13 +10,20 @@ const HomePage: React.FC = () => {
     <div>
       <Hero />
       <About />
-      <Experience />
+      <WorkExperience />
       <Contact />
     </div>
   )
 }
 
 export default HomePage;
+
+
+
+
+
+
+
 
 
 

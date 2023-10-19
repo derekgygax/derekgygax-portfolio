@@ -1,12 +1,23 @@
 import type { Metadata } from 'next'
 
+// layout
+import { Container } from './_layouts/container/Container';
+
 // components
 import { Header } from './_components/header/Header';
 import { Footer } from './_components/footer/Footer';
 
 // styles
 import './globals.scss'
-import { Container } from './_layout/container/Container';
+
+
+
+// TODO haven't done mobile!!!
+// TODO Make sure you don't have to change too much
+
+
+
+
 
 
 // TODO put this data somewhere!!!
