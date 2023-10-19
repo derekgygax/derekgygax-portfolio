@@ -1,6 +1,6 @@
 [
   {
-    "company": "57 West Capital Advisors, Inc.",
+    "companyName": "57 West Capital Advisors, Inc.",
     "jobTitle": "Software Engineer/System Administrator",
     "id": "fiftySevenWest",
     "details": [
@@ -18,7 +18,7 @@
     "summary": "Fulfilled role as Software Developer, Project Manager, and System Administrator for 57 West Capital Advisors, Inc.’s webpage to promote their company."
   },
   {
-    "company": "Mendelgen",
+    "companyName": "Mendelgen",
     "jobTitle": "Bioinformatic Developer",
     "id": "mendelgen",
     "details": [
@@ -32,7 +32,7 @@
     "summary": "Developed, improved, and maintained bioinformatic web applications on the webpage allowing biologists to simulate biological assays."
   },
   {
-    "company": "Artemis Consulting, Inc.",
+    "companyName": "Artemis Consulting, Inc.",
     "jobTitle": "Software Engineer",
     "id": "artemis",
     "details": [
@@ -52,7 +52,7 @@
     "summary": "Developed and maintained web applications for the Library of Congress allowing for the search of web archives and the submission of new copyrights."
   },
   {
-    "company": "In Silico Solutions",
+    "companyName": "In Silico Solutions",
     "jobTitle": "Bioinformatic Developer",
     "id": "inSilico",
     "details": [

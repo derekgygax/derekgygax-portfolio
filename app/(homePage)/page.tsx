@@ -1,7 +1,7 @@
 
 import { About } from "../_components/about/About";
 import { Contact } from "../_components/contact/Contact";
-import { WorkExperience } from "../_components/workExperience/WorkExperience";
+import { WorkExperiences } from "../_components/workExperiences/WorkExperiences";
 import { Hero } from "../_components/hero/Hero";
 
 const HomePage: React.FC = () => {
@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
     <div>
       <Hero />
       <About />
-      <WorkExperience />
+      <WorkExperiences />
       <Contact />
     </div>
   )

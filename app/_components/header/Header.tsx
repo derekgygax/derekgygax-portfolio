@@ -10,7 +10,7 @@ import { Container } from "@/app/_layouts/container/Container";
 import styles from './Header.module.scss';
 
 // types
-import { NavItem } from "@/app/types/nav";
+import { SectionNavItem } from "@/app/types/nav";
 
 // data
 import me from '@/app/data/me.json';
@@ -39,14 +39,14 @@ export const Header: React.FC = () => {
               classNames(styles.portfolioSections, styles.navSection)
             }
           >
-            {navSections.map((navItem: NavItem) => {
+            {navSections.map((section: SectionNavItem) => {
               return (
                 <Link
-                  key={`header_nav_${navItem.id}`}
+                  key={`header_nav_${section.id}`}
                   className={styles.link}
-                  href={`#${navItem.href}`}
+                  href={`#${section.href}`}
                 >
-                  {navItem.label}
+                  {section.label}
                 </Link>
               );
             })}
