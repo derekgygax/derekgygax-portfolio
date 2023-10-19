@@ -1,0 +1,10 @@
+@import '../../styles/Variables.scss';
+
+.container {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $max-width;
+
+    @media screen and (max-width: $container-halves-phone ) {}
+}

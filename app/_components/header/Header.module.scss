@@ -1,0 +1,9 @@
+@import '../../styles/Variables.scss';
+
+.main {
+  background-color: $header-bg;
+  height: $header-height;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}

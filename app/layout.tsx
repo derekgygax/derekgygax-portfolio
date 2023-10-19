@@ -1,7 +1,12 @@
 import type { Metadata } from 'next'
 
+// components
+import { Header } from './_components/header/Header';
+import { Footer } from './_components/footer/Footer';
+
 // styles
 import './globals.scss'
+import { Container } from './_layout/container/Container';
 
 
 // TODO put this data somewhere!!!
@@ -35,7 +40,11 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        {children}
+        <Header />
+        <Container>
+          {children}
+        </Container>
+        <Footer />
       </body>
     </html>
   )
