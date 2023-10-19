@@ -3,7 +3,7 @@ import Link from "next/link";
 
 // layouts
 import { Container } from "@/app/_layouts/container/Container";
-import { Logo } from "../logo/Logo";
+// import { Logo } from "../logo/Logo";
 
 // styles
 import styles from './Header.module.scss';
@@ -19,9 +19,9 @@ export const Header: React.FC = () => {
     <div className={styles.main}>
       <Container>
         <div className={styles.nav}>
-          <Link href={'/'} className={classNames(styles.logo)}>
+          {/* <Link href={'/'} className={classNames(styles.logo)}>
             <Logo />
-          </Link>
+          </Link> */}
           <div className={styles.menu}>
             {navItems.map((navItem: NavItem) => {
               return (
