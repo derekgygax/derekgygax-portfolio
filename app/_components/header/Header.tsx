@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Image from "next/image";
 import Link from "next/link";
 
 // layouts
@@ -12,29 +13,64 @@ import styles from './Header.module.scss';
 import { NavItem } from "@/app/types/nav";
 
 // data
-import navItems from '@/app/data/nav.json';
+import me from '@/app/data/me.json';
+import navSections from '@/app/data/navSections.json';
+import socialMedia from '@/app/data/socialMedia.json';
+
+// icons
+import githubIcon from '@/public/assets/icons/github-mark-white.svg';
+import linkedInIcon from '@/public/assets/icons/linkedin.svg';
 
 export const Header: React.FC = () => {
   return (
     <div className={styles.main}>
       <Container>
         <div className={styles.nav}>
-          {/* <Link href={'/'} className={classNames(styles.logo)}>
-            <Logo />
-          </Link> */}
-          <div className={styles.menu}>
-            {navItems.map((navItem: NavItem) => {
+          <div className={styles.navSection}>
+            <Link
+              className={styles.link}
+              href="/"
+            >
+              {me.name}
+            </Link>
+          </div>
+          <div
+            className={
+              classNames(styles.portfolioSections, styles.navSection)
+            }
+          >
+            {navSections.map((navItem: NavItem) => {
               return (
                 <Link
                   key={`header_nav_${navItem.id}`}
-                  className={classNames(
-                    styles.menuNavbarLink,
-                  )}
+                  className={styles.link}
                   href={`#${navItem.href}`}
                 >
                   {navItem.label}
                 </Link>
               );
+            })}
+          </div>
+          <div className={classNames(styles.socialMedia, styles.navSection)}>
+            {socialMedia.map((media) => {
+              return (
+                <div
+                  key={`footer_socialMediaIcon_${media.id}`}
+                  className={styles.socialMediaIcon}
+                >
+                  <a
+                    target="_blank"
+                    href={media.href}
+                  >
+                    <Image
+                      alt={media.alt}
+                      src={media.id === 'github' ? githubIcon : linkedInIcon}
+                      width={media.width}
+                      height={media.height}
+                    />
+                  </a>
+                </div>
+              )
             })}
           </div>
         </div>

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "github",
+    "alt": "Link to Derek Gygax github",
+    "href": "https://github.com/derekgygax",
+    "width": 33,
+    "height": 33
+  },
+  {
+    "id": "linkedIn",
+    "alt": "Link to Derek Gygax LinkedIn",
+    "href": "https://www.linkedin.com/in/derek-gygax-9407a689/",
+    "width": 33,
+    "height": 33
+  }
+]
