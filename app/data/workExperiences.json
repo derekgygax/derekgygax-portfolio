@@ -1,75 +1,78 @@
-[
-  {
-    "companyName": "57 West Capital Advisors, Inc.",
-    "jobTitle": "Software Engineer/System Administrator",
-    "id": "fiftySevenWest",
-    "details": [
-      "Interact with the customer on a regular basis to update/maintain the webpage to their satisfaction.",
-      "Responsible for building/editing code, updating external libraries, and production deployment.",
-      "Code optimized to ensure full functionality and an optimal user experience across both desktop and mobile browsers."
-    ],
-    "technologies": [
-      "Next.js",
-      "TypeScript",
-      "SCSS",
-      "Flexbox"
-    ],
-    "website": "https://57west.us/",
-    "summary": "Fulfilled role as Software Developer, Project Manager, and System Administrator for 57 West Capital Advisors, Inc.’s webpage to promote their company."
-  },
-  {
-    "companyName": "Mendelgen",
-    "jobTitle": "Bioinformatic Developer",
-    "id": "mendelgen",
-    "details": [
-      "Devised and created algorithms to simulate many different DNA cloning techniques, along with PCR, allowing scientists to study anticipated results before completing the assays."
-    ],
-    "technologies": [
-      "React",
-      "Redux"
-    ],
-    "website": "https://mendelgen.com/",
-    "summary": "Developed, improved, and maintained bioinformatic web applications on the webpage allowing biologists to simulate biological assays."
-  },
-  {
-    "companyName": "Artemis Consulting, Inc.",
-    "jobTitle": "Software Engineer",
-    "id": "artemis",
-    "details": [
-      "Improved and helped maintain the ProjectOne search application and web page. Specifically aided in the newspapers section built using Django and utilizing the search engine Apache Solr. Also extensively used the JavaScript library OpenSeadragon to view digitized newspaper articles and perform article clippings to be downloaded.",
-      "Aided in the development of a new web platform for the Copyright Office to allow for the submission of new copyrights online."
-    ],
-    "technologies": [
-      "Django",
-      "Apache Solr",
-      "OpenSeadragon",
-      "Angular",
-      "Java",
-      "AWS Elastic Container Service",
-      "Docker"
-    ],
-    "website": "https://loc.gov/",
-    "summary": "Developed and maintained web applications for the Library of Congress allowing for the search of web archives and the submission of new copyrights."
-  },
-  {
-    "companyName": "In Silico Solutions",
-    "jobTitle": "Bioinformatic Developer",
-    "id": "inSilico",
-    "details": [
-      "Interacted with customers to ensure implemented website designs and bioinformatics algorithms best suited their needs.",
-      "Developed a web-based application to perform bioinformatic analysis for the MD Anderson Cancer Center Reverse phase protein array (RPPA) core facility.",
-      "Aided the In Silico Solutions team collaborating with the Karchin lab at Johns Hopkins University to design and develop the genomic sequence variant annotation software CRAVAT (Cancer-Related Analysis of Variants Toolkit), and the 3D protein variant viewer, MuPIT (Mutation Position Imaging Toolbox)."
-    ],
-    "technologies": [
-      "HTML",
-      "JavaScript",
-      "Java",
-      "MySQL",
-      "Python",
-      "R",
-      "Docker"
-    ],
-    "website": "",
-    "summary": "Designed and developed web-based applications, bioinformatics pipelines, database solutions, and Docker (Virtual machine) images to assist biologists with the analysis of public and private biological data."
-  }
-]
+{
+  "id": "workExperiences",
+  "experiences": [
+    {
+      "companyName": "57 West Capital Advisors, Inc.",
+      "jobTitle": "Software Engineer/System Administrator",
+      "id": "fiftySevenWest",
+      "details": [
+        "Interact with the customer on a regular basis to update/maintain the webpage to their satisfaction.",
+        "Responsible for building/editing code, updating external libraries, and production deployment.",
+        "Code optimized to ensure full functionality and an optimal user experience across both desktop and mobile browsers."
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "SCSS",
+        "Flexbox"
+      ],
+      "website": "https://57west.us/",
+      "summary": "Fulfilled role as Software Developer, Project Manager, and System Administrator for 57 West Capital Advisors, Inc.’s webpage to promote their company."
+    },
+    {
+      "companyName": "Mendelgen",
+      "jobTitle": "Bioinformatic Developer",
+      "id": "mendelgen",
+      "details": [
+        "Devised and created algorithms to simulate many different DNA cloning techniques, along with PCR, allowing scientists to study anticipated results before completing the assays."
+      ],
+      "technologies": [
+        "React",
+        "Redux"
+      ],
+      "website": "https://mendelgen.com/",
+      "summary": "Developed, improved, and maintained bioinformatic web applications on the webpage allowing biologists to simulate biological assays."
+    },
+    {
+      "companyName": "Artemis Consulting, Inc.",
+      "jobTitle": "Software Engineer",
+      "id": "artemis",
+      "details": [
+        "Improved and helped maintain the ProjectOne search application and web page. Specifically aided in the newspapers section built using Django and utilizing the search engine Apache Solr. Also extensively used the JavaScript library OpenSeadragon to view digitized newspaper articles and perform article clippings to be downloaded.",
+        "Aided in the development of a new web platform for the Copyright Office to allow for the submission of new copyrights online."
+      ],
+      "technologies": [
+        "Django",
+        "Apache Solr",
+        "OpenSeadragon",
+        "Angular",
+        "Java",
+        "AWS Elastic Container Service",
+        "Docker"
+      ],
+      "website": "https://loc.gov/",
+      "summary": "Developed and maintained web applications for the Library of Congress allowing for the search of web archives and the submission of new copyrights."
+    },
+    {
+      "companyName": "In Silico Solutions",
+      "jobTitle": "Bioinformatic Developer",
+      "id": "inSilico",
+      "details": [
+        "Interacted with customers to ensure implemented website designs and bioinformatics algorithms best suited their needs.",
+        "Developed a web-based application to perform bioinformatic analysis for the MD Anderson Cancer Center Reverse phase protein array (RPPA) core facility.",
+        "Aided the In Silico Solutions team collaborating with the Karchin lab at Johns Hopkins University to design and develop the genomic sequence variant annotation software CRAVAT (Cancer-Related Analysis of Variants Toolkit), and the 3D protein variant viewer, MuPIT (Mutation Position Imaging Toolbox)."
+      ],
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Java",
+        "MySQL",
+        "Python",
+        "R",
+        "Docker"
+      ],
+      "website": "",
+      "summary": "Designed and developed web-based applications, bioinformatics pipelines, database solutions, and Docker (Virtual machine) images to assist biologists with the analysis of public and private biological data."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Playfair+Display:700,900|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import './Variables.scss';
+
+// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
+// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
+// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
+// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
+// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
+// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
+
+
+// * {
+//   @media screen and (max-width: $container-halves-phone ) {
+//     box-sizing: border-box;
+//   }
+// }
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $bg-whole-page;
+  margin: 0;
+  font-family: $font-family-whole-page;
+  background-size: cover;
+  background-attachment: fixed;
+  color: $font-color-whole-page;
+  font-size: 14px;
+}
+
+label,
+input,
+textarea {
+  font-family: $font-family-form;
+}
+
+input {
+  padding: 2px 5px;
+}
+
+button {
+  border: none;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+// TODO MAYBE NOT NEEDED AND CAN BE ERASED LATER!!!
+// TODO MAYBE NOT NEEDED AND CAN BE ERASED LATER!!!
+// TODO MAYBE NOT NEEDED AND CAN BE ERASED LATER!!!
+// TODO MAYBE NOT NEEDED AND CAN BE ERASED LATER!!!
+// TODO MAYBE NOT NEEDED AND CAN BE ERASED LATER!!!
+
+
+.playfairDisplayFont {
+  font-family: "Playfair Display";
+}
+
+.robotoSanSerifFont {
+  font-family: "Roboto", sans-serif;
+}

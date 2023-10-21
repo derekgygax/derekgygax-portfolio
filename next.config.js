@@ -9,4 +9,9 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+// Needed to use Next Intel for internationalization
+const withNextIntl = require('next-intl/plugin')(
+  './i18n.ts'
+);
+ 
+module.exports = withNextIntl(nextConfig);

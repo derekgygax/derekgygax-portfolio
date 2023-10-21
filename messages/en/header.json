@@ -1,0 +1,15 @@
+{
+  "Header": {
+    "navItems": {
+      "about": {
+        "label": "About"
+      },
+      "workExperiences": {
+        "label": "Experience"
+      },
+      "contact": {
+        "label": "Contact"
+      }
+    }
+  }
+}
