@@ -23,9 +23,12 @@ export const WorkExperience: React.FC = () => {
     <Section id={workExperince.id}>
       <h1>{t("title")}</h1>
       <div className={styles.jobs}>
-        {workExperince.jobs.map((job: JobConfig) => {
+        {workExperince.jobs.map((job: JobConfig, index: number) => {
           return (
-            <div key={`job_${job.id}`}>
+            <div
+              key={`job_${job.id}`}
+              className={index !== 0 ? styles.job : undefined}
+            >
               <Job
                 id={job.id}
                 companyName={job.companyName}
