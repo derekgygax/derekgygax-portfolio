@@ -5,8 +5,12 @@ export default getRequestConfig(async ({ locale }) => ({
     ...(await import(`./messages/${locale}/header.json`)).default,
     ...(await import(`./messages/${locale}/homePage.json`)).default,
     ...(await import(`./messages/${locale}/rootLayout.json`)).default,
-    // Discover: {
-    //   ...(await import(`./messages/${locale}/discover/whyEquities.json`)).default,
-    // }
+    ...(await import(`./messages/${locale}/workExperience.json`)).default,
+    Jobs: {
+      ...(await import(`./messages/${locale}/jobs/fiftySevenWest.json`)).default,
+      ...(await import(`./messages/${locale}/jobs/mendelgen.json`)).default,
+      ...(await import(`./messages/${locale}/jobs/artemis.json`)).default,
+      ...(await import(`./messages/${locale}/jobs/inSilico.json`)).default,
+    }
   }
 }));

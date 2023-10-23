@@ -1,0 +1,150 @@
+{
+  "id": "workExperiences",
+  "jobs": [
+    {
+      "id": "fiftySevenWest",
+      "companyName": "57 West Capital Advisors, Inc.",
+      "projects": [
+        {
+          "title": "57 West Site",
+          "id": "website",
+          "image": "/assets/projects/fiftySevenWest.png",
+          "imageAlt": "Image of 57 West website",
+          "website": "https://57west.us/",
+          "responsibilities": [
+            "customer",
+            "code",
+            "css"
+          ],
+          "technologies": [
+            "Next.js",
+            "TypeScript",
+            "SCSS",
+            "Flexbox"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mendelgen",
+      "companyName": "Mendelgen",
+      "projects": [
+        {
+          "id": "website",
+          "title": "Mendelgen Site",
+          "image": "/assets/projects/mendelgen.png",
+          "imageAlt": "Image of Mendelgen site used for performing genetic assays",
+          "website": "https://mendelgen.com/",
+          "responsibilities": [
+            "engineer"
+          ],
+          "technologies": [
+            "React",
+            "Redux"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "artemis",
+      "companyName": "Artemis Consulting, Inc.",
+      "projects": [
+        {
+          "id": "loc",
+          "title": "Library of Congress",
+          "image": "/assets/projects/loc.png",
+          "imageAlt": "loc.gov site for searching American archives.",
+          "website": "https://www.loc.gov/newspapers/",
+          "responsibilities": [
+            "general",
+            "newspaper",
+            "openSeaDragon"
+          ],
+          "technologies": [
+            "Django",
+            "Apache Solr",
+            "OpenSeadragon",
+            "Flask"
+          ]
+        },
+        {
+          "id": "copyright",
+          "title": "Copyright",
+          "image": "",
+          "imageAlt": "Copyright office site for submitting and processing copyrights.",
+          "website": "",
+          "responsibilities": [
+            "general"
+          ],
+          "technologies": [
+            "Angular",
+            "Java",
+            "AWS Elastic Container Service",
+            "Docker"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inSilico",
+      "companyName": "In Silico Solutions",
+      "projects": [
+        {
+          "id": "rppa",
+          "title": "Reverse Phase Protein Assay",
+          "image": "",
+          "imageAlt": "RPPA site for processing Reverse Phase Protein Assays at MD Anderson Cancer Center.",
+          "website": "",
+          "responsibilities": [
+            "code"
+          ],
+          "technologies": [
+            "HTML",
+            "JavaScript",
+            "Java",
+            "MySQL",
+            "Python",
+            "R",
+            "Docker"
+          ]
+        },
+        {
+          "id": "cravat",
+          "title": "CRAVAT",
+          "image": "/assets/projects/cravat.png",
+          "imageAlt": "CRAVAT, Cancer-Related Analysis of Variants Toolkit, site for processing genome variants and their relation to cancer.",
+          "website": "https://cravat.us/CRAVAT/",
+          "responsibilities": [
+            "code"
+          ],
+          "technologies": [
+            "HTML",
+            "JavaScript",
+            "Java",
+            "MySQL",
+            "Python",
+            "Docker"
+          ]
+        },
+        {
+          "id": "mupit",
+          "title": "MuPIT",
+          "image": "/assets/projects/mupit.png",
+          "imageAlt": "MuPIT, Mutation Position Imaging Toolbox, site used for viewing proteins.",
+          "website": "https://mupit.icm.jhu.edu/MuPIT_Interactive/",
+          "responsibilities": [
+            "code"
+          ],
+          "technologies": [
+            "HTML",
+            "JavaScript",
+            "Java",
+            "MySQL",
+            "Python",
+            "Docker"
+          ]
+        }
+      ]
+    }
+  ]
+}

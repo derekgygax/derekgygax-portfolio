@@ -3,9 +3,9 @@ import { notFound } from 'next/navigation';
 
 
 // components
-import { About } from "../_components/about/About";
+import { AboutMe } from '../_components/aboutMe/AboutMe';
 import { Contact } from "../_components/contact/Contact";
-import { WorkExperiences } from "../_components/workExperiences/WorkExperiences";
+import { WorkExperience } from "../_components/workExperience/WorkExperience";
 import { Hero } from "../_components/hero/Hero";
 
 // data
@@ -28,6 +28,7 @@ export function generateStaticParams() {
 // TODO is this right. Do you need others
 // TODO maybe the title and keywords and description can 
 // TODO be moved to the rootLayout if no other pages
+// TODO must improve your SEO
 // Generate the Metadata for the home page
 export async function generateMetadata(
   { params: { locale } }: { params: { locale: string } }
@@ -63,8 +64,8 @@ const HomePage: React.FC<HomePageProps> = ({ params }) => {
   return (
     <div>
       <Hero />
-      <About />
-      <WorkExperiences />
+      <AboutMe />
+      <WorkExperience />
       <Contact />
     </div>
   )

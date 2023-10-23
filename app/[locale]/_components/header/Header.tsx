@@ -15,8 +15,8 @@ import { SectionNavItem } from "@/app/[locale]/types/nav";
 
 // data
 import me from '@/app/data/me.json';
-import about from '@/app/data/about.json';
-import workExperiences from '@/app/data/workExperiences.json';
+import aboutMe from '@/app/data/aboutMe.json';
+import workExperience from '@/app/data/workExperience.json';
 import contact from '@/app/data/contact.json';
 import socialMedia from '@/app/data/socialMedia.json';
 
@@ -29,8 +29,8 @@ import linkedInIcon from '@/public/assets/icons/linkedin.svg';
 export const Header: React.FC = () => {
 
   const navSetionsIds = [
-    about.id,
-    workExperiences.id,
+    aboutMe.id,
+    workExperience.id,
     contact.id
   ];
 

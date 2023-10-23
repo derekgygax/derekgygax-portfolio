@@ -1,0 +1,40 @@
+@import '../../Variables.scss';
+
+.main {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $container-halves-phone ) {
+        display: block;
+    }
+}
+
+.containerFirst {
+    @media screen and (max-width: $container-halves-phone ) {
+        width: 100%;
+    }
+}
+
+.containerSecond {
+    @media screen and (max-width: $container-halves-phone ) {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 5vh;
+    }
+}
+
+// .main {
+//     margin: 0 auto;
+//     background-size: cover;
+//     background-color: $font-dark !important;
+//     background-repeat: no-repeat !important;
+//     position: fixed;
+//     bottom: 0;
+//     width: 100%;
+//     z-index: 99;
+
+//     @media screen and (max-width: $container-halves-phone ) {
+//         position: relative;
+//         z-index: 0;
+//     }
+// }

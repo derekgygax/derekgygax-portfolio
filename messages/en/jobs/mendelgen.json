@@ -1,0 +1,13 @@
+{
+  "mendelgen": {
+    "jobTitle": "Bioinformatics Engineer",
+    "projects": {
+      "website": {
+        "responsibilities": {
+          "engineer": "Devised and created algorithms to simulate many different DNA cloning techniques, along with PCR, allowing scientists to study anticipated results before completing the assays."
+        }
+      }
+    },
+    "summary": "Developed, improved, and maintained bioinformatic web applications on the webpage allowing biologists to simulate biological assays."
+  }
+}

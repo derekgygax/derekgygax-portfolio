@@ -1,0 +1,33 @@
+{
+  "inSilico": {
+    "jobTitle": "Bioinformatics Engineer",
+    "id": "inSilico",
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "Java",
+      "MySQL",
+      "Python",
+      "R",
+      "Docker"
+    ],
+    "projects": {
+      "rppa": {
+        "responsibilities": {
+          "code": "Developed a web-based application to perform bioinformatic analysis for the MD Anderson Cancer Center Reverse phase protein array (RPPA) core facility."
+        }
+      },
+      "cravat": {
+        "responsibilities": {
+          "code": "Aided the In Silico Solutions team collaborating with the Karchin lab at Johns Hopkins University to design and develop the genomic sequence variant annotation software CRAVAT (Cancer-Related Analysis of Variants Toolkit)."
+        }
+      },
+      "mupit": {
+        "responsibilities": {
+          "code": "Aided the In Silico Solutions team collaborating with the Karchin lab at Johns Hopkins University to design and develop the 3D protein variant viewer, MuPIT (Mutation Position Imaging Toolbox)."
+        }
+      }
+    },
+    "summary": "Designed and developed web-based applications, bioinformatics pipelines, database solutions, and Docker (Virtual machine) images to assist biologists with the analysis of public and private biological data."
+  }
+}

@@ -1,8 +1,8 @@
 {
   "Header": {
     "navItems": {
-      "about": {
-        "label": "About"
+      "aboutMe": {
+        "label": "About Me"
       },
       "workExperiences": {
         "label": "Experience"

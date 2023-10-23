@@ -1,0 +1,48 @@
+@import '../../Variables.scss';
+
+.containerSecond {
+  @media screen and (min-width: $container-halves-phone ) {
+    padding-top: 2vw;
+  }
+
+  @media screen and (max-width: $container-halves-phone ) {
+    padding-top: 2vh;
+  }
+}
+
+.desktop {
+  @media screen and (max-width: $container-halves-phone ) {
+    display: none;
+  }
+}
+
+.flexDirection {
+  flex-direction: column;
+}
+
+.headerTitleContainer {
+  @media screen and (min-width: $container-halves-phone ) {
+    padding-bottom: 2vw;
+  }
+}
+
+.halfContainers {
+  width: 100%;
+}
+
+.main {
+  @media screen and (min-width: $container-halves-phone ) {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+
+  @media screen and (max-width: $container-halves-phone ) {
+    padding-top: 3vh;
+  }
+}
+
+.mobile {
+  @media screen and (min-width: $container-halves-phone ) {
+    display: none;
+  }
+}

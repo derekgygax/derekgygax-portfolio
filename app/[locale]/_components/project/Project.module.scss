@@ -1,0 +1,18 @@
+.details {
+  display: flex;
+  flex-direction: row;
+}
+
+.imageAndLink {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectImage {
+  width: 500px;
+}
