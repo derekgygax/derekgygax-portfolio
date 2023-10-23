@@ -9,7 +9,6 @@
           "title": "57 West Site",
           "id": "website",
           "image": "/assets/projects/fiftySevenWest.png",
-          "imageAlt": "Image of 57 West website",
           "website": "https://57west.us/",
           "responsibilities": [
             "customer",
@@ -33,7 +32,6 @@
           "id": "website",
           "title": "Mendelgen Site",
           "image": "/assets/projects/mendelgen.png",
-          "imageAlt": "Image of Mendelgen site used for performing genetic assays",
           "website": "https://mendelgen.com/",
           "responsibilities": [
             "engineer"
@@ -53,7 +51,6 @@
           "id": "loc",
           "title": "Library of Congress",
           "image": "/assets/projects/loc.png",
-          "imageAlt": "loc.gov site for searching American archives.",
           "website": "https://www.loc.gov/newspapers/",
           "responsibilities": [
             "general",
@@ -70,9 +67,8 @@
         {
           "id": "copyright",
           "title": "Copyright",
-          "image": "",
-          "imageAlt": "Copyright office site for submitting and processing copyrights.",
-          "website": "",
+          "image": "/assets/projects/copyright.png",
+          "website": "https://record.copyright.gov/remitter-portal/remitter-dash",
           "responsibilities": [
             "general"
           ],
@@ -92,8 +88,7 @@
         {
           "id": "rppa",
           "title": "Reverse Phase Protein Assay",
-          "image": "",
-          "imageAlt": "RPPA site for processing Reverse Phase Protein Assays at MD Anderson Cancer Center.",
+          "image": "/assets/projects/mdAndersonCancerCenterLogo.jpeg",
           "website": "",
           "responsibilities": [
             "code"
@@ -112,7 +107,6 @@
           "id": "cravat",
           "title": "CRAVAT",
           "image": "/assets/projects/cravat.png",
-          "imageAlt": "CRAVAT, Cancer-Related Analysis of Variants Toolkit, site for processing genome variants and their relation to cancer.",
           "website": "https://cravat.us/CRAVAT/",
           "responsibilities": [
             "code"
@@ -130,7 +124,6 @@
           "id": "mupit",
           "title": "MuPIT",
           "image": "/assets/projects/mupit.png",
-          "imageAlt": "MuPIT, Mutation Position Imaging Toolbox, site used for viewing proteins.",
           "website": "https://mupit.icm.jhu.edu/MuPIT_Interactive/",
           "responsibilities": [
             "code"

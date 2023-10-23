@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 // layouts
@@ -22,9 +23,11 @@ export const ContactMe: React.FC = () => {
       <div className={styles.formAndPic}>
         <EmailForm />
         <div>
-          <img
+          <Image
             src={contactMe.image}
+            alt={t('imageAlt')}
             width={500}
+            height={665}
           />
         </div>
       </div>

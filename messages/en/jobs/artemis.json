@@ -7,12 +7,14 @@
           "general": "Improved and helped maintain the ProjectOne search application and web page.",
           "newspaper": "Specifically aided in the newspapers section built using Django and utilizing the search engine Apache Solr.",
           "openSeaDragon": " Also extensively used the JavaScript library OpenSeadragon to view digitized newspaper articles and perform article clippings to be downloaded."
-        }
+        },
+        "imageAlt": "loc.gov website on the newspapers section for searching American archives."
       },
       "copyright": {
         "responsibilities": {
           "general": "Aided in the development of a new web platform for the Copyright Office to allow for the submission of new copyrights online."
-        }
+        },
+        "imageAlt": "Copyright Recordation site for submitting and processing copyrights."
       }
     },
     "website": "https://loc.gov/",

@@ -5,6 +5,7 @@ import { ProjectConfig } from '../../types/job';
 
 // styles
 import styles from './Project.module.scss';
+import Image from 'next/image';
 
 type ProjectProps = {
   jobId: string;
@@ -23,10 +24,12 @@ export const Project: React.FC<ProjectProps> = ({
       <h2>{project.title}</h2>
       <div className={styles.details}>
         <div className={styles.imageAndLink}>
-          <img
+          <Image
             className={styles.projectImage}
             src={project.image}
-            alt={project.imageAlt}
+            alt={t('imageAlt')}
+            width={400}
+            height={224}
           />
           <a href={project.website} target="_blank">
             {project.website}

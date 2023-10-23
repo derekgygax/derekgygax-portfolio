@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 // layouts
@@ -20,9 +21,11 @@ export const AboutMe: React.FC = () => {
           <p>{t("details")}</p>
         </div>
         <div className={styles.content}>
-          <img
+          <Image
             src={aboutMe.image}
-            height={500}
+            alt={t("imageAlt")}
+            height={533}
+            width={400}
           />
         </div>
       </div>

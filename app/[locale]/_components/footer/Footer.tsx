@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
     <div className={styles.main}>
       <Container>
         <div className={styles.copyright}>
-          <span>{`${t('copyright')}. ${t('buildDescription')}`}</span>
+          <span>{`${t('copyright')}`}</span>
         </div>
       </Container>
     </div>
