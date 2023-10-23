@@ -17,7 +17,7 @@ import { SectionNavItem } from "@/app/[locale]/types/nav";
 import me from '@/app/data/me.json';
 import aboutMe from '@/app/data/aboutMe.json';
 import workExperience from '@/app/data/workExperience.json';
-import contact from '@/app/data/contact.json';
+import contactMe from '@/app/data/contactMe.json';
 import socialMedia from '@/app/data/socialMedia.json';
 
 // data for content sections
@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
   const navSetionsIds = [
     aboutMe.id,
     workExperience.id,
-    contact.id
+    contactMe.id
   ];
 
   const t = useTranslations("Header");

@@ -1,0 +1,133 @@
+@import '../../../Variables.scss';
+
+.button {
+    float: right;
+    background: transparent;
+    border: 1px solid white;
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 30px;
+    text-transform: initial;
+
+    &:hover {
+        background-color: white;
+        color: grey;
+        border: 1px solid grey;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: $container-halves-phone) {
+        justify-content: center;
+    }
+}
+
+.buttonsAndThankyou {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        margin: 0;
+    }
+
+    .buttonSumbit {
+        margin-left: 15px;
+
+        @media (max-width: $container-halves-phone) {
+            margin: 0;
+        }
+    }
+}
+
+
+.contactUs {
+    font-weight: 500;
+    margin: 0 !important;
+    color: white !important;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $container-havles-to-vertical) {}
+
+    @media (max-width: $container-halves-phone) {
+        display: block;
+    }
+}
+
+.input {
+    height: 40px;
+    appearance: none;
+    color: #293649;
+    background-color: white;
+    border-radius: 3px !important;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+
+    @media screen and (max-width: $container-havles-to-vertical) {
+        width: 175px;
+    }
+
+    @media screen and (max-width: $container-halves-phone ) {
+        width: 100%;
+    }
+}
+
+.nameEmailInput {
+    box-sizing: border-box;
+    width: 225px;
+}
+
+.subjectInput {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.input,
+.textarea {
+    border: 2px solid $electric-blue;
+    border-radius: 5px !important;
+}
+
+
+.inputName {
+    margin-right: 0 !important;
+
+    @media screen and (max-width: $container-halves-phone ) {
+        margin-bottom: 0;
+    }
+}
+
+.phoneButtonDiv {
+    @media screen and (max-width: $container-halves-phone ) {
+        display: none;
+    }
+}
+
+.message {
+    color: $white;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.textareaContainer {
+    margin-bottom: 15px;
+}
+
+.textarea {
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    margin-top: 15px;
+    color: #293649;
+}

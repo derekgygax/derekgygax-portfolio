@@ -2,6 +2,8 @@ import { getRequestConfig } from 'next-intl/server';
 
 export default getRequestConfig(async ({ locale }) => ({
   messages: {
+    ...(await import(`./messages/${locale}/contactMe.json`)).default,
+    ...(await import(`./messages/${locale}/emailForm.json`)).default,
     ...(await import(`./messages/${locale}/footer.json`)).default,
     ...(await import(`./messages/${locale}/header.json`)).default,
     ...(await import(`./messages/${locale}/homePage.json`)).default,

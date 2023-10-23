@@ -1,0 +1,78 @@
+@import '../../Variables.scss';
+
+.button {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.buttonContainer {
+    background: none;
+    display: inline-block;
+    padding: 12px 15px 10px 15px;
+    border: 2px solid $white;
+    cursor: pointer;
+    width: auto;
+    min-width: 180px;
+    color: $white;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background-color 0.5s, color 0.5s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    @media screen and (max-width: 600px) {
+        font-size: 14px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        background-color: $white;
+        border: 2px solid $white;
+        color: $electric-blue;
+
+        .rightArrowIcon {
+            background-image: url("/assets/arrow-point-to-right-blue.png") !important;
+        }
+    }
+
+    &.dark {
+        border-color: $electric-blue;
+        color: $electric-blue;
+
+        .rightArrowIcon {
+            background-image: url("/assets/arrow-point-to-right-blue.png") !important;
+        }
+
+        &:hover {
+            background-color: $electric-blue;
+            color: $white;
+
+            .rightArrowIcon {
+                background-image: url("/assets/arrow-point-to-right-white.png") !important;
+            }
+        }
+    }
+}
+
+.rightArrowIcon {
+    background-size: contain;
+    background-image: url("/assets/arrow-point-to-right-blue.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 13px;
+    width: 13px;
+    margin-left: 15px;
+}
+
+.text {
+    display: block;
+    flex-grow: 1;
+}

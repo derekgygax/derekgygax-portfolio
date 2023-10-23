@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 
 // components
 import { AboutMe } from '../_components/aboutMe/AboutMe';
-import { Contact } from "../_components/contact/Contact";
+import { ContactMe } from "../_components/contactMe/ContactMe";
 import { WorkExperience } from "../_components/workExperience/WorkExperience";
 import { Hero } from "../_components/hero/Hero";
 
@@ -66,7 +66,7 @@ const HomePage: React.FC<HomePageProps> = ({ params }) => {
       <Hero />
       <AboutMe />
       <WorkExperience />
-      <Contact />
+      <ContactMe />
     </div>
   )
 }
