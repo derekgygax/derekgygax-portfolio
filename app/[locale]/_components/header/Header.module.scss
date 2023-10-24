@@ -3,7 +3,8 @@
 .main {
   background-color: $header-bg;
   height: $header-height;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 999;
   display: flex;

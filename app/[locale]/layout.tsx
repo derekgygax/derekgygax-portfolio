@@ -66,9 +66,11 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children, params }) => {
     <html lang="en">
       <body>
         <Header />
-        <Container>
-          {children}
-        </Container>
+        <main>
+          <Container>
+            {children}
+          </Container>
+        </main>
         <Footer />
       </body>
     </html>

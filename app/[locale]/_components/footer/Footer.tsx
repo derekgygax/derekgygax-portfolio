@@ -10,12 +10,12 @@ export const Footer: React.FC = () => {
 
   const t = useTranslations('Footer');
   return (
-    <div className={styles.main}>
+    <footer className={styles.main}>
       <Container>
         <div className={styles.copyright}>
           <span>{`${t('copyright')}`}</span>
         </div>
       </Container>
-    </div>
+    </footer>
   )
 }

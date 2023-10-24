@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 
 // layouts
 import { Container } from "@/app/[locale]/_layouts/container/Container";
-// import { Logo } from "../logo/Logo";
 
 // styles
 import styles from './Header.module.scss';
@@ -20,7 +19,6 @@ import workExperience from '@/app/data/workExperience.json';
 import contactMe from '@/app/data/contactMe.json';
 import socialMedia from '@/app/data/socialMedia.json';
 
-// data for content sections
 
 // icons
 import githubIcon from '@/public/assets/icons/github-mark-white.svg';
@@ -37,7 +35,7 @@ export const Header: React.FC = () => {
   const t = useTranslations("Header");
 
   return (
-    <div className={styles.main}>
+    <header className={styles.main}>
       <Container>
         <div className={styles.nav}>
           <div className={styles.navSection}>
@@ -89,6 +87,6 @@ export const Header: React.FC = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </header>
   )
 }
