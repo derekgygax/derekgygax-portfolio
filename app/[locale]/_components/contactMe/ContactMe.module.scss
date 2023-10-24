@@ -4,6 +4,17 @@
   justify-content: space-around;
 }
 
-.form {
-  width: 40%
+.contact {
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.contactType {
+  font-size: 1.5rem;
+}
+
+.contactHowTo {
+  margin-left: 10px
 }

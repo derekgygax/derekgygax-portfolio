@@ -1,4 +1,21 @@
 {
   "id": "contact",
-  "image": "/assets/meKohPhiPhi.jpg"
+  "image": "/assets/meKohPhiPhi.jpg",
+  "howToContact": [
+    {
+      "id": "email",
+      "contact": "derekgygax@gmail.com",
+      "type": "email"
+    },
+    {
+      "id": "whatsapp",
+      "contact": "+66 98 515 9908",
+      "type": "call"
+    },
+    {
+      "id": "cell",
+      "contact": "+1 (443) 302-9554",
+      "type": "call"
+    }
+  ]
 }

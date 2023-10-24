@@ -1,6 +1,17 @@
 {
   "ContactMe": {
     "title": "Contact Me",
-    "imageAlt": "Derek Gygax looking super sly"
+    "imageAlt": "Derek Gygax on Koh Phi Phi ",
+    "howToContact": {
+      "email": {
+        "label": "Email"
+      },
+      "whatsapp": {
+        "label": "WhatsApp"
+      },
+      "cell": {
+        "label": "Cell"
+      }
+    }
   }
 }
