@@ -18,8 +18,10 @@ export const ContactMe: React.FC = () => {
   const t = useTranslations('ContactMe');
 
   return (
-    <Section id={contactMe.id}>
-      <h1>{t('title')}</h1>
+    <Section
+      id={contactMe.id}
+      title={t('title')}
+    >
       <div className={styles.formAndPic}>
         <EmailForm />
         <div>

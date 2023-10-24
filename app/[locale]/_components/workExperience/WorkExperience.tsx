@@ -20,8 +20,10 @@ export const WorkExperience: React.FC = () => {
   const t = useTranslations("WorkExperience");
 
   return (
-    <Section id={workExperince.id}>
-      <h1>{t("title")}</h1>
+    <Section
+      id={workExperince.id}
+      title={t('title')}
+    >
       <div className={styles.jobs}>
         {workExperince.jobs.map((job: JobConfig, index: number) => {
           return (

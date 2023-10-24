@@ -1,8 +1,14 @@
 .aboutContent {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
-.content {
-  width: 50%;
+.paragraphSection {
+  width: 60%;
+  font-size: 20px;
+}
+
+.paragraphs {
+  width: 75%
 }

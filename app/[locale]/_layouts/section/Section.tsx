@@ -5,11 +5,13 @@ import styles from './Sections.module.scss';
 type SectionProps = {
   children: React.ReactNode;
   id?: string;
+  title: string;
 }
 
-export const Section: React.FC<SectionProps> = ({ children, id }) => {
+export const Section: React.FC<SectionProps> = ({ children, id, title }) => {
   return (
     <div id={id} className={styles.main}>
+      <h1 className={styles.sectionTitle}>{title}</h1>
       {children}
     </div>
   );
