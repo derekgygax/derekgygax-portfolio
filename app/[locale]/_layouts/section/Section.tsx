@@ -4,7 +4,7 @@ import styles from './Sections.module.scss';
 
 type SectionProps = {
   children: React.ReactNode;
-  id: string;
+  id?: string;
 }
 
 export const Section: React.FC<SectionProps> = ({ children, id }) => {

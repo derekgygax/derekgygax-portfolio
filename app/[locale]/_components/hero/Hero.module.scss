@@ -1,0 +1,133 @@
+@import '../../Variables.scss';
+
+.backgroundBlue {
+    background: linear-gradient(0deg, #02244A 0%, rgba(0, 98, 250, 0.630556) 97.22%, rgba(0, 100, 255, 0.62) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding-top: 125px;
+    padding-bottom: 0;
+    min-height: 600px;
+    text-align: center;
+
+    @media screen and (max-width: $container-halves-phone) {
+        height: 100vh;
+
+        @media screen and (max-height: $short-vertical-phone) {
+            padding-top: 100px;
+        }
+    }
+}
+
+.backgroundImage {
+    background-image: url('/assets/derekGygaxPortfolio.png');
+    background-repeat: no-repeat;
+}
+
+.barLong {
+    background: $red;
+    height: 2px;
+    margin: 30px 0;
+    transition: width 1s;
+    width: 60px;
+}
+
+.button {
+    float: right;
+    background: transparent;
+    border: 1px solid white;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 30px;
+    text-transform: initial;
+
+    // TODO again below you don't know really how
+    // to do this correctly so you are doing it this way
+    // with !important for now
+    &:hover {
+        background-color: white;
+        color: grey !important;
+        border: 1px solid grey !important;
+    }
+}
+
+.buttons {
+    display: flex;
+
+    @media (max-width: $container-halves-phone) {
+        justify-content: center;
+    }
+
+    span {
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}
+
+.containerSecond {
+    padding-top: 10vh;
+}
+
+.desktop {
+    @media screen and (max-width: $container-halves-phone) {
+        display: none !important;
+    }
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.roles {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 2rem;
+    place-items: center;
+}
+
+.coverBackgroundImage {
+    background-color: $bg-whole-page;
+    padding: 10px;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.description {
+    font-size: 25px;
+    margin: 0;
+
+    @media screen and (max-width: $container-halves-phone) {
+        font-size: 14px;
+    }
+}
+
+.header {
+    font-weight: 700;
+    font-size: 6.0vw;
+    padding-bottom: 40px;
+
+    @media screen and (max-width: $container-halves-phone) {
+        font-size: 50px;
+    }
+}
+
+.resume {
+    padding-top: 175px;
+}
+
+.main {
+    align-items: center;
+    background-attachment: fixed;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    margin: 0 auto;
+}
+
+.mobile {
+    @media screen and (min-width: $container-halves-phone) {
+        display: none !important;
+    }
+}

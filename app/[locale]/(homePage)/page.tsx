@@ -62,12 +62,12 @@ const HomePage: React.FC<HomePageProps> = ({ params }) => {
   unstable_setRequestLocale(params.locale);
 
   return (
-    <div>
+    <>
       <Hero />
       <AboutMe />
       <WorkExperience />
       <ContactMe />
-    </div>
+    </>
   )
 }
 

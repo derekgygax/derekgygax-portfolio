@@ -10,7 +10,6 @@ export type ButtonProps = {
   children: React.ReactNode;
   onClick?: () => {};
   style?: 'light' | 'dark';
-  noArrow?: boolean;
   type?: string;
 };
 
@@ -19,7 +18,6 @@ export const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
   style = 'light',
-  noArrow,
   type
 }) => {
   return (
@@ -35,7 +33,6 @@ export const Button: React.FC<ButtonProps> = ({
         <span className={styles.text}>
           {children}
         </span>
-        <span className={!noArrow ? styles.rightArrowIcon : undefined} />
       </span>
     </button>
   );

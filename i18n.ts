@@ -7,7 +7,9 @@ export default getRequestConfig(async ({ locale }) => ({
     ...(await import(`./messages/${locale}/emailForm.json`)).default,
     ...(await import(`./messages/${locale}/footer.json`)).default,
     ...(await import(`./messages/${locale}/header.json`)).default,
+    ...(await import(`./messages/${locale}/hero.json`)).default,
     ...(await import(`./messages/${locale}/homePage.json`)).default,
+    ...(await import(`./messages/${locale}/resume.json`)).default,
     ...(await import(`./messages/${locale}/rootLayout.json`)).default,
     ...(await import(`./messages/${locale}/workExperience.json`)).default,
     Jobs: {

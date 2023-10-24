@@ -9,8 +9,11 @@ type ContainerProps = {
   children: React.ReactNode;
 };
 
-export const Container: React.FC<ContainerProps> = ({ children, className }) => (
-  <div className={classNames(styles.container, className)}>
-    {children}
-  </div>
-);
+export const Container: React.FC<ContainerProps> = ({ children, className }) => {
+
+  return (
+    <div className={classNames(styles.container, className)}>
+      {children}
+    </div>
+  );
+};

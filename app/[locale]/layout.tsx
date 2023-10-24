@@ -66,7 +66,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children, params }) => {
     <html lang="en">
       <body>
         <Header />
-        <Container className={styles.fullPge}>
+        <Container className={styles.fullPage}>
           {children}
         </Container>
         <Footer />
