@@ -27,36 +27,38 @@ export const Hero: React.FC = ({ }) => {
   ];
 
   return (
-    <div
-      className={
-        classNames(
-          styles.main,
-          styles.backgroundImage
-        )
-      }
-    >
-      <div className={styles.backgroundBlue}>
-        <div className={classNames(styles.header, "playfairDisplayFont")}>
-          <div className={classNames(styles.coverBackgroundImage, styles.inlineBlock)}>
-            <span>{t('name')}</span>
+    <Section>
+      <div
+        className={
+          classNames(
+            styles.main,
+            styles.backgroundImage
+          )
+        }
+      >
+        <div className={styles.backgroundBlue}>
+          <div className={classNames(styles.header, "playfairDisplayFont")}>
+            <div className={classNames(styles.coverBackgroundImage, styles.inlineBlock)}>
+              <span>{t('name')}</span>
+            </div>
+          </div>
+          <div className={styles.roles}>
+            {roles.map((role, index) => {
+              return (
+                <div key={`hero_role_(${index})`} className={styles.coverBackgroundImage}>
+                  <p className={styles.description}>
+                    {role}
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+          <div className={styles.resume}>
+            <Resume />
           </div>
         </div>
-        <div className={styles.roles}>
-          {roles.map((role, index) => {
-            return (
-              <div key={`hero_role_(${index})`} className={styles.coverBackgroundImage}>
-                <p className={styles.description}>
-                  {role}
-                </p>
-              </div>
-            )
-          })}
-        </div>
-        <div className={styles.resume}>
-          <Resume />
-        </div>
       </div>
-    </div>
+    </Section>
   );
 };
 

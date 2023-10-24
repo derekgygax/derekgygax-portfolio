@@ -165,7 +165,6 @@ export const EmailFormClient: React.FC<EmailFormClientProps> = ({
               >
                 <Button
                   type="submit"
-                  noArrow={true}
                   className={styles.button}
                 >
                   {
