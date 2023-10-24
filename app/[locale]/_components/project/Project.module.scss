@@ -3,12 +3,22 @@
   flex-direction: row;
 }
 
-.imageAndLink {
+.image {
   display: flex;
   flex-direction: column;
+}
+
+.link {
+  padding-top: 10px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
+  padding: 15px;
+}
+
+.projectTitle {
+  margin: 0 0 5px 0;
+
 }

@@ -23,7 +23,9 @@ export const ContactMe: React.FC = () => {
       title={t('title')}
     >
       <div className={styles.formAndPic}>
-        <EmailForm />
+        <div className={styles.form}>
+          <EmailForm />
+        </div>
         <div>
           <Image
             src={contactMe.image}

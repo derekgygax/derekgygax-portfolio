@@ -33,7 +33,7 @@
 }
 
 .link {
-  font-size: 17px;
+  font-size: 1.2rem;
   font-weight: 400;
   text-decoration: none;
   letter-spacing: 1px;
@@ -43,7 +43,7 @@
   text-transform: uppercase;
 
   @media screen and (max-width: $container-halves-phone ) {
-    font-size: 14px;
+    font-size: 1.1rem;
   }
 
   &:hover {

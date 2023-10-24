@@ -6,7 +6,7 @@
       "companyName": "57 West Capital Advisors, Inc.",
       "projects": [
         {
-          "title": "57 West Site",
+          "title": "57 West",
           "id": "website",
           "image": "/assets/projects/fiftySevenWest.png",
           "website": "https://57west.us/",
@@ -30,7 +30,7 @@
       "projects": [
         {
           "id": "website",
-          "title": "Mendelgen Site",
+          "title": "Mendelgen",
           "image": "/assets/projects/mendelgen.png",
           "website": "https://mendelgen.com/",
           "responsibilities": [

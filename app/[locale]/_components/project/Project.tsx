@@ -21,9 +21,9 @@ export const Project: React.FC<ProjectProps> = ({
 
   return (
     <div className={styles.main}>
-      <h2>{project.title}</h2>
+      <h2 className={styles.projectTitle}>{project.title}</h2>
       <div className={styles.details}>
-        <div className={styles.imageAndLink}>
+        <div className={styles.image}>
           <Image
             className={styles.projectImage}
             src={project.image}
@@ -31,9 +31,6 @@ export const Project: React.FC<ProjectProps> = ({
             width={400}
             height={224}
           />
-          <a href={project.website} target="_blank">
-            {project.website}
-          </a>
         </div>
         <div>
           <ul>
@@ -46,6 +43,11 @@ export const Project: React.FC<ProjectProps> = ({
             })}
           </ul>
         </div>
+      </div>
+      <div className={styles.link}>
+        <a href={project.website} target="_blank">
+          {project.website}
+        </a>
       </div>
     </div>
   );
