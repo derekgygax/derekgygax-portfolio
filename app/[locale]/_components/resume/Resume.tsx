@@ -14,7 +14,6 @@ export const Resume: React.FC = () => {
   const t = useTranslations('Resume');
 
   return (
-
     <a
       target="_blank"
       href={resume.href}

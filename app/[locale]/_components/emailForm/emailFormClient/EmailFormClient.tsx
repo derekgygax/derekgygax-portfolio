@@ -164,7 +164,6 @@ export const EmailFormClient: React.FC<EmailFormClientProps> = ({
                 }
               >
                 <Button
-                  type="submit"
                   className={styles.button}
                 >
                   {
