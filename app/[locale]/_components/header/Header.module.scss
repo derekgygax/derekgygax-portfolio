@@ -4,6 +4,7 @@
   background-color: $header-bg;
   height: $header-height;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 999;
   display: flex;
@@ -36,11 +37,9 @@
   font-size: 1.2rem;
   font-weight: 400;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: $white;
-  // transition: opacity 0.25s ease;
   white-space: nowrap;
-  text-transform: uppercase;
 
   @media screen and (max-width: $container-halves-phone ) {
     font-size: 1.1rem;

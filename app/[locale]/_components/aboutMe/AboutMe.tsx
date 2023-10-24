@@ -11,6 +11,9 @@ import aboutMe from '@/app/data/aboutMe.json';
 // styles
 import styles from './AboutMe.module.scss';
 
+// images
+import meHandstand from '@/public/assets/meHandstand.jpg';
+
 export const AboutMe: React.FC = () => {
 
   const t = useTranslations('AboutMe');
@@ -26,12 +29,11 @@ export const AboutMe: React.FC = () => {
             <p className={styles.paragraph}>{t("bio.personal")}</p>
           </div>
         </div>
-        <div>
+        <div className={styles.imageSection}>
           <Image
-            src={aboutMe.image}
+            src={meHandstand}
             alt={t("imageAlt")}
-            height={533}
-            width={400}
+            className={styles.image}
           />
         </div>
       </div>

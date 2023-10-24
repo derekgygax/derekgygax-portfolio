@@ -63,7 +63,7 @@ const HomePage: React.FC<HomePageProps> = ({ params }) => {
 
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <AboutMe />
       <WorkExperience />
       <ContactMe />

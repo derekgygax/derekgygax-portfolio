@@ -25,17 +25,17 @@ a {
 body {
   background-color: $bg-whole-page;
   margin: 0;
-  font-family: $font-family-whole-page;
+  font-family: $font-inter;
   background-size: cover;
   background-attachment: fixed;
-  color: $font-color-whole-page;
+  color: $main-text-color;
   font-size: 16px;
 }
 
 label,
 input,
 textarea {
-  font-family: $font-family-form;
+  font-family: $font-roboto;
 }
 
 input {

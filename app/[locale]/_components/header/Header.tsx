@@ -48,7 +48,10 @@ export const Header: React.FC = () => {
           </div>
           <div
             className={
-              classNames(styles.portfolioSections, styles.navSection)
+              classNames(
+                styles.portfolioSections,
+                styles.navSection
+              )
             }
           >
             {navSetionsIds.map((sectionId) => {
