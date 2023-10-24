@@ -10,6 +10,7 @@ export default getRequestConfig(async ({ locale }) => ({
     ...(await import(`./messages/${locale}/hero.json`)).default,
     ...(await import(`./messages/${locale}/homePage.json`)).default,
     ...(await import(`./messages/${locale}/job.json`)).default,
+    ...(await import(`./messages/${locale}/projects.json`)).default,
     ...(await import(`./messages/${locale}/resume.json`)).default,
     ...(await import(`./messages/${locale}/rootLayout.json`)).default,
     ...(await import(`./messages/${locale}/workExperience.json`)).default,
@@ -18,6 +19,9 @@ export default getRequestConfig(async ({ locale }) => ({
       ...(await import(`./messages/${locale}/jobs/mendelgen.json`)).default,
       ...(await import(`./messages/${locale}/jobs/artemis.json`)).default,
       ...(await import(`./messages/${locale}/jobs/inSilico.json`)).default,
+    },
+    Project: {
+
     }
   }
 }));

@@ -1,7 +1,13 @@
 @import '../../Variables.scss';
 
+$padding-link: 10px;
+
+.homeLink {
+  margin-left: -$padding-link;
+}
+
 .main {
-  background-color: $header-bg;
+  background-color: $bg-main;
   height: $header-height;
   position: fixed;
   top: 0;
@@ -31,6 +37,16 @@
 .portfolioSections {
   justify-content: space-around;
   width: 600px;
+}
+
+.linkContainer {
+
+  padding: $padding-link;
+  border-radius: 15px;
+
+  &:hover {
+    background-color: $bg-secondary;
+  }
 }
 
 .link {

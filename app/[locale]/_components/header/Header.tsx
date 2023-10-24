@@ -15,7 +15,7 @@ import { SectionNavItem } from "@/app/[locale]/types/nav";
 // data
 import me from '@/app/data/me.json';
 import aboutMe from '@/app/data/aboutMe.json';
-import workExperience from '@/app/data/workExperience.json';
+import projects from '@/app/data/projects.json';
 import contactMe from '@/app/data/contactMe.json';
 import socialMedia from '@/app/data/socialMedia.json';
 
@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
 
   const navSetionsIds = [
     aboutMe.id,
-    workExperience.id,
+    projects.id,
     contactMe.id
   ];
 
@@ -38,7 +38,15 @@ export const Header: React.FC = () => {
     <header className={styles.main}>
       <Container>
         <div className={styles.nav}>
-          <div className={styles.navSection}>
+          <div
+            className={
+              classNames(
+                styles.navSection,
+                styles.linkContainer,
+                styles.homeLink
+              )
+            }
+          >
             <Link
               className={styles.link}
               href="/"
@@ -56,13 +64,17 @@ export const Header: React.FC = () => {
           >
             {navSetionsIds.map((sectionId) => {
               return (
-                <Link
+                <div
                   key={`header_nav_${sectionId}`}
-                  className={styles.link}
-                  href={`#${sectionId}`}
+                  className={styles.linkContainer}
                 >
-                  {t(`navItems.${sectionId}.label`)}
-                </Link>
+                  <Link
+                    className={styles.link}
+                    href={`#${sectionId}`}
+                  >
+                    {t(`navItems.${sectionId}.label`)}
+                  </Link>
+                </div>
               )
             })}
           </div>

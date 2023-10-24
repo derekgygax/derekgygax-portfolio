@@ -4,8 +4,8 @@
       "aboutMe": {
         "label": "About"
       },
-      "workExperiences": {
-        "label": "Experience"
+      "projects": {
+        "label": "Projects"
       },
       "contact": {
         "label": "Contact"
