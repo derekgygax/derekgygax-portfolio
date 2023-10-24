@@ -26,8 +26,8 @@ export const ContactMe: React.FC = () => {
           <Image
             src={contactMe.image}
             alt={t('imageAlt')}
-            width={352}
-            height={665}
+            width={500}
+            height={375}
           />
         </div>
       </div>
