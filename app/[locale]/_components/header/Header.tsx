@@ -90,8 +90,7 @@ export const Header: React.FC = () => {
                     <Image
                       alt={media.alt}
                       src={media.id === 'github' ? githubIcon : linkedInIcon}
-                      width={media.width}
-                      height={media.height}
+                      className={styles.icon}
                     />
                   </a>
                 </div>

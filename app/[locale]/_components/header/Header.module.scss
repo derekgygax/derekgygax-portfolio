@@ -67,10 +67,16 @@ $padding-link: 10px;
   }
 }
 
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
 .socialMedia {
   grid-area: 1 / 5 / 2 / 6;
 }
 
 .socialMediaIcon {
-  margin-right: 30px;
+  margin-right: 2rem;
+  width: 1.75rem;
 }
