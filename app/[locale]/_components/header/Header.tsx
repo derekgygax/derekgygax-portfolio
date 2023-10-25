@@ -33,21 +33,21 @@ export const Header: React.FC = () => {
       <Container>
         <div className={styles.nav}>
           <div className={styles.navSection}>
-            <div
-              className={
-                classNames(
-                  styles.linkContainer,
-                  styles.homeLink
-                )
-              }
+            <Link
+              className={styles.link}
+              href="/"
             >
-              <Link
-                className={styles.link}
-                href="/"
+              <div
+                className={
+                  classNames(
+                    styles.linkContainer,
+                    styles.homeLink
+                  )
+                }
               >
                 {me.name}
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div
             className={
@@ -59,39 +59,46 @@ export const Header: React.FC = () => {
           >
             {navSetionsIds.map((sectionId) => {
               return (
-                <div
+                <Link
                   key={`header_nav_${sectionId}`}
-                  className={styles.linkContainer}
+                  className={styles.link}
+                  href={`#${sectionId}`}
                 >
-                  <Link
-                    className={styles.link}
-                    href={`#${sectionId}`}
+                  <div
+                    className={styles.linkContainer}
                   >
                     {t(`navItems.${sectionId}.label`)}
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               )
             })}
           </div>
           <div className={classNames(styles.socialMedia, styles.navSection)}>
-            {socialMedia.map((media) => {
-              return (
-                <div
-                  key={`header_socialMediaIcon_${media.id}`}
-                  className={styles.socialMediaIcon}
-                >
+            <div className={styles.socialMediaIconsContainer}>
+              {socialMedia.map((media) => {
+                return (
                   <a
+                    key={`header_socialMediaIcon_${media.id}`}
                     target="_blank"
                     href={media.href}
                   >
-                    <Icon
-                      id={media.id}
-                      alt={media.alt}
-                    />
+                    <div
+                      className={
+                        classNames(
+                          styles.socialMediaIcon,
+                          styles.linkContainer
+                        )
+                      }
+                    >
+                      <Icon
+                        id={media.id}
+                        alt={media.alt}
+                      />
+                    </div>
                   </a>
-                </div>
-              )
-            })}
+                )
+              })}
+            </div>
           </div>
         </div>
       </Container>

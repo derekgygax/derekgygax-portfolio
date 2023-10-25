@@ -37,11 +37,14 @@ $round-amount: 10px;
 }
 
 .techIcon {
-  width: 1.8rem;
+  width: 1.5rem;
   padding: 0.5rem;
 }
 
-.textContainer {
+.textAndTech {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1rem;
   box-sizing: border-box;
   background-color: $bg-secondary;
@@ -51,7 +54,26 @@ $round-amount: 10px;
   border-bottom-right-radius: $round-amount;
 }
 
-.title {
+.textContainer {}
+
+.jobAndTitle {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.title {
+  margin: 0;
+}
+
+.jobTitle {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.websiteContainer {
+  padding: 5px 10px 5px 10px;
+  background-color: $bg-tertiary;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 0.9rem;
 }

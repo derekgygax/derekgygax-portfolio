@@ -41,28 +41,42 @@ export const Project: React.FC<ProjectProps> = ({
           className={styles.image}
         />
       </div>
-      <div className={styles.textContainer}>
-        <h4 className={styles.title}>{data.title}</h4>
-        <div className={styles.paragraphs}>
-          <p>{t('summary')}</p>
+      <div className={styles.textAndTech}>
+        <div className={styles.textContainer}>
+          <div className={styles.jobAndTitle}>
+            <h3 className={styles.title}>{data.title}</h3>
+            <h4 className={styles.jobTitle}>{t('jobTitle')}</h4>
+          </div>
+          <div className={styles.paragraphs}>
+            <p>{t('summary')}</p>
+          </div>
         </div>
-        <div className={styles.techIcons}>
-          {data.technologies.map((tech) => {
-            return (
-              <div
-                key={`project_${id}_tech_${tech}`}
-                className={
-                  classNames(
-                    styles.techIcon,
-                  )
-                }
-              >
-                <Icon
-                  id={tech}
-                />
-              </div>
-            );
-          })}
+        <div className={styles.techContainer}>
+          <div className={styles.techIcons}>
+            {data.technologies.map((tech) => {
+              return (
+                <div
+                  key={`project_${id}_tech_${tech}`}
+                  className={
+                    classNames(
+                      styles.techIcon,
+                    )
+                  }
+                >
+                  <Icon
+                    id={tech}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <a target="_blank" href={data.website}>
+            <div className={styles.websiteContainer}>
+              <span>
+                Website
+              </span>
+            </div>
+          </a>
         </div>
       </div>
     </div>

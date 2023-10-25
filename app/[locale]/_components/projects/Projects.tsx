@@ -36,7 +36,7 @@ export const Projects: React.FC = () => {
     mendelgen: mendelgenImage,
     loc: locImage,
     copyright: copyrightImage,
-    rppa: mdAnderCancerCenterImage,
+    rppa: locImage,
     cravat: cravatImage,
     mupit: mupitImage
   }

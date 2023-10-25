@@ -58,13 +58,6 @@ $padding-link: 10px;
   color: $white;
   white-space: nowrap;
 
-  @media screen and (max-width: $container-halves-phone ) {
-    font-size: 1.1rem;
-  }
-
-  &:hover {
-    font-weight: 600;
-  }
 }
 
 .icon {
@@ -76,7 +69,13 @@ $padding-link: 10px;
   grid-area: 1 / 5 / 2 / 6;
 }
 
+.socialMediaIconsContainer {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .socialMediaIcon {
-  margin-right: 2rem;
   width: 1.75rem;
+  display: flex;
 }
