@@ -5,8 +5,6 @@ import { notFound } from 'next/navigation';
 // components
 import { AboutMe } from '../_components/aboutMe/AboutMe';
 import { Projects } from '../_components/projects/Projects';
-// import { WorkExperience } from "../_components/workExperience/WorkExperience";
-// import { Hero } from "../_components/hero/Hero";
 
 // data
 import { LOCALES } from '@/locales.config';
@@ -18,7 +16,6 @@ import type { Metadata } from 'next'
 // This is a temporary work around that should be removed
 // in the future
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { WorkExperience } from '../_components/workExperience/WorkExperience';
 
 
 // Generate the urls that code exist at this level form the LOCALES
@@ -64,11 +61,8 @@ const HomePage: React.FC<HomePageProps> = ({ params }) => {
 
   return (
     <>
-      {/* <Hero /> */}
       <AboutMe />
       <Projects />
-      {/* <WorkExperience /> */}
-      {/* <ContactMe /> */}
     </>
   )
 }
