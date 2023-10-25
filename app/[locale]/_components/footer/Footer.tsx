@@ -26,20 +26,20 @@ export const Footer: React.FC = () => {
             <div className={styles.icons}>
               {footerData.icons.map((icon) => {
                 return (
-                  <div
+                  <a
                     key={`footer_icon_${icon.id}`}
-                    className={styles.icon}
+                    target={icon.type === "link" ? "_blank" : "_self"}
+                    href={icon.href}
                   >
-                    <a
-                      target={icon.type === "link" ? "_blank" : "_self"}
-                      href={icon.href}
+                    <div
+                      className={styles.icon}
                     >
                       <Icon
                         id={icon.id}
                         alt={t(`icons.${icon.id}.alt`)}
                       />
-                    </a>
-                  </div>
+                    </div>
+                  </a>
                 );
               })}
             </div>
