@@ -31,7 +31,7 @@ export const Resume: React.FC = () => {
           <span>{t('label')}</span>
           <Icon
             id={'download'}
-            alt="Download Resume"
+            alt="Download Derek Gygax Resume"
           />
         </div>
 

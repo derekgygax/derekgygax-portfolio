@@ -29,9 +29,16 @@ $round-amount: 10px;
   color: $text-color-secondary
 }
 
-.title {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.techIcons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.techIcon {
+  width: 1.8rem;
+  padding: 0.5rem;
 }
 
 .textContainer {
@@ -42,4 +49,9 @@ $round-amount: 10px;
   height: 100%;
   border-bottom-left-radius: $round-amount;
   border-bottom-right-radius: $round-amount;
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

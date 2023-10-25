@@ -9,6 +9,7 @@ export default getRequestConfig(async ({ locale }) => ({
     ...(await import(`./messages/${locale}/header.json`)).default,
     ...(await import(`./messages/${locale}/hero.json`)).default,
     ...(await import(`./messages/${locale}/homePage.json`)).default,
+    ...(await import(`./messages/${locale}/icons.json`)).default,
     ...(await import(`./messages/${locale}/job.json`)).default,
     ...(await import(`./messages/${locale}/projects.json`)).default,
     ...(await import(`./messages/${locale}/resume.json`)).default,

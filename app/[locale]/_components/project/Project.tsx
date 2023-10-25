@@ -7,6 +7,7 @@ import { ProjectConfig } from "../../types/projects";
 
 // styles
 import styles from './Project.module.scss';
+import { Icon } from '../icon/Icon';
 
 type ProjectProps = {
   id: string;
@@ -44,6 +45,24 @@ export const Project: React.FC<ProjectProps> = ({
         <h4 className={styles.title}>{data.title}</h4>
         <div className={styles.paragraphs}>
           <p>{t('summary')}</p>
+        </div>
+        <div className={styles.techIcons}>
+          {data.technologies.map((tech) => {
+            return (
+              <div
+                key={`project_${id}_tech_${tech}`}
+                className={
+                  classNames(
+                    styles.techIcon,
+                  )
+                }
+              >
+                <Icon
+                  id={tech}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

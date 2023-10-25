@@ -1,0 +1,67 @@
+{
+  "Icons": {
+    "angular": {
+      "alt": "Icon for angular"
+    },
+    "aws": {
+      "alt": "Icon for aws"
+    },
+    "django": {
+      "alt": "Icon for django"
+    },
+    "docker": {
+      "alt": "Icon for docker"
+    },
+    "download": {
+      "alt": "Icon for download"
+    },
+    "email": {
+      "alt": "Icon for email"
+    },
+    "github": {
+      "alt": "Icon for github"
+    },
+    "html": {
+      "alt": "Icon for html"
+    },
+    "java": {
+      "alt": "Icon for java"
+    },
+    "javascript": {
+      "alt": "Icon for javascript"
+    },
+    "linkedIn": {
+      "alt": "Icon for linkedIn"
+    },
+    "mysql": {
+      "alt": "Icon for mysql"
+    },
+    "nextjs": {
+      "alt": "Icon for nexjs"
+    },
+    "phone": {
+      "alt": "Icon for mobile phone"
+    },
+    "python": {
+      "alt": "Icon for python"
+    },
+    "r": {
+      "alt": "Icon for r"
+    },
+    "react": {
+      "alt": "Icon for react"
+    },
+    "redux": {
+      "alt": "Icon for redux"
+    },
+    "sass": {
+      "alt": "Icon for sass"
+    },
+    "solr": {
+      "alt": "Icon for solr"
+    },
+    "typescript": {
+      "alt": "Icon for typescript"
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image"
 
 // styles
@@ -17,18 +18,19 @@ import htmlIcon from '@/public/assets/icons/html.svg';
 import javaIcon from '@/public/assets/icons/java.svg';
 import javascriptIcon from '@/public/assets/icons/javascript.svg';
 import mysqlIcon from '@/public/assets/icons/mysql.svg';
-import nexjsIcon from '@/public/assets/icons/nextjs.svg';
+import nextjsIcon from '@/public/assets/icons/nextjs.svg';
 import pythonIcon from '@/public/assets/icons/python.svg';
 import rIcon from '@/public/assets/icons/r.svg';
 import reactIcon from '@/public/assets/icons/react.svg';
 import reduxIcon from '@/public/assets/icons/redux.svg';
 import sassIcon from '@/public/assets/icons/sass.svg';
+import solrIcon from '@/public/assets/icons/solr.svg';
 import typescriptIcon from '@/public/assets/icons/typescript.svg';
 
 
 type IconProps = {
   id: string;
-  alt: string;
+  alt?: string;
 }
 
 export const Icon: React.FC<IconProps> = ({ id, alt }) => {
@@ -46,20 +48,23 @@ export const Icon: React.FC<IconProps> = ({ id, alt }) => {
     javascript: javascriptIcon,
     linkedIn: linkedInIcon,
     mysql: mysqlIcon,
-    nexjs: nexjsIcon,
+    nextjs: nextjsIcon,
     phone: phoneIcon,
     python: pythonIcon,
     r: rIcon,
     react: reactIcon,
     redux: reduxIcon,
     sass: sassIcon,
+    solr: solrIcon,
     typescript: typescriptIcon,
   };
+
+  const t = useTranslations("Icons");
 
   return (
     <Image
       src={icons[id]}
-      alt={alt}
+      alt={alt ? alt : t(`${id}.alt`)}
       className={styles.icon}
     />
   )
