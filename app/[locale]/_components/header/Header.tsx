@@ -38,21 +38,22 @@ export const Header: React.FC = () => {
     <header className={styles.main}>
       <Container>
         <div className={styles.nav}>
-          <div
-            className={
-              classNames(
-                styles.navSection,
-                styles.linkContainer,
-                styles.homeLink
-              )
-            }
-          >
-            <Link
-              className={styles.link}
-              href="/"
+          <div className={styles.navSection}>
+            <div
+              className={
+                classNames(
+                  styles.linkContainer,
+                  styles.homeLink
+                )
+              }
             >
-              {me.name}
-            </Link>
+              <Link
+                className={styles.link}
+                href="/"
+              >
+                {me.name}
+              </Link>
+            </div>
           </div>
           <div
             className={
