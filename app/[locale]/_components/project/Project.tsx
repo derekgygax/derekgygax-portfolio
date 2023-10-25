@@ -61,6 +61,9 @@ export const Project: React.FC<ProjectProps> = ({
       </div>
       <div className={styles.textContainer}>
         <h4 className={styles.title}>{data.title}</h4>
+        <div className={styles.paragraphs}>
+          <p>{t('summary')}</p>
+        </div>
       </div>
     </div>
   )

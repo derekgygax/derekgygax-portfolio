@@ -21,7 +21,7 @@ import fiftySevenWestImage from '@/public/assets/projects/fiftySevenWest.png';
 import mendelgenImage from '@/public/assets/projects/mendelgen.png';
 import locImage from '@/public/assets/projects/loc.png';
 import copyrightImage from '@/public/assets/projects/copyright.png';
-import rppaImage from '@/public/assets/projects/rppa.jpeg';
+import mdAnderCancerCenterImage from '@/public/assets/projects/mdAndersonCancerCenter.jpg';
 import cravatImage from '@/public/assets/projects/cravat.png';
 import mupitImage from '@/public/assets/projects/mupit.png';
 
@@ -36,7 +36,7 @@ export const Projects: React.FC = () => {
     mendelgen: mendelgenImage,
     loc: locImage,
     copyright: copyrightImage,
-    rppa: rppaImage,
+    rppa: mdAnderCancerCenterImage,
     cravat: cravatImage,
     mupit: mupitImage
   }
