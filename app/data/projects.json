@@ -40,7 +40,7 @@
     "loc": {
       "id": "loc",
       "title": "Library of Congress",
-      "website": "https://www.loc.gov/newspapers/",
+      "website": "https://www.loc.gov/",
       "responsibilities": [
         "general",
         "newspaper",
@@ -69,7 +69,7 @@
     "rppa": {
       "id": "rppa",
       "title": "Reverse Phase Protein Assay",
-      "website": "",
+      "website": null,
       "responsibilities": [
         "code"
       ],

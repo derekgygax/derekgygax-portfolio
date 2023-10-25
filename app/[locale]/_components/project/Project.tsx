@@ -70,13 +70,15 @@ export const Project: React.FC<ProjectProps> = ({
               );
             })}
           </div>
-          <a target="_blank" href={data.website}>
-            <div className={styles.websiteContainer}>
-              <span>
-                Website
-              </span>
-            </div>
-          </a>
+          {data.website ? (
+            <a target="_blank" href={data.website}>
+              <div className={styles.websiteContainer}>
+                <span>
+                  Website
+                </span>
+              </div>
+            </a>
+          ) : null}
         </div>
       </div>
     </div>

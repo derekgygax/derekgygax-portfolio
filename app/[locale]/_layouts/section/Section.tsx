@@ -6,17 +6,22 @@ type SectionProps = {
   children: React.ReactNode;
   id?: string;
   title?: string | undefined;
+  detail?: string | undefined;
 }
 
 export const Section: React.FC<SectionProps> = ({
   children,
   id,
-  title
+  title,
+  detail
 }) => {
   return (
     <div id={id} className={styles.main}>
       {title ? (
         <h1 className={styles.sectionTitle}>{title}</h1>
+      ) : null}
+      {detail ? (
+        <h2 className={styles.sectionDetail}>{detail}</h2>
       ) : null}
       {children}
     </div>

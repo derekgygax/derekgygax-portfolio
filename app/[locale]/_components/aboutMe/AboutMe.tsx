@@ -21,6 +21,7 @@ export const AboutMe: React.FC = () => {
     <Section
       id={aboutMe.id}
       title={t("title")}
+      detail={t("jobTitles")}
     >
       <div className={styles.aboutContent}>
         <div className={classNames(styles.paragraphSection)}>
