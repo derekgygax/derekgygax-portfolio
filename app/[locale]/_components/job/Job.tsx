@@ -42,10 +42,10 @@ export const Job: React.FC<JobProps> = ({ id, companyName, projects }) => {
           {projects.map((project: ProjectConfig) => {
             return (
               <div key={`${id}_project_${project.id}`}>
-                <Project
+                {/* <Project
                   jobId={id}
                   project={project}
-                />
+                /> */}
               </div>
             );
           })}

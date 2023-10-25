@@ -1,0 +1,12 @@
+{
+  "loc": {
+    "jobTitle": "Software Engineer",
+    "summary": "Developed and maintained web applications for the Library of Congress allowing for the search of web archives and the submission of new copyrights.",
+    "responsibilities": {
+      "general": "Improved and helped maintain the ProjectOne search application and web page.",
+      "newspaper": "Specifically aided in the newspapers section built using Django and utilizing the search engine Apache Solr.",
+      "openSeaDragon": " Also extensively used the JavaScript library OpenSeadragon to view digitized newspaper articles and perform article clippings to be downloaded."
+    },
+    "imageAlt": "loc.gov website on the newspapers section for searching American archives."
+  }
+}

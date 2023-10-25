@@ -1,3 +1,121 @@
 {
-  "id": "projects"
+  "id": "projects",
+  "projectIds": [
+    "fiftySevenWest",
+    "mendelgen",
+    "loc",
+    "copyright",
+    "rppa",
+    "cravat",
+    "mupit"
+  ],
+  "projects": {
+    "fiftySevenWest": {
+      "id": "fiftySevenWest",
+      "title": "57 West",
+      "website": "https://57west.us/",
+      "responsibilities": [
+        "customer",
+        "code",
+        "css"
+      ],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "SCSS",
+        "Flexbox"
+      ]
+    },
+    "mendelgen": {
+      "id": "mendelgen",
+      "title": "Mendelgen",
+      "website": "https://mendelgen.com/",
+      "responsibilities": [
+        "engineer"
+      ],
+      "technologies": [
+        "React",
+        "Redux"
+      ]
+    },
+    "loc": {
+      "id": "loc",
+      "title": "Library of Congress",
+      "website": "https://www.loc.gov/newspapers/",
+      "responsibilities": [
+        "general",
+        "newspaper",
+        "openSeaDragon"
+      ],
+      "technologies": [
+        "Django",
+        "Apache Solr",
+        "OpenSeadragon",
+        "Flask"
+      ]
+    },
+    "copyright": {
+      "id": "copyright",
+      "title": "Copyright",
+      "website": "https://record.copyright.gov/remitter-portal/remitter-dash",
+      "responsibilities": [
+        "general"
+      ],
+      "technologies": [
+        "Angular",
+        "Java",
+        "AWS Elastic Container Service",
+        "Docker"
+      ]
+    },
+    "rppa": {
+      "id": "rppa",
+      "title": "Reverse Phase Protein Assay",
+      "website": "",
+      "responsibilities": [
+        "code"
+      ],
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Java",
+        "MySQL",
+        "Python",
+        "R",
+        "Docker"
+      ]
+    },
+    "cravat": {
+      "id": "cravat",
+      "title": "CRAVAT",
+      "website": "https://cravat.us/CRAVAT/",
+      "responsibilities": [
+        "code"
+      ],
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Java",
+        "MySQL",
+        "Python",
+        "Docker"
+      ]
+    },
+    "mupit": {
+      "id": "mupit",
+      "title": "MuPIT",
+      "website": "https://mupit.icm.jhu.edu/MuPIT_Interactive/",
+      "responsibilities": [
+        "code"
+      ],
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Java",
+        "MySQL",
+        "Python",
+        "Docker"
+      ]
+    }
+  }
 }

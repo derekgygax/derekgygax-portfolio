@@ -1,54 +1,67 @@
-import { useTranslations } from 'next-intl';
+import classNames from 'classnames';
+import Image, { StaticImageData } from 'next/image';
+import { useTranslations } from "next-intl";
 
-// types
-import { ProjectConfig } from '../../types/job';
+// components
+import { ProjectConfig } from "../../types/projects";
 
 // styles
 import styles from './Project.module.scss';
-import Image from 'next/image';
+
+// images
+import fiftySevenWestImage from '@/public/assets/projects/fiftySevenWest.png';
+import mendelgenImage from '@/public/assets/projects/mendelgen.png';
+import locImage from '@/public/assets/projects/loc.png';
+import copyrightImage from '@/public/assets/projects/copyright.png';
+import rppaImage from '@/public/assets/projects/rppa.jpeg';
+import cravatImage from '@/public/assets/projects/cravat.png';
+import mupitImage from '@/public/assets/projects/mupit.png';
 
 type ProjectProps = {
-  jobId: string;
-  project: ProjectConfig;
+  id: string;
+  image: StaticImageData;
+  data: ProjectConfig;
+  isLastProject: boolean;
 }
 
 export const Project: React.FC<ProjectProps> = ({
-  jobId,
-  project
+  id,
+  image,
+  data,
+  isLastProject
 }) => {
 
-  const t = useTranslations(`Jobs.${jobId}.projects.${project.id}`)
+  const images: Record<string, StaticImageData> = {
+    fiftySevenWest: fiftySevenWestImage,
+    mendelgen: mendelgenImage,
+    loc: locImage,
+    copyright: copyrightImage,
+    rppa: rppaImage,
+    cravat: cravatImage,
+    mupit: mupitImage
+  }
+
+  const t = useTranslations(`Project.${id}`);
 
   return (
-    <div className={styles.main}>
-      <h2 className={styles.projectTitle}>{project.title}</h2>
-      <div className={styles.details}>
-        <div className={styles.image}>
-          <Image
-            className={styles.projectImage}
-            src={project.image}
-            alt={t('imageAlt')}
-            width={400}
-            height={224}
-          />
-        </div>
-        <div>
-          <ul>
-            {project.responsibilities.map((responsibility: string) => {
-              return (
-                <li key={`${jobId}_${project.id}_${responsibility}`}>
-                  {t(`responsibilities.${responsibility}`)}
-                </li>
-              )
-            })}
-          </ul>
-        </div>
+    <div
+      className={
+        classNames(
+          styles.main,
+          isLastProject ? styles.lastChild : undefined
+        )
+      }
+    >
+      <div className={styles.imageContainer}>
+        <Image
+          src={image}
+          alt={t('imageAlt')}
+          className={styles.image}
+        />
       </div>
-      <div className={styles.link}>
-        <a href={project.website} target="_blank">
-          {project.website}
-        </a>
+      <div className={styles.textContainer}>
+        <h4 className={styles.title}>{data.title}</h4>
       </div>
     </div>
-  );
+  )
 }

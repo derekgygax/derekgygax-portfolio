@@ -1,0 +1,10 @@
+{
+  "mendelgen": {
+    "jobTitle": "Bioinformatics Engineer",
+    "summary": "Developed, improved, and maintained bioinformatic web applications allowing biologists to simulate biological assays.",
+    "responsibilities": {
+      "engineer": "Devised and created algorithms to simulate many different DNA cloning techniques, along with PCR, allowing scientists to study anticipated results before completing the assays."
+    },
+    "imageAlt": "Mendelgen, site used for performing simulations of genetic assays such as DNA cloning or PCR"
+  }
+}
