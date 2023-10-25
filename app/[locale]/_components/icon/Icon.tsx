@@ -19,6 +19,7 @@ import javascriptIcon from '@/public/assets/icons/javascript.svg';
 import mysqlIcon from '@/public/assets/icons/mysql.svg';
 import nexjsIcon from '@/public/assets/icons/nextjs.svg';
 import pythonIcon from '@/public/assets/icons/python.svg';
+import rIcon from '@/public/assets/icons/r.svg';
 import reactIcon from '@/public/assets/icons/react.svg';
 import reduxIcon from '@/public/assets/icons/redux.svg';
 import sassIcon from '@/public/assets/icons/sass.svg';
@@ -48,6 +49,7 @@ export const Icon: React.FC<IconProps> = ({ id, alt }) => {
     nexjs: nexjsIcon,
     phone: phoneIcon,
     python: pythonIcon,
+    r: rIcon,
     react: reactIcon,
     redux: reduxIcon,
     sass: sassIcon,
