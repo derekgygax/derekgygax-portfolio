@@ -21,7 +21,13 @@ export default getRequestConfig(async ({ locale }) => ({
       ...(await import(`./messages/${locale}/jobs/inSilico.json`)).default,
     },
     Project: {
-
+      ...(await import(`./messages/${locale}/projects/fiftySevenWest.json`)).default,
+      ...(await import(`./messages/${locale}/projects/mendelgen.json`)).default,
+      ...(await import(`./messages/${locale}/projects/loc.json`)).default,
+      ...(await import(`./messages/${locale}/projects/copyright.json`)).default,
+      ...(await import(`./messages/${locale}/projects/rppa.json`)).default,
+      ...(await import(`./messages/${locale}/projects/cravat.json`)).default,
+      ...(await import(`./messages/${locale}/projects/mupit.json`)).default,
     }
   }
 }));
