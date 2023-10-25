@@ -43,6 +43,7 @@ $padding-link: 10px;
 
   padding: $padding-link;
   border-radius: 15px;
+  transition: all 0.3s ease 0s;
 
   &:hover {
     background-color: $bg-secondary;

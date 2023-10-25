@@ -4,9 +4,9 @@ import { notFound } from 'next/navigation';
 
 // components
 import { AboutMe } from '../_components/aboutMe/AboutMe';
-import { ContactMe } from "../_components/contactMe/ContactMe";
+import { ContactMe } from '../_components/contactMe/ContactMe';
 import { WorkExperience } from "../_components/workExperience/WorkExperience";
-import { Hero } from "../_components/hero/Hero";
+// import { Hero } from "../_components/hero/Hero";
 
 // data
 import { LOCALES } from '@/locales.config';
@@ -66,7 +66,7 @@ const HomePage: React.FC<HomePageProps> = ({ params }) => {
       {/* <Hero /> */}
       <AboutMe />
       <WorkExperience />
-      <ContactMe />
+      {/* <ContactMe /> */}
     </>
   )
 }

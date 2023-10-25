@@ -9,9 +9,6 @@ import { Container } from "@/app/[locale]/_layouts/container/Container";
 // styles
 import styles from './Header.module.scss';
 
-// types
-import { SectionNavItem } from "@/app/[locale]/types/nav";
-
 // data
 import me from '@/app/data/me.json';
 import aboutMe from '@/app/data/aboutMe.json';
@@ -21,7 +18,7 @@ import socialMedia from '@/app/data/socialMedia.json';
 
 
 // icons
-import githubIcon from '@/public/assets/icons/github-mark-white.svg';
+import githubIcon from '@/public/assets/icons/github.svg';
 import linkedInIcon from '@/public/assets/icons/linkedin.svg';
 
 export const Header: React.FC = () => {
@@ -83,7 +80,7 @@ export const Header: React.FC = () => {
             {socialMedia.map((media) => {
               return (
                 <div
-                  key={`footer_socialMediaIcon_${media.id}`}
+                  key={`header_socialMediaIcon_${media.id}`}
                   className={styles.socialMediaIcon}
                 >
                   <a

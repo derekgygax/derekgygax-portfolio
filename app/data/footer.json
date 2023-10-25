@@ -1,0 +1,22 @@
+[
+  {
+    "id": "phone",
+    "href": "tel:+14433029554",
+    "type": "phone"
+  },
+  {
+    "id": "email",
+    "href": "mailto:derekgygax@gmail.com",
+    "type": "email"
+  },
+  {
+    "id": "github",
+    "href": "https://github.com/derekgygax",
+    "type": "link"
+  },
+  {
+    "id": "linkedIn",
+    "href": "https://www.linkedin.com/in/derek-gygax-9407a689/",
+    "type": "link"
+  }
+]
