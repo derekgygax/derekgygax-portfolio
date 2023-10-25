@@ -12,6 +12,7 @@ import styles from './Resume.module.scss';
 
 // icons
 import downloadIcon from '@/public/assets/icons/arrow-down-circle.svg'
+import { Icon } from "../icon/Icon";
 
 export const Resume: React.FC = () => {
 
@@ -28,8 +29,8 @@ export const Resume: React.FC = () => {
       >
         <div>
           <span>{t('label')}</span>
-          <Image
-            src={downloadIcon}
+          <Icon
+            id={'download'}
             alt="Download Resume"
           />
         </div>

@@ -1,10 +1,12 @@
 import classNames from "classnames";
-import Image from "next/image";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 
 // layouts
 import { Container } from "@/app/[locale]/_layouts/container/Container";
+
+// components
+import { Icon } from "../icon/Icon";
 
 // styles
 import styles from './Header.module.scss';
@@ -15,11 +17,6 @@ import aboutMe from '@/app/data/aboutMe.json';
 import projects from '@/app/data/projects.json';
 import contactMe from '@/app/data/contactMe.json';
 import socialMedia from '@/app/data/socialMedia.json';
-
-
-// icons
-import githubIcon from '@/public/assets/icons/github.svg';
-import linkedInIcon from '@/public/assets/icons/linkedin.svg';
 
 export const Header: React.FC = () => {
 
@@ -87,10 +84,9 @@ export const Header: React.FC = () => {
                     target="_blank"
                     href={media.href}
                   >
-                    <Image
+                    <Icon
+                      id={media.id}
                       alt={media.alt}
-                      src={media.id === 'github' ? githubIcon : linkedInIcon}
-                      className={styles.icon}
                     />
                   </a>
                 </div>
