@@ -7,16 +7,14 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 // types
 import type { Metadata } from 'next'
 
-// layout
-import { Container } from './_layouts/container/Container';
-
 // components
 import { Header } from './_components/header/Header';
 import { Footer } from './_components/footer/Footer';
 
 // styles
-import './globals.scss'
-import styles from './layout.module.scss';
+import './globals.scss';
+import './tailwind.css';
+// import styles from './layout.module.scss';
 
 
 // Generate the Metadata for the root layout
@@ -67,9 +65,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children, params }) => {
       <body>
         <Header />
         <main className={styles.main}>
-          <Container>
-            {children}
-          </Container>
+          {children}
         </main>
         <Footer />
       </body>

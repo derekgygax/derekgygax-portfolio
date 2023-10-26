@@ -1,6 +1,6 @@
 
 // styles
-import styles from './Sections.module.scss';
+// import styles from './Sections.module.scss';
 
 type SectionProps = {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export const Section: React.FC<SectionProps> = ({
   detail
 }) => {
   return (
-    <div id={id} className={styles.main}>
+    <section id={id} className={styles.main}>
       {title ? (
         <h1 className={styles.sectionTitle}>{title}</h1>
       ) : null}
@@ -24,7 +24,7 @@ export const Section: React.FC<SectionProps> = ({
         <h2 className={styles.sectionDetail}>{detail}</h2>
       ) : null}
       {children}
-    </div>
+    </section>
   );
 }
 
@@ -32,7 +32,7 @@ export const Section: React.FC<SectionProps> = ({
 // This would be using it as a HOC
 // Our example is too simplistic to do this.
 // // styles
-// import styles from './Sections.module.scss';
+// // import styles from './Sections.module.scss';
 
 // type SectionProps = {
 //   children: React.ReactNode;

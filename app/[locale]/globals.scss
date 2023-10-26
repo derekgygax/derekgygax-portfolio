@@ -2,19 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 @import './Variables.scss';
 
-// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
-// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
-// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
-// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
-// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
-// TODO REMOVE THE COMMENTED OUT IN THE FUTURE. FOR NOW YOU ARE FIGURING THINGS OUT!!
-
-
-// * {
-//   @media screen and (max-width: $container-halves-phone ) {
-//     box-sizing: border-box;
-//   }
-// }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 a {
   text-decoration: none;
@@ -48,10 +38,14 @@ button {
 
 html,
 body {
-  max-width: 100%;
-  scroll-behavior: smooth;
+  width: 100%;
 }
 
+@media (max-width: $mobile-width) {
+  body {
+    font-size: 14px;
+  }
+}
 
 
 

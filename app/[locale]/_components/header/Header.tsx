@@ -2,15 +2,12 @@ import classNames from "classnames";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
 
-// layouts
-import { Container } from "@/app/[locale]/_layouts/container/Container";
-
 // components
 import { Icon } from "../icon/Icon";
 import { Location } from "../location/Location";
 
 // styles
-import styles from './Header.module.scss';
+// import styles from './Header.module.scss';
 
 // data
 // import me from '@/app/data/me.json';
@@ -30,12 +27,11 @@ export const Header: React.FC = () => {
 
   return (
     <header className={styles.main}>
-      <Container>
-        <div className={styles.nav}>
-          <div className={styles.navSection}>
-            <Location />
-          </div>
-          {/* 
+      <div className={styles.nav}>
+        <div className={styles.navSection}>
+          <Location />
+        </div>
+        {/* 
             This has a link to the home page
             Maybe bring this back in the future
           <div className={styles.navSection}>
@@ -55,15 +51,15 @@ export const Header: React.FC = () => {
               </div>
             </Link>
           </div> */}
-          <div
-            className={
-              classNames(
-                styles.portfolioSections,
-                styles.navSection
-              )
-            }
-          >
-            {/* 
+        <div
+          className={
+            classNames(
+              styles.portfolioSections,
+              styles.navSection
+            )
+          }
+        >
+          {/* 
             It's only one page so this may not be important for now
             {navSetionsIds.map((sectionId) => {
               return (
@@ -80,53 +76,52 @@ export const Header: React.FC = () => {
                 </Link>
               )
             })} */}
-          </div>
-          <div className={classNames(styles.socialMedia, styles.navSection)}>
-            <div className={styles.socialMediaIconsContainer}>
-              {socialMedia.map((media) => {
-                return (
-                  <a
-                    key={`header_socialMediaIcon_${media.id}`}
-                    target="_blank"
-                    href={media.href}
+        </div>
+        <div className={classNames(styles.socialMedia, styles.navSection)}>
+          <div className={styles.socialMediaIconsContainer}>
+            {socialMedia.map((media) => {
+              return (
+                <a
+                  key={`header_socialMediaIcon_${media.id}`}
+                  target="_blank"
+                  href={media.href}
+                >
+                  <div
+                    className={
+                      classNames(
+                        styles.socialMediaIcon,
+                        styles.linkContainer
+                      )
+                    }
                   >
-                    <div
-                      className={
-                        classNames(
-                          styles.socialMediaIcon,
-                          styles.linkContainer
-                        )
-                      }
-                    >
-                      <Icon
-                        id={media.id}
-                        alt={media.alt}
-                      />
-                    </div>
-                  </a>
-                )
-              })}
-            </div>
-          </div>
-          <div className={
-            classNames(
-              styles.navSection,
-              styles.contactMe
-            )
-          }>
-            <Link
-              className={styles.link}
-              href={contactMe.href}
-            >
-              <div
-                className={styles.linkContainer}
-              >
-                {t(`navItems.contact.label`)}
-              </div>
-            </Link>
+                    <Icon
+                      id={media.id}
+                      alt={media.alt}
+                    />
+                  </div>
+                </a>
+              )
+            })}
           </div>
         </div>
-      </Container>
+        <div className={
+          classNames(
+            styles.navSection,
+            styles.contactMe
+          )
+        }>
+          <Link
+            className={styles.link}
+            href={contactMe.href}
+          >
+            <div
+              className={styles.linkContainer}
+            >
+              {t(`navItems.contact.label`)}
+            </div>
+          </Link>
+        </div>
+      </div>
     </header>
   )
 }

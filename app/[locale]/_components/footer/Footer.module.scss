@@ -6,34 +6,6 @@
 }
 
 .main {
-  padding-top: 3rem;
+  padding-top: 1rem;
   margin-bottom: 5rem;
-}
-
-.iconsContainer {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1.5rem;
-}
-
-.icons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr;
-  column-gap: 2rem;
-  text-align: center;
-  justify-items: center;
-  width: 45%;
-}
-
-.icon {
-  width: 1.5rem;
-  padding: 10px;
-  display: flex;
-  border-radius: 13px;
-  transition: all 0.3s ease 0s;
-
-  &:hover {
-    background-color: $bg-secondary;
-  }
 }

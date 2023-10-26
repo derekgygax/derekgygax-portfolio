@@ -14,7 +14,7 @@ import aboutMe from '@/app/data/aboutMe.json';
 import resume from '@/app/data/resume.json';
 
 // styles
-import styles from './AboutMe.module.scss';
+// import styles from './AboutMe.module.scss';
 
 // images
 import meHandstand from '@/public/assets/meHandstand.jpg';

@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image"
 
 // styles
-import styles from './Icon.module.scss';
+// import styles from './Icon.module.scss';
 
 // icons
 import angularIcon from '@/public/assets/icons/angular.svg';

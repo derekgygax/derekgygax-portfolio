@@ -1,19 +1,5 @@
 {
   "Footer": {
-    "copyright": "Built by Derek Gygax with Next.js and SASS",
-    "icons": {
-      "github": {
-        "alt": "Link to Derek Gygax github"
-      },
-      "linkedIn": {
-        "alt": "Link to Derek Gygax github"
-      },
-      "email": {
-        "alt": "Link to Derek Gygax email at derekgygax@gmail.com"
-      },
-      "phone": {
-        "alt": "Link to call Derek Gygax at 443-302-9554"
-      }
-    }
+    "copyright": "Built by Derek Gygax with Next.js and SASS"
   }
 }

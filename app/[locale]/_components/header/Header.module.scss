@@ -9,12 +9,9 @@ $padding-link: 10px;
 .main {
   background-color: $bg-main;
   height: $header-height;
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 999;
-  display: flex;
-  align-items: center;
 }
 
 .nav {
@@ -22,6 +19,7 @@ $padding-link: 10px;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
   column-gap: 2rem;
+
 }
 
 .navSection {
@@ -37,6 +35,7 @@ $padding-link: 10px;
 .portfolioSections {
   justify-content: space-around;
   grid-area: 1 / 2 / 2 / 4;
+
 }
 
 .linkContainer {
@@ -67,6 +66,7 @@ $padding-link: 10px;
 
 .socialMedia {
   grid-area: 1 / 5 / 2 / 6;
+
 }
 
 .socialMediaIconsContainer {
@@ -82,4 +82,5 @@ $padding-link: 10px;
 
 .contactMe {
   grid-area: 1 / 6 / 2 / 7;
+
 }
