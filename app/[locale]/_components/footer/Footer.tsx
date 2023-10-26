@@ -8,9 +8,9 @@ export const Footer: React.FC = () => {
   const t = useTranslations('Footer');
 
   return (
-    <footer className={styles.main}>
-      <div className={styles.content}>
-        <div className={styles.copyright}>
+    <footer className="pt-4 mb-20">
+      <div className="maxWidth mx-auto">
+        <div className="text-center text-sm">
           <span>{`${t('copyright')}`}</span>
         </div>
       </div>

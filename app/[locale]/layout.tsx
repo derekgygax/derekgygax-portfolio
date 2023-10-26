@@ -14,7 +14,6 @@ import { Footer } from './_components/footer/Footer';
 // styles
 import './globals.scss';
 import './tailwind.css';
-import styles from './layout.module.scss';
 
 
 // Generate the Metadata for the root layout
@@ -64,7 +63,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children, params }) => {
     <html lang="en">
       <body>
         <Header />
-        <main className={styles.main}>
+        <main>
           {children}
         </main>
         <Footer />

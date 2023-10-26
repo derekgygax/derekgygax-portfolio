@@ -70,8 +70,8 @@ export const Header: React.FC = () => {
               )
             })} */}
         </div>
-        <div className="hidden md:navSection md:col-start-5 md:col-end-6">
-          <div className="flex justify-between">
+        <div className="hidden md:navSection md:col-start-5 md:col-end-6 justify-center">
+          <div className="flex w-3/5 justify-between">
             {socialMedia.map((media) => {
               return (
                 <a
@@ -92,7 +92,7 @@ export const Header: React.FC = () => {
             })}
           </div>
         </div>
-        <div className="navSection col-start-3 col-end-4 md:col-start-6 md:col-end-7">
+        <div className="navSection col-start-3 col-end-4 md:col-start-6 md:col-end-7 jsutify-self-end">
           <Link
             className="link"
             href={contactMe.href}

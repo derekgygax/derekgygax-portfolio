@@ -16,7 +16,7 @@ import type { Metadata } from 'next'
 // This is a temporary work around that should be removed
 // in the future
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { ConnectionLinks } from './_components/connectionLinks/ConnectionLinks';
+import { ConnectionIcons } from './_components/connectionIcons/ConnectionIcons';
 
 
 // Generate the urls that code exist at this level form the LOCALES
@@ -64,7 +64,7 @@ const HomePage: React.FC<HomePageProps> = ({ params }) => {
     <>
       <AboutMe />
       <Projects />
-      <ConnectionLinks />
+      <ConnectionIcons />
     </>
   )
 }

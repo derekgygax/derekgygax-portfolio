@@ -24,7 +24,11 @@
   }
 
   .socialMediaIcon {
-    @apply flex w-11
+    @apply flex w-11;
+  }
+
+  .socialMediaIconSmaller {
+    @apply flex w-10;
   }
 
   .link {
