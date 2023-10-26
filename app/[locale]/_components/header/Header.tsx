@@ -63,6 +63,8 @@ export const Header: React.FC = () => {
               )
             }
           >
+            {/* 
+            It's only one page so this may not be important for now
             {navSetionsIds.map((sectionId) => {
               return (
                 <Link
@@ -77,7 +79,7 @@ export const Header: React.FC = () => {
                   </div>
                 </Link>
               )
-            })}
+            })} */}
           </div>
           <div className={classNames(styles.socialMedia, styles.navSection)}>
             <div className={styles.socialMediaIconsContainer}>
