@@ -15,6 +15,7 @@ import styles from './Header.module.scss';
 // data
 // import me from '@/app/data/me.json';
 import aboutMe from '@/app/data/aboutMe.json';
+import contactMe from '@/app/data/contactMe.json'
 import projects from '@/app/data/projects.json';
 import socialMedia from '@/app/data/socialMedia.json';
 
@@ -34,7 +35,10 @@ export const Header: React.FC = () => {
           <div className={styles.navSection}>
             <Location />
           </div>
-          {/* <div className={styles.navSection}>
+          {/* 
+            This has a link to the home page
+            Maybe bring this back in the future
+          <div className={styles.navSection}>
             <Link
               className={styles.link}
               href="/"
@@ -101,6 +105,23 @@ export const Header: React.FC = () => {
                 )
               })}
             </div>
+          </div>
+          <div className={
+            classNames(
+              styles.navSection,
+              styles.contactMe
+            )
+          }>
+            <Link
+              className={styles.link}
+              href={contactMe.href}
+            >
+              <div
+                className={styles.linkContainer}
+              >
+                {t(`navItems.contact.label`)}
+              </div>
+            </Link>
           </div>
         </div>
       </Container>

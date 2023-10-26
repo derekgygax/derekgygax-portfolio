@@ -1,16 +1,5 @@
 {
   "ContactMe": {
-    "title": "Let's Create Something",
-    "howToContact": {
-      "email": {
-        "label": "Email"
-      },
-      "whatsapp": {
-        "label": "WhatsApp"
-      },
-      "cell": {
-        "label": "Cell"
-      }
-    }
+    "title": "Contact Me"
   }
 }
