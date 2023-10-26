@@ -6,6 +6,7 @@ export default getRequestConfig(async ({ locale }) => ({
     ...(await import(`./messages/${locale}/contactMe.json`)).default,
     ...(await import(`./messages/${locale}/emailForm.json`)).default,
     ...(await import(`./messages/${locale}/footer.json`)).default,
+    ...(await import(`./messages/${locale}/general.json`)).default,
     ...(await import(`./messages/${locale}/header.json`)).default,
     ...(await import(`./messages/${locale}/hero.json`)).default,
     ...(await import(`./messages/${locale}/homePage.json`)).default,

@@ -72,8 +72,11 @@ $round-amount: 10px;
 
 .websiteContainer {
   padding: 5px 10px 5px 10px;
-  background-color: $bg-tertiary;
   border-radius: 10px;
   display: inline-block;
   font-size: 0.9rem;
+
+  &:hover {
+    background-color: $bg-tertiary;
+  }
 }

@@ -23,7 +23,8 @@ export const Project: React.FC<ProjectProps> = ({
   isLastProject
 }) => {
 
-  const t = useTranslations(`Project.${id}`);
+  const t_general = useTranslations(`General`);
+  const t_project = useTranslations(`Project.${id}`);
 
   return (
     <div
@@ -37,7 +38,7 @@ export const Project: React.FC<ProjectProps> = ({
       <div className={styles.imageContainer}>
         <Image
           src={image}
-          alt={t('imageAlt')}
+          alt={t_project('imageAlt')}
           className={styles.image}
         />
       </div>
@@ -45,10 +46,10 @@ export const Project: React.FC<ProjectProps> = ({
         <div className={styles.textContainer}>
           <div className={styles.jobAndTitle}>
             <h3 className={styles.title}>{data.title}</h3>
-            <h4 className={styles.jobTitle}>{t('jobTitle')}</h4>
+            <h4 className={styles.jobTitle}>{t_project('jobTitle')}</h4>
           </div>
           <div className={styles.paragraphs}>
-            <p>{t('summary')}</p>
+            <p>{t_project('summary')}</p>
           </div>
         </div>
         <div className={styles.techContainer}>
@@ -73,9 +74,7 @@ export const Project: React.FC<ProjectProps> = ({
           {data.website ? (
             <a target="_blank" href={data.website}>
               <div className={styles.websiteContainer}>
-                <span>
-                  Website
-                </span>
+                <span> {t_general("website")}</span>
               </div>
             </a>
           ) : null}
