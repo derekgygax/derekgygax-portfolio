@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className="bg-primary-bg sticky h-header top-0 z-10 flex items-center">
-      <div className="maxWidth mx-auto px-4 grid grid-rows-1 grid-cols-3 md:grid-cols-6 md:col-gap-4">
+      <div className="maxWidth mx-auto px-4 grid grid-rows-1 grid-cols-3 md:grid-cols-6 md:gap-y-4">
         <div className="navSection">
           <Location />
         </div>

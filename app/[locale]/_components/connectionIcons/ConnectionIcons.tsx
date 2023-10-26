@@ -3,9 +3,6 @@ import { useTranslations } from "next-intl";
 // components
 import { Icon } from "../icon/Icon";
 
-// layout
-import { Section } from "../../_layouts/section/Section"
-
 // data
 import connectionIcons from '@/app/data/connectionIcons.json';
 
@@ -14,9 +11,9 @@ export const ConnectionIcons: React.FC = () => {
   const t = useTranslations('ConnectionIcons');
 
   return (
-    <Section>
-      <div className="flex justify-center pb-6">
-        <div className="grid grid-rows-1 grid-cols-4 col-gap-2 md:col-gap-4 text-center justify-center w-2/3 md:w-1/3">
+    <section>
+      <div className="section flex justify-center pb-2">
+        <div className="grid grid-rows-1 grid-cols-4 gap-y-2 md:gap-y-4 text-center justify-center w-2/3 md:w-2/5">
           {connectionIcons.icons.map((icon) => {
             return (
               <a
@@ -36,6 +33,6 @@ export const ConnectionIcons: React.FC = () => {
           })}
         </div>
       </div>
-    </Section>
+    </section>
   )
 }

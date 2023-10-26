@@ -70,7 +70,7 @@ export const Icon: React.FC<IconProps> = ({ id, alt }) => {
     <Image
       src={icons[id]}
       alt={alt ? alt : t(`${id}.alt`)}
-      className={styles.icon}
+      className="w-full h-full"
     />
   )
 }

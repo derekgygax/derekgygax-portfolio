@@ -28,41 +28,31 @@ export const Project: React.FC<ProjectProps> = ({
 
   return (
     <div
-      className={
-        classNames(
-          styles.main,
-          isLastProject ? styles.lastChild : undefined
-        )
-      }
-    >
-      <div className={styles.imageContainer}>
+      className="border border-secondary-bg rounded-lg hover:border-tertiary-bg flex flex-col">
+      <div>
         <Image
           src={image}
           alt={t_project('imageAlt')}
-          className={styles.image}
+          className="w-full h-full rounded-t-lg"
         />
       </div>
-      <div className={styles.textAndTech}>
-        <div className={styles.textContainer}>
-          <div className={styles.jobAndTitle}>
-            <h3 className={styles.title}>{data.title}</h3>
-            <h4 className={styles.jobTitle}>{t_project('jobTitle')}</h4>
+      <div className="flex flex-col justify-between box-border p-4 bg-secondary-bg w-full h-full rounded-b-lg">
+        <div>
+          <div className="mt-4 mb-4">
+            <h3 className="m-0">{data.title}</h3>
+            <h4 className="m-0 mt-2">{t_project('jobTitle')}</h4>
           </div>
-          <div className={styles.paragraphs}>
+          <div className="text-secondary-text">
             <p>{t_project('summary')}</p>
           </div>
         </div>
-        <div className={styles.techContainer}>
-          <div className={styles.techIcons}>
+        <div>
+          <div className="flex flex-row flex-nowrap w-full">
             {data.technologies.map((tech) => {
               return (
                 <div
                   key={`project_${id}_tech_${tech}`}
-                  className={
-                    classNames(
-                      styles.techIcon,
-                    )
-                  }
+                  className="w-9 p-2"
                 >
                   <Icon
                     id={tech}
@@ -73,12 +63,12 @@ export const Project: React.FC<ProjectProps> = ({
           </div>
           {data.website ? (
             <a target="_blank" href={data.website}>
-              <div className={classNames(styles.linkContainer, styles.link)}>
+              <div className="px-2 py-1 inline-block rounded-lg text-sm hover:bg-tertiary-bg">
                 <span> {t_general("website")}</span>
               </div>
             </a>
           ) : (
-            <div className={classNames(styles.linkContainer)}>
+            <div className="px-2 py-1 inline-block rounded-lg text-sm">
               <span> {t_general("private")}</span>
             </div>
           )}

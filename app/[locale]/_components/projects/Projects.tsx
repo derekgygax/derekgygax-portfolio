@@ -7,9 +7,6 @@ import { Section } from "@/app/[locale]/_layouts/section/Section";
 // components
 import { Project } from '../project/Project';
 
-// styles
-import styles from './Projects.module.scss';
-
 // data
 import projectsData from '@/app/data/projects.json';
 
@@ -21,6 +18,8 @@ import fiftySevenWestImage from '@/public/assets/projects/fiftySevenWest.png';
 import mendelgenImage from '@/public/assets/projects/mendelgen.png';
 import locImage from '@/public/assets/projects/loc.png';
 import copyrightImage from '@/public/assets/projects/copyright.png';
+
+// TODO need to change rppa image
 import mdAnderCancerCenterImage from '@/public/assets/projects/mdAndersonCancerCenter.jpg';
 import cravatImage from '@/public/assets/projects/cravat.png';
 import mupitImage from '@/public/assets/projects/mupit.png';
@@ -36,6 +35,7 @@ export const Projects: React.FC = () => {
     mendelgen: mendelgenImage,
     loc: locImage,
     copyright: copyrightImage,
+    // TODO NEED TO CHANGE RPPA IMAGE
     rppa: locImage,
     cravat: cravatImage,
     mupit: mupitImage
@@ -49,23 +49,29 @@ export const Projects: React.FC = () => {
 
 
   return (
-    <Section
-      id={projects.id}
-      title={t('title')}
-    >
-      <div className={styles.projects}>
-        {projects.projectIds.map((id: string, index: number) => {
-          return (
-            <Project
-              key={`project_${id}`}
-              id={id}
-              image={images[id]}
-              data={projects.projects[id]}
-              isLastProject={index === projects.projectIds.length - 1}
-            />
-          )
-        })}
+    <section id={projectsData.id}>
+      <div className="section">
+        <div className="pb-8">
+          <h1 className="m-0 text-5xl font-bold pb-2">
+            {t('title')}
+          </h1>
+        </div>
+        {/* TODO THIS INST WORKING BUT IS THE WAY IT SHOULD BE DONE. YOU HAVE SOMETHING IN THAT WORKS KINDA!!  MABYE CHANGING THE INTERIOR WILL FIX IT!!*/}
+        {/* <div className="grid grid-cols-1 grid-rows-7 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 lg:grid-rows-3 gap-y-8 gap-x-8"> */}
+        <div className="md:grid md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 lg:grid-rows-3 gap-y-8 gap-x-8">
+          {projects.projectIds.map((id: string, index: number) => {
+            return (
+              <Project
+                key={`project_${id}`}
+                id={id}
+                image={images[id]}
+                data={projects.projects[id]}
+                isLastProject={index === projects.projectIds.length - 1}
+              />
+            )
+          })}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }
