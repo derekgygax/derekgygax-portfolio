@@ -7,7 +7,7 @@ import { Icon } from "../icon/Icon";
 import { Location } from "../location/Location";
 
 // styles
-import styles from './Header.module.scss';
+// import styles from './Header.module.scss';
 
 // data
 // import me from '@/app/data/me.json';
@@ -26,9 +26,9 @@ export const Header: React.FC = () => {
   const t = useTranslations("Header");
 
   return (
-    <header className={styles.main}>
-      <div className={styles.nav}>
-        <div className={styles.navSection}>
+    <header className="bg-primary-bg sticky h-header top-0 z-10 flex items-center">
+      <div className="max-w-5xl mx-auto px-4 grid grid-rows-1 grid-cols-6 col-gap-4">
+        <div className="navSection">
           <Location />
         </div>
         {/* 
@@ -51,14 +51,7 @@ export const Header: React.FC = () => {
               </div>
             </Link>
           </div> */}
-        <div
-          className={
-            classNames(
-              styles.portfolioSections,
-              styles.navSection
-            )
-          }
-        >
+        <div className="navSection justify-around col-start-2 col-end-4">
           {/* 
             It's only one page so this may not be important for now
             {navSetionsIds.map((sectionId) => {
@@ -77,8 +70,8 @@ export const Header: React.FC = () => {
               )
             })} */}
         </div>
-        <div className={classNames(styles.socialMedia, styles.navSection)}>
-          <div className={styles.socialMediaIconsContainer}>
+        <div className="navSection col-start-5 col-end-6">
+          <div className="flex justify-between">
             {socialMedia.map((media) => {
               return (
                 <a
@@ -87,12 +80,7 @@ export const Header: React.FC = () => {
                   href={media.href}
                 >
                   <div
-                    className={
-                      classNames(
-                        styles.socialMediaIcon,
-                        styles.linkContainer
-                      )
-                    }
+                    className="linkContainer socialMediaIcon "
                   >
                     <Icon
                       id={media.id}
@@ -104,19 +92,12 @@ export const Header: React.FC = () => {
             })}
           </div>
         </div>
-        <div className={
-          classNames(
-            styles.navSection,
-            styles.contactMe
-          )
-        }>
+        <div className="navSection col-start-6 col-end-7">
           <Link
-            className={styles.link}
+            className="link"
             href={contactMe.href}
           >
-            <div
-              className={styles.linkContainer}
-            >
+            <div className="linkContainer">
               {t(`navItems.contact.label`)}
             </div>
           </Link>

@@ -1,3 +1,29 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Playfair+Display:700,900|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Where you can add your own classese */
+/* You add your own variables in tailwind.config.js */
+
+@layer components {
+  .navSection {
+    @apply flex items-center
+  }
+
+  .linkContainer {
+    @apply p-2 rounded-lg transition duration-300 ease-in-out hover:bg-secondary-bg
+  }
+
+  .socialMediaIcon {
+    @apply flex w-11
+  }
+
+  .link {
+    @apply font-normal no-underline whitespace-nowrap tracking-wide text-xl text-white
+  }
+}

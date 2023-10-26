@@ -9,7 +9,24 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary-bg': '#1A1A1A',
+        'secondary-bg': '#323235',
+        'tertiary-bg': '#4d4d4f',
+        'primary-text': '#ffffff',
+        'secondary-text': '#A1A1AA',
+      },
+      height: {
+        header: '5rem'
+      },
+      fontFamily: {
+        'sans': ['Open Sans', 'sans-serif'],
+        'playfair': ['Playfair Display', 'serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
