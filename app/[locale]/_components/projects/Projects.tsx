@@ -8,7 +8,7 @@ import { Section } from "@/app/[locale]/_layouts/section/Section";
 import { Project } from '../project/Project';
 
 // styles
-// import styles from './Projects.module.scss';
+import styles from './Projects.module.scss';
 
 // data
 import projectsData from '@/app/data/projects.json';

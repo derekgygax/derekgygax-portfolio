@@ -1,6 +1,6 @@
 
 // styles
-// import styles from './Sections.module.scss';
+import styles from './Sections.module.scss';
 
 type SectionProps = {
   children: React.ReactNode;
@@ -32,7 +32,7 @@ export const Section: React.FC<SectionProps> = ({
 // This would be using it as a HOC
 // Our example is too simplistic to do this.
 // // styles
-// // import styles from './Sections.module.scss';
+// import styles from './Sections.module.scss';
 
 // type SectionProps = {
 //   children: React.ReactNode;

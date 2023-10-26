@@ -14,7 +14,7 @@ import { Footer } from './_components/footer/Footer';
 // styles
 import './globals.scss';
 import './tailwind.css';
-// import styles from './layout.module.scss';
+import styles from './layout.module.scss';
 
 
 // Generate the Metadata for the root layout

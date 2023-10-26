@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { ProjectConfig } from "../../types/projects";
 
 // styles
-// import styles from './Project.module.scss';
+import styles from './Project.module.scss';
 import { Icon } from '../icon/Icon';
 
 type ProjectProps = {

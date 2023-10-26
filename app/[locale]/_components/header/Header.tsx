@@ -7,7 +7,7 @@ import { Icon } from "../icon/Icon";
 import { Location } from "../location/Location";
 
 // styles
-// import styles from './Header.module.scss';
+import styles from './Header.module.scss';
 
 // data
 // import me from '@/app/data/me.json';

@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Icon } from '../icon/Icon';
 
 // styles
-// import styles from './Location.module.scss';
+import styles from './Location.module.scss';
 
 // data
 import location from '@/app/data/location.json';

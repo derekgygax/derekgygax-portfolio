@@ -7,7 +7,7 @@ import { Icon } from "../icon/Icon";
 import resume from '@/app/data/resume.json';
 
 // styles
-// import styles from './Resume.module.scss';
+import styles from './Resume.module.scss';
 
 export const Resume: React.FC = () => {
 

@@ -7,7 +7,7 @@ import { Icon } from "../icon/Icon";
 import { Section } from "../../_layouts/section/Section"
 
 // styles
-// import styles from './ConnectionLinks.module.scss';
+import styles from './ConnectionLinks.module.scss';
 
 // data
 import connectionLinks from '@/app/data/connectionLinks.json';
