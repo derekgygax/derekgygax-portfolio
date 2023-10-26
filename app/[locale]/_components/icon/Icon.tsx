@@ -17,6 +17,7 @@ import dockerIcon from '@/public/assets/icons/docker.svg';
 import htmlIcon from '@/public/assets/icons/html.svg';
 import javaIcon from '@/public/assets/icons/java.svg';
 import javascriptIcon from '@/public/assets/icons/javascript.svg';
+import mapPinIcon from '@/public/assets/icons/map-pin.svg'
 import mysqlIcon from '@/public/assets/icons/mysql.svg';
 import nextjsIcon from '@/public/assets/icons/nextjs.svg';
 import pythonIcon from '@/public/assets/icons/python.svg';
@@ -47,6 +48,7 @@ export const Icon: React.FC<IconProps> = ({ id, alt }) => {
     java: javaIcon,
     javascript: javascriptIcon,
     linkedIn: linkedInIcon,
+    mappin: mapPinIcon,
     mysql: mysqlIcon,
     nextjs: nextjsIcon,
     phone: phoneIcon,

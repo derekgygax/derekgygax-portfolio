@@ -7,15 +7,15 @@ import { Container } from "@/app/[locale]/_layouts/container/Container";
 
 // components
 import { Icon } from "../icon/Icon";
+import { Location } from "../location/Location";
 
 // styles
 import styles from './Header.module.scss';
 
 // data
-import me from '@/app/data/me.json';
+// import me from '@/app/data/me.json';
 import aboutMe from '@/app/data/aboutMe.json';
 import projects from '@/app/data/projects.json';
-import contactMe from '@/app/data/contactMe.json';
 import socialMedia from '@/app/data/socialMedia.json';
 
 export const Header: React.FC = () => {
@@ -23,7 +23,6 @@ export const Header: React.FC = () => {
   const navSetionsIds = [
     aboutMe.id,
     projects.id,
-    contactMe.id
   ];
 
   const t = useTranslations("Header");
@@ -33,6 +32,9 @@ export const Header: React.FC = () => {
       <Container>
         <div className={styles.nav}>
           <div className={styles.navSection}>
+            <Location />
+          </div>
+          {/* <div className={styles.navSection}>
             <Link
               className={styles.link}
               href="/"
@@ -48,7 +50,7 @@ export const Header: React.FC = () => {
                 {me.name}
               </div>
             </Link>
-          </div>
+          </div> */}
           <div
             className={
               classNames(
