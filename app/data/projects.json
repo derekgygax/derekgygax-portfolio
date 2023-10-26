@@ -48,8 +48,9 @@
       ],
       "technologies": [
         "django",
-        "solr",
-        "python"
+        "flask",
+        "python",
+        "solr"
       ]
     },
     "copyright": {
@@ -76,9 +77,9 @@
       "technologies": [
         "java",
         "python",
+        "javascript",
         "r",
         "mysql",
-        "javascript",
         "docker"
       ]
     },

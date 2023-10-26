@@ -1,10 +1,20 @@
 @import '../../Variables.scss';
 
-.resumeButton {
-  background-color: $bg-main;
-  border: none;
+.downloadContainer {
+  padding: 10px;
   border-radius: 15px;
-  min-height: 50px;
-  font-size: 1.3rem;
-  width: fit-content;
+  transition: all 0.3s ease 0s;
+
+  display: flex;
+  flex-direction: row;
+
+  &:hover {
+    background-color: $bg-secondary;
+  }
+}
+
+.icon {
+  display: flex;
+  width: 1.5rem;
+  margin-left: 0.25rem;
 }

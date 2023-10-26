@@ -6,6 +6,12 @@
   border-radius: 10px;
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
 .aboutContent {
   display: flex;
   flex-direction: row;
@@ -18,11 +24,14 @@
 }
 
 .paragraphSection {
-  width: 70%;
   font-size: 1.25rem;
   color: $text-color-secondary;
 }
 
 .paragraphs {
   width: 95%
+}
+
+.resume {
+  align-self: start;
 }

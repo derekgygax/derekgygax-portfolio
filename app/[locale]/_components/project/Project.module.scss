@@ -70,12 +70,15 @@ $round-amount: 10px;
   margin-top: 5px;
 }
 
-.websiteContainer {
+.linkContainer {
   padding: 5px 10px 5px 10px;
   border-radius: 10px;
   display: inline-block;
   font-size: 0.9rem;
 
+}
+
+.link {
   &:hover {
     background-color: $bg-tertiary;
   }

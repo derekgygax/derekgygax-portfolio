@@ -73,11 +73,15 @@ export const Project: React.FC<ProjectProps> = ({
           </div>
           {data.website ? (
             <a target="_blank" href={data.website}>
-              <div className={styles.websiteContainer}>
+              <div className={classNames(styles.linkContainer, styles.link)}>
                 <span> {t_general("website")}</span>
               </div>
             </a>
-          ) : null}
+          ) : (
+            <div className={classNames(styles.linkContainer)}>
+              <span> {t_general("private")}</span>
+            </div>
+          )}
         </div>
       </div>
     </div>

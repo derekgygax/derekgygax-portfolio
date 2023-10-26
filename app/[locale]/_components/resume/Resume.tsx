@@ -1,8 +1,7 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl"
 
 // components
-import { Button } from "../button/Button";
+import { Icon } from "../icon/Icon";
 
 // data
 import resume from '@/app/data/resume.json';
@@ -10,32 +9,25 @@ import resume from '@/app/data/resume.json';
 // styles
 import styles from './Resume.module.scss';
 
-// icons
-import downloadIcon from '@/public/assets/icons/arrow-down-circle.svg'
-import { Icon } from "../icon/Icon";
-
 export const Resume: React.FC = () => {
 
   const t = useTranslations('Resume');
 
   return (
     <a
-      target="_blank"
+      className={styles.link}
       href={resume.href}
       download
     >
-      <Button
-        className={styles.resumeButton}
-      >
-        <div>
-          <span>{t('label')}</span>
+      <div className={styles.downloadContainer} >
+        <span className={styles.text}>{t('label')}</span>
+        <div className={styles.icon}>
           <Icon
-            id={'download'}
-            alt="Download Derek Gygax Resume"
+            id={resume.icon.id}
+            alt={resume.icon.alt}
           />
         </div>
-
-      </Button>
+      </div>
     </a>
   )
 }
