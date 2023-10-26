@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className="bg-primary-bg sticky h-header top-0 z-10 flex items-center">
-      <div className="max-w-5xl mx-auto px-4 grid grid-rows-1 grid-cols-6 col-gap-4">
+      <div className="maxWidth mx-auto px-4 grid grid-rows-1 grid-cols-3 md:grid-cols-6 md:col-gap-4">
         <div className="navSection">
           <Location />
         </div>
@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
               </div>
             </Link>
           </div> */}
-        <div className="navSection justify-around col-start-2 col-end-4">
+        <div className="hidden md:navSection justify-around md:col-start-2 md:col-end-4">
           {/* 
             It's only one page so this may not be important for now
             {navSetionsIds.map((sectionId) => {
@@ -70,7 +70,7 @@ export const Header: React.FC = () => {
               )
             })} */}
         </div>
-        <div className="navSection col-start-5 col-end-6">
+        <div className="hidden md:navSection md:col-start-5 md:col-end-6">
           <div className="flex justify-between">
             {socialMedia.map((media) => {
               return (
@@ -92,7 +92,7 @@ export const Header: React.FC = () => {
             })}
           </div>
         </div>
-        <div className="navSection col-start-6 col-end-7">
+        <div className="navSection col-start-3 col-end-4 md:col-start-6 md:col-end-7">
           <Link
             className="link"
             href={contactMe.href}

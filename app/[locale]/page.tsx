@@ -3,8 +3,8 @@ import { notFound } from 'next/navigation';
 
 
 // components
-import { AboutMe } from '../_components/aboutMe/AboutMe';
-import { Projects } from '../_components/projects/Projects';
+import { AboutMe } from './_components/aboutMe/AboutMe';
+import { Projects } from './_components/projects/Projects';
 
 // data
 import { LOCALES } from '@/locales.config';
@@ -16,7 +16,7 @@ import type { Metadata } from 'next'
 // This is a temporary work around that should be removed
 // in the future
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { ConnectionLinks } from '../_components/connectionLinks/ConnectionLinks';
+import { ConnectionLinks } from './_components/connectionLinks/ConnectionLinks';
 
 
 // Generate the urls that code exist at this level form the LOCALES
