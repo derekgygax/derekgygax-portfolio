@@ -12,8 +12,9 @@ module.exports = {
     extend: {
       colors: {
         'primary-bg': '#1A1A1A',
-        'secondary-bg': '#323235',
-        'tertiary-bg': '#4d4d4f',
+        'secondary-bg': '#2B2B2B',
+        'tertiary-bg': '#323235',
+        'quaternary-bg': '#4d4d4f',
         'primary-text': '#ffffff',
         'secondary-text': '#A1A1AA',
       },

@@ -40,7 +40,7 @@ body {
   }
 
   .linkContainer {
-    @apply p-2 rounded-lg transition duration-300 ease-in-out hover:bg-secondary-bg;
+    @apply p-2 rounded-lg transition duration-300 ease-in-out hover:bg-tertiary-bg;
   }
 
   .maxWidth {
