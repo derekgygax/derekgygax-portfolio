@@ -1,7 +1,7 @@
 {
   "cravat": {
     "jobTitle": "Bioinformatics Engineer",
-    "summary": "Designed and developed web-based applications, bioinformatics pipelines, database solutions, and Docker (Virtual machine) images to assist biologists with the analysis of public and private biological data.",
+    "summary": "CRAVAT is a comprehensive genomic analysis platform that streamlines the process of submitting large sets of genomic variants, such as single base substitutions and indels, for  impact analysis, scoring, and annotation. The platform’s interactive viewer allows users to  identify and investigate potential pathogenic or cancer driving variants.",
     "responsibilities": {
       "code": "Aided the In Silico Solutions team collaborating with the Karchin lab at Johns Hopkins University to design and develop the genomic sequence variant annotation software CRAVAT (Cancer-Related Analysis of Variants Toolkit)."
     },
