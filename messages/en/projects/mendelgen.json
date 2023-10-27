@@ -1,7 +1,7 @@
 {
   "mendelgen": {
     "jobTitle": "Bioinformatics Engineer",
-    "summary": "Developed, improved, and maintained bioinformatic web applications allowing biologists to simulate biological assays.",
+    "summary": "Mendelgen is an online sequence editing and manipulation tool, encompassing all essential features for simulating genetic experiments such as DNA digests, primer design, and translation features. My contributions to this innovative platform include developing the DNA cloning and PCR simulations, and enhancing Redux implementations to support these features.",
     "responsibilities": {
       "engineer": "Devised and created algorithms to simulate many different DNA cloning techniques, along with PCR, allowing scientists to study anticipated results before completing the assays."
     },
