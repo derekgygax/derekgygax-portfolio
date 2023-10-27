@@ -1,7 +1,7 @@
 {
   "copyright": {
     "jobTitle": "Software Engineer",
-    "summary": "Developed and maintained web applications for the Library of Congress allowing for the search of web archives and the submission of new copyrights.",
+    "summary": "The U.S. Copyright Office's recordation webpage facilitates the filing and indexing of documents such as transfers of copyright ownership and notices of termination. Once indexed, these documents are available for public inspection.",
     "responsibilities": {
       "general": "Aided in the development of a new web platform for the Copyright Office to allow for the submission of new copyrights online."
     },
