@@ -66,10 +66,12 @@ export const Icon: React.FC<IconProps> = ({ id, alt }) => {
   const t = useTranslations("Icons");
 
   return (
-    <Image
-      src={icons[id]}
-      alt={alt ? alt : t(`${id}.alt`)}
-      className="w-full h-full"
-    />
+    <div className="z-10" title={t(`${id}.tooltip`)}>
+      <Image
+        alt={alt ? alt : t(`${id}.alt`)}
+        className="w-full h-full"
+        src={icons[id]}
+      />
+    </div>
   )
 }

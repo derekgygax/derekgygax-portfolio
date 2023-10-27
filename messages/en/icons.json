@@ -1,76 +1,100 @@
 {
   "Icons": {
     "angular": {
-      "alt": "Icon for angular"
+      "alt": "Icon for angular",
+      "tooltip": "Angular"
     },
     "aws": {
-      "alt": "Icon for aws"
+      "alt": "Icon for aws",
+      "tooltip": "AWS"
     },
     "django": {
-      "alt": "Icon for django"
+      "alt": "Icon for django",
+      "tooltip": "Django"
     },
     "docker": {
-      "alt": "Icon for docker"
+      "alt": "Icon for docker",
+      "tooltip": "Docker"
     },
     "download": {
-      "alt": "Icon for download"
+      "alt": "Icon for download",
+      "tooltip": "Download"
     },
     "email": {
-      "alt": "Icon for email"
+      "alt": "Icon for email",
+      "tooltip": "Email"
     },
     "flask": {
-      "alt": "Icon for flask"
+      "alt": "Icon for flask",
+      "tooltip": "Flask"
     },
     "github": {
-      "alt": "Icon for github"
+      "alt": "Icon for github",
+      "tooltip": "Github"
     },
     "html": {
-      "alt": "Icon for html"
+      "alt": "Icon for html",
+      "tooltip": "HTML"
     },
     "java": {
-      "alt": "Icon for java"
+      "alt": "Icon for java",
+      "tooltip": "Java"
     },
     "javascript": {
-      "alt": "Icon for javascript"
+      "alt": "Icon for javascript",
+      "tooltip": "Javascript"
     },
     "linkedIn": {
-      "alt": "Icon for linkedIn"
+      "alt": "Icon for linkedIn",
+      "tooltip": "LinkedIn"
     },
     "mappin": {
-      "alt": "Icon for map location"
+      "alt": "Icon for map location",
+      "tooltip": "Mappin"
     },
     "mysql": {
-      "alt": "Icon for mysql"
+      "alt": "Icon for mysql",
+      "tooltip": "Mysql"
     },
     "nextjs": {
-      "alt": "Icon for nexjs"
+      "alt": "Icon for nexjs",
+      "tooltip": "Next.js"
     },
     "phone": {
-      "alt": "Icon for mobile phone"
+      "alt": "Icon for mobile phone",
+      "tooltip": "Phone"
     },
     "python": {
-      "alt": "Icon for python"
+      "alt": "Icon for python",
+      "tooltip": "Python"
     },
     "r": {
-      "alt": "Icon for r"
+      "alt": "Icon for r",
+      "tooltip": "R"
     },
     "react": {
-      "alt": "Icon for react"
+      "alt": "Icon for react",
+      "tooltip": "React"
     },
     "redux": {
-      "alt": "Icon for redux"
+      "alt": "Icon for redux",
+      "tooltip": "Redux"
     },
     "sass": {
-      "alt": "Icon for sass"
+      "alt": "Icon for sass",
+      "tooltip": "Sass"
     },
     "solr": {
-      "alt": "Icon for solr"
+      "alt": "Icon for solr",
+      "tooltip": "Solr"
     },
     "tailwind": {
-      "alt": "Icon for tailwind"
+      "alt": "Icon for tailwind",
+      "tooltip": "Tailwind"
     },
     "typescript": {
-      "alt": "Icon for typescript"
+      "alt": "Icon for typescript",
+      "tooltip": "TypeScript"
     }
   }
 }
