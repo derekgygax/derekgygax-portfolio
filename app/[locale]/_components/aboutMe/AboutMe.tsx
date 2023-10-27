@@ -13,6 +13,7 @@ import meHandstand from '@/public/assets/meHandstand.jpg';
 export const AboutMe: React.FC = () => {
 
   const t = useTranslations('AboutMe');
+
   return (
     <section id={aboutMe.id}>
       <div className="section">
@@ -24,17 +25,17 @@ export const AboutMe: React.FC = () => {
             {t('jobTitles')}
           </h2>
         </div>
-        {/* TODO THIS ISN"T RIGHT WITH THE IMAGE */}
-        {/* TODO THIS ISN"T RIGHT WITH THE IMAGE */}
-        {/* TODO THIS ISN"T RIGHT WITH THE IMAGE */}
-        {/* TODO THIS ISN"T RIGHT WITH THE IMAGE */}
-        {/* TODO THIS ISN"T RIGHT WITH THE IMAGE */}
         <div className="flex flex-row">
           <div className="w-full md:w-2/3 flex flex-col">
             <div className="text-xl text-secondary-text">
               <div className="w:full md:w-11/12">
                 <p>{t("bio.work")}</p>
-                <p>{t("bio.personal")}</p>
+                <p>
+                  {t("bio.personal.general")}
+                  <span className="hidden md:inline ml-1">
+                    {t("bio.personal.withHandstand")}
+                  </span>
+                </p>
               </div>
             </div>
             <div className="self-start">

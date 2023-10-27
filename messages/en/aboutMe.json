@@ -6,7 +6,10 @@
     "jobTitles": "Software Engineer, Bioinformatics Engineer",
     "bio": {
       "work": "I started out as a biologist, specifically genetics, and studied my way to obtaining a Masters in Human and Molecular Genetics. While studying for my masters I had to learn to code as the world of genetics is a huge sum of data. I continued down the road of coding and became a bioinformatician and then eventually jumped back and forth between bioinformatics and software development. Nowadays I tend to focus more on software development, but still love bioinformatics when the opporunity arises.",
-      "personal": "Outside of work I enjoy seeing new places and having as many experiences I can. My passion is gymnastics and I'll do a handstand any chance I get, as you can see to the right."
+      "personal": {
+        "general": "Outside of work I enjoy seeing new places and having as many experiences I can. My passion is gymnastics and I'll do a handstand any chance I get.",
+        "withHandstand": "As you can see to the right."
+      }
     }
   }
 }

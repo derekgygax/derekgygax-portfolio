@@ -7,6 +7,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+Define classes
+  Define your own classes in this file as shown below
+For responsiveness
+  sm: 640px and above
+  md: 768px and above
+  lg: 1024px and above
+  xl: 1280px and above
+  2xl: 1536px and above 
+Variables
+  Add your own variables in tailwind.config.js
+*/
+
 a {
   @apply no-underline text-primary-text text-xl
 }
@@ -20,9 +33,7 @@ body {
   @apply w-full
 }
 
-/* Where you can add your own classese */
-/* You add your own variables in tailwind.config.js */
-
+/* Define your own classes */
 @layer components {
   .link {
     @apply font-normal no-underline whitespace-nowrap tracking-wide text-xl text-white;
