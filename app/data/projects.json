@@ -1,6 +1,7 @@
 {
   "id": "projects",
   "projectIds": [
+    "portfolio",
     "fiftySevenWest",
     "mendelgen",
     "loc",
@@ -10,6 +11,19 @@
     "mupit"
   ],
   "projects": {
+    "portfolio": {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "website": "/",
+      "responsibilities": [
+        "code"
+      ],
+      "technologies": [
+        "nextjs",
+        "typescript",
+        "tailwind"
+      ]
+    },
     "fiftySevenWest": {
       "id": "fiftySevenWest",
       "title": "57 West",

@@ -1,3 +1,8 @@
 {
-  "name": "Derek Gygax"
+  "name": "Derek Gygax",
+  "location": {
+    "city": "Severna Park",
+    "state": "Maryland",
+    "country": "USA"
+  }
 }

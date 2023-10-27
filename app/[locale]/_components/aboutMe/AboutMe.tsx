@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
+// components
+import { Resume } from "../resume/Resume";
+
 // data
 import aboutMe from '@/app/data/aboutMe.json';
 
 // images
 import meHandstand from '@/public/assets/meHandstand.jpg';
-import { Resume } from "../resume/Resume";
 
 export const AboutMe: React.FC = () => {
 

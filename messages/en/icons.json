@@ -66,6 +66,9 @@
     "solr": {
       "alt": "Icon for solr"
     },
+    "tailwind": {
+      "alt": "Icon for tailwind"
+    },
     "typescript": {
       "alt": "Icon for typescript"
     }

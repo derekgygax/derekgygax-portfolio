@@ -1,8 +1,5 @@
 import { useTranslations } from "next-intl";
 
-// styles
-import styles from './Footer.module.scss';
-
 export const Footer: React.FC = () => {
 
   const t = useTranslations('Footer');

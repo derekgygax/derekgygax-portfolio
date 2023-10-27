@@ -1,9 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image"
 
-// styles
-import styles from './Icon.module.scss';
-
 // icons
 import angularIcon from '@/public/assets/icons/angular.svg';
 import awsIcon from '@/public/assets/icons/aws.svg';
@@ -27,6 +24,7 @@ import reactIcon from '@/public/assets/icons/react.svg';
 import reduxIcon from '@/public/assets/icons/redux.svg';
 import sassIcon from '@/public/assets/icons/sass.svg';
 import solrIcon from '@/public/assets/icons/solr.svg';
+import tailwindIcon from '@/public/assets/icons/tailwind.svg';
 import typescriptIcon from '@/public/assets/icons/typescript.svg';
 
 
@@ -61,6 +59,7 @@ export const Icon: React.FC<IconProps> = ({ id, alt }) => {
     redux: reduxIcon,
     sass: sassIcon,
     solr: solrIcon,
+    tailwind: tailwindIcon,
     typescript: typescriptIcon,
   };
 

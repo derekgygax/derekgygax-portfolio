@@ -12,16 +12,13 @@ import { Header } from './_components/header/Header';
 import { Footer } from './_components/footer/Footer';
 
 // styles
-import './globals.scss';
-import './tailwind.css';
-
+import './globals.css';
 
 // Generate the Metadata for the root layout
 export async function generateMetadata(
   { params: { locale } }: { params: { locale: string } }
 ): Promise<Metadata> {
   const t = await getTranslator(locale, 'RootLayout.Metadata');
-
 
   // TODO Does this have all the sections it needs like 57West does
   return {
@@ -38,13 +35,9 @@ export async function generateMetadata(
     twitter: {
       card: 'summary_large_image',
     }
-
   };
 }
 
-
-// TODO haven't done mobile!!!
-// TODO Make sure you don't have to change too much
 type RootLayoutProps = {
   children: React.ReactNode,
   params: {

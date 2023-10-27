@@ -22,7 +22,7 @@ export const ConnectionIcons: React.FC = () => {
                 target={icon.type === "link" ? "_blank" : "_self"}
                 href={icon.href}
               >
-                <div className="linkContainer socialMediaIconSmaller">
+                <div className="linkContainer socialMediaIconSm">
                   <Icon
                     id={icon.id}
                     alt={t(`icons.${icon.id}.alt`)}

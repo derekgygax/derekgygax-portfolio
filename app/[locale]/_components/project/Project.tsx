@@ -5,22 +5,18 @@ import { useTranslations } from "next-intl";
 // components
 import { ProjectConfig } from "../../types/projects";
 
-// styles
-import styles from './Project.module.scss';
 import { Icon } from '../icon/Icon';
 
 type ProjectProps = {
   id: string;
   image: StaticImageData;
   data: ProjectConfig;
-  isLastProject: boolean;
 }
 
 export const Project: React.FC<ProjectProps> = ({
   id,
   image,
   data,
-  isLastProject
 }) => {
 
   const t_general = useTranslations(`General`);
