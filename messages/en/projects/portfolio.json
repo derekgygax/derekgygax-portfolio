@@ -1,7 +1,7 @@
 {
   "portfolio": {
     "jobTitle": "Software Engineer",
-    "summary": "Portfolio website to showcase of my skills and abilities. Built with Next.js and TypeScript, and styled with Tailwind CSS. This framework enhances search engine optimization and allows for concentration on content rather than styling and layout.",
+    "summary": "Portfolio website to showcase my skills and abilities. Built with Next.js and TypeScript, and styled with Tailwind CSS. This framework boosts SEO and performance, streamlines design processes, and guarantees a cohesive user interface.",
     "responsibilities": {
       "code": "Responsible for building, styling, and deploying."
     },
