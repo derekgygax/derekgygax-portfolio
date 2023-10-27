@@ -24,7 +24,7 @@ export const Project: React.FC<ProjectProps> = ({
 
   return (
     <div
-      className="border border-secondary-bg rounded-lg hover:border-tertiary-bg flex flex-col">
+      className="my-4 md:my-0 border border-secondary-bg rounded-lg hover:border-tertiary-bg flex flex-col">
       <div>
         <Image
           src={image}

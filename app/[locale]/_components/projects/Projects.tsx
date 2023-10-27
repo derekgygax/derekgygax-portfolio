@@ -50,14 +50,14 @@ export const Projects: React.FC = () => {
   return (
     <section id={projectsData.id}>
       <div className="section">
-        <div className="pb-8">
-          <h1 className="m-0 text-5xl font-bold pb-2">
+        <div className="pb-2 md:pb-8">
+          <h1 className="m-0 text-3xl md:text-5xl font-bold pb-2">
             {t('title')}
           </h1>
         </div>
         {/* TODO THIS INST WORKING BUT IS THE WAY IT SHOULD BE DONE. YOU HAVE SOMETHING IN THAT WORKS KINDA!!  MABYE CHANGING THE INTERIOR WILL FIX IT!!*/}
         {/* <div className="grid grid-cols-1 grid-rows-7 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 lg:grid-rows-3 gap-y-8 gap-x-8"> */}
-        <div className="md:grid md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 lg:grid-rows-3 gap-y-8 gap-x-8">
+        <div className="mx-4 md:mx-0 md:grid md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 lg:grid-rows-3 gap-y-8 gap-x-8">
           {projects.projectIds.map((id: string) => {
             return (
               <Project
