@@ -17,7 +17,7 @@ import locImage from '@/public/assets/projects/loc.png';
 import copyrightImage from '@/public/assets/projects/copyright.png';
 
 // TODO need to change rppa image
-import mdAnderCancerCenterImage from '@/public/assets/projects/mdAndersonCancerCenter.jpg';
+import rppaImage from '@/public/assets/projects/rppa.png';
 import cravatImage from '@/public/assets/projects/cravat.png';
 import mupitImage from '@/public/assets/projects/mupit.png';
 import portfolioImage from '@/public/assets/projects/portfolio.png';
@@ -33,8 +33,7 @@ export const Projects: React.FC = () => {
     mendelgen: mendelgenImage,
     loc: locImage,
     copyright: copyrightImage,
-    // TODO NEED TO CHANGE RPPA IMAGE
-    rppa: locImage,
+    rppa: rppaImage,
     cravat: cravatImage,
     mupit: mupitImage,
     portfolio: portfolioImage
