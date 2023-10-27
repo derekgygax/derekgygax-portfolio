@@ -35,8 +35,8 @@ export const Project: React.FC<ProjectProps> = ({
       <div className="flex flex-col justify-between box-border p-4 bg-secondary-bg w-full h-full rounded-b-lg">
         <div className='pb-4'>
           <div className="mt-4 mb-4">
-            <h3 className="m-0">{data.title}</h3>
-            <h4 className="m-0 mt-2">{t_project('jobTitle')}</h4>
+            <h2 className="m-0 text-2xl">{data.title}</h2>
+            <h4 className="m-0 text-lg">{t_project('jobTitle')}</h4>
           </div>
           <div className="text-secondary-text">
             <p>{t_project('summary')}</p>
