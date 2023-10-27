@@ -1,7 +1,7 @@
 {
   "mupit": {
     "jobTitle": "Bioinformatics Engineer",
-    "summary": "Designed and developed web-based applications, bioinformatics pipelines, database solutions, and Docker (Virtual machine) images to assist biologists with the analysis of public and private biological data.",
+    "summary": "MuPIT (Mutation Position Imaging Toolbox) is an interactive web-based tool that maps human genomic coordinates to three-dimensional protein structures from the Protein Data Bank (PDB). Users can easily visualize the spatial context of genomic variations by inputting genomic coordinates, PDB IDs, or features, and receive corresponding PDB positions, lists of features, or data for \"painting\" protein structures.",
     "responsibilities": {
       "code": "Aided the In Silico Solutions team collaborating with the Karchin lab at Johns Hopkins University to design and develop the 3D protein variant viewer, MuPIT (Mutation Position Imaging Toolbox)."
     },
