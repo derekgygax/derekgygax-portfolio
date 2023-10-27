@@ -24,7 +24,7 @@ export const Project: React.FC<ProjectProps> = ({
 
   return (
     <div
-      className="my-4 md:my-0 rounded-2xl hover:bg-secondary-bg transition duration-300 ease-in-out"
+      className="my-2 md:my-0 rounded-2xl hover:bg-secondary-bg transition duration-300 ease-in-out"
     >
       <div className="p-2 h-full">
         <div className="h-full border border-tertiary-bg rounded-xl flex flex-col hover:border-quaternary-bg transition duration-300 ease-in-out">
