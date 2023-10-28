@@ -13,7 +13,7 @@ export const Resume: React.FC = () => {
 
   return (
     <Link
-      href={resume.href}
+      href={'/assets/DerekGygax_resume.pdf'}
       target="_blank"
       rel="noopener noreferrer"
       locale={undefined}
