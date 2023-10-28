@@ -27,7 +27,7 @@ export const AboutMe: React.FC = () => {
         </div>
         <div className="flex flex-row">
           <div className="w-full md:w-2/3 flex flex-col">
-            <div className="md:text-xl text-secondary-text">
+            <div className="lg:text-xl text-secondary-text">
               <div className="w:full md:w-11/12">
                 <p className="pb-2">{t("bio.work")}</p>
                 <p>
