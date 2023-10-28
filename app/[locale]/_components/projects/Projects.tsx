@@ -54,7 +54,7 @@ export const Projects: React.FC = () => {
             {t('title')}
           </h1>
         </div>
-        <div className="md:grid md:grid-cols-2 md:grid-rows-4 lg:grid-cols-3 lg:grid-rows-3 gap-y-4 gap-x-4">
+        <div className="md:grid md:grid-cols-2 md:grid-rows-4 gap-y-4 gap-x-4">
           {projects.projectIds.map((id: string) => {
             return (
               <Project
