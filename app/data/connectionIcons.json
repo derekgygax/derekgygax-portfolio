@@ -2,12 +2,12 @@
   "icons": [
     {
       "id": "phone",
-      "href": "tel:+14433029554",
+      "href": "tel:",
       "type": "phone"
     },
     {
       "id": "email",
-      "href": "mailto:derekgygax@gmail.com",
+      "href": "mailto:",
       "type": "email"
     },
     {
