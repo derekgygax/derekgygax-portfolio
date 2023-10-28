@@ -11,7 +11,11 @@ export const Resume: React.FC = () => {
   const t = useTranslations('Resume');
 
   return (
-    <a href={resume.href} download>
+    <a
+      href={resume.href}
+      target="_blank"
+      download
+    >
       <div className="linkContainer flex flex-row">
         <span>{t('label')}</span>
         <div className="socialMediaIconXs4 ml-1">
