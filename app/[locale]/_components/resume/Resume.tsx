@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl"
-import Link from 'next-intl/link';
 
 // components
 import { Icon } from "../icon/Icon";
@@ -12,11 +11,10 @@ export const Resume: React.FC = () => {
   const t = useTranslations('Resume');
 
   return (
-    <Link
-      href={'/assets/DerekGygax_resume.pdf'}
+    <a
+      href="/assets/DerekGygax_resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      locale={undefined}
       download
     >
       <div className="linkContainer flex flex-row">
@@ -28,6 +26,6 @@ export const Resume: React.FC = () => {
           />
         </div>
       </div>
-    </Link>
+    </a>
   )
 }
