@@ -4,9 +4,9 @@ export default getRequestConfig(async ({ locale }) => ({
   messages: {
     ...(await import(`./messages/${locale}/aboutMe.json`)).default,
     ...(await import(`./messages/${locale}/connectionIcons.json`)).default,
+    ...(await import(`./messages/${locale}/contactMeButton.json`)).default,
     ...(await import(`./messages/${locale}/footer.json`)).default,
     ...(await import(`./messages/${locale}/general.json`)).default,
-    ...(await import(`./messages/${locale}/header.json`)).default,
     ...(await import(`./messages/${locale}/homePage.json`)).default,
     ...(await import(`./messages/${locale}/icons.json`)).default,
     ...(await import(`./messages/${locale}/projects.json`)).default,
