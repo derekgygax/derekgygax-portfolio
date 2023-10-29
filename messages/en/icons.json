@@ -46,7 +46,7 @@
     },
     "linkedIn": {
       "alt": "Link to {myName}'s linkedIn",
-      "tooltip": "Click to visit {myName}'s linkedIn"
+      "tooltip": "Click to visit {myName}'s LinkedIn"
     },
     "mappin": {
       "alt": "Icon for map location",
