@@ -3,7 +3,6 @@ import { getRequestConfig } from 'next-intl/server';
 export default getRequestConfig(async ({ locale }) => ({
   messages: {
     ...(await import(`./messages/${locale}/aboutMe.json`)).default,
-    ...(await import(`./messages/${locale}/connectionIcons.json`)).default,
     ...(await import(`./messages/${locale}/contactMeButton.json`)).default,
     ...(await import(`./messages/${locale}/footer.json`)).default,
     ...(await import(`./messages/${locale}/general.json`)).default,
