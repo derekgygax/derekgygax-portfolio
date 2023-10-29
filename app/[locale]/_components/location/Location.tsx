@@ -12,6 +12,7 @@ export const Location: React.FC = () => {
       <div className="pr-1 w-5">
         <Icon
           id={location.icon.id}
+          showToolTip={false}
         />
       </div>
       <div className="flex flex-row flex-nowrap">

@@ -15,9 +15,9 @@ export const ConnectionIcons: React.FC = () => {
 
             let href = icon.href;
             if (icon.id === 'phone') {
-              href = `tel:${me.phone}`;
+              href = href.replace('{phone}', me.phone);
             } else if (icon.id === 'email') {
-              href = `mailto:${me.email}`;
+              href = href.replace('{email}', me.email);
             }
 
             return (

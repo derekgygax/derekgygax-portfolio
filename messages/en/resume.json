@@ -1,6 +1,6 @@
 {
   "Resume": {
     "label": "Resume",
-    "tooltip": "Click to download Derek Gygax's resume"
+    "tooltip": "Click to download {myName}'s resume"
   }
 }

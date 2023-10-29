@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl"
 import { Icon } from "../icon/Icon";
 
 // data
+import me from '@/app/data/me.json';
 import resume from '@/app/data/resume.json';
 
 export const Resume: React.FC = () => {
@@ -17,7 +18,10 @@ export const Resume: React.FC = () => {
       rel="noopener noreferrer"
       download
     >
-      <div className="linkContainer flex flex-row" title={t('tooltip')}>
+      <div
+        className="linkContainer flex flex-row"
+        title={t('tooltip', { myName: me.name })}
+      >
         <span>{t('label')}</span>
         <div className="socialMediaIconXs4 ml-1">
           <Icon

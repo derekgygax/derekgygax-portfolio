@@ -1,6 +1,6 @@
 {
   "ContactMeButton": {
     "label": "Contact Me",
-    "tooltip": "Click to send an email to Derek Gygax"
+    "tooltip": "Click to send an email to {myName} at {email}"
   }
 }

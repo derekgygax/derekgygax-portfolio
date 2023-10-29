@@ -2,12 +2,12 @@
   "icons": [
     {
       "id": "phone",
-      "href": "",
+      "href": "tel:{phone}",
       "type": "phone"
     },
     {
       "id": "email",
-      "href": "",
+      "href": "mailto:{email}",
       "type": "email"
     },
     {

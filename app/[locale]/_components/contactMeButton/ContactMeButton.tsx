@@ -10,7 +10,10 @@ export const ContactMeButton: React.FC = () => {
 
   const t = useTranslations("ContactMeButton")
 
-  const tooltip = `${t('tooltip')} ${me.email}`
+  const tooltip = t('tooltip', {
+    myName: me.name,
+    email: me.email
+  });
 
   return (
     <Link

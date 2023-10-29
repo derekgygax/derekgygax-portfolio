@@ -75,17 +75,16 @@ export const Icon: React.FC<IconProps> = ({
 
   const t = useTranslations("Icons");
 
-  alt = alt ? alt : t(`${id}.alt`);
-  tooltip = tooltip ? tooltip : t(`${id}.tooltip`);
-
-
-  if (id === 'phone') {
-    alt = `${alt} ${me.phone}`;
-    tooltip = `${tooltip} ${me.phone}`
-  } else if (id === 'email') {
-    alt = `${alt} ${me.email}`;
-    tooltip = `${tooltip} ${me.email}`
-  }
+  alt = alt ? alt : t(`${id}.alt`, {
+    email: me.email,
+    myName: me.name,
+    phone: me.phone
+  });
+  tooltip = tooltip ? tooltip : t(`${id}.tooltip`, {
+    email: me.email,
+    myName: me.name,
+    phone: me.phone
+  });
 
   return (
     <div
