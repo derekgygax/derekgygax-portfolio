@@ -1,5 +1,3 @@
-import { useTranslations } from "next-intl";
-
 // components
 import { Icon } from "../icon/Icon";
 
@@ -9,20 +7,17 @@ import me from '@/app/data/me.json';
 
 export const ConnectionIcons: React.FC = () => {
 
-  const t = useTranslations('ConnectionIcons');
-
   return (
     <section>
       <div className="section flex justify-center pb-2">
         <div className="grid grid-rows-1 grid-cols-4 gap-y-2 md:gap-y-4 text-center justify-center w-2/3 md:w-2/5">
           {connectionIcons.icons.map((icon) => {
 
-            let alt = t(`icons.${icon.id}.alt`);
             let href = icon.href;
-
-            if (icon.id === 'phone' || icon.id === 'email') {
-              alt = `${alt} ${me[icon.id]}`;
-              href = `${href}${me[icon.id]}`;
+            if (icon.id === 'phone') {
+              href = `tel:${me.phone}`;
+            } else if (icon.id === 'email') {
+              href = `mailto:${me.email}`;
             }
 
             return (
@@ -35,7 +30,6 @@ export const ConnectionIcons: React.FC = () => {
                 <div className="linkContainer socialMediaIconSm">
                   <Icon
                     id={icon.id}
-                    alt={alt}
                   />
                 </div>
               </a>

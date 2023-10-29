@@ -10,12 +10,14 @@ export const ContactMeButton: React.FC = () => {
 
   const t = useTranslations("ContactMeButton")
 
+  const tooltip = `${t('tooltip')} ${me.email}`
+
   return (
     <Link
       className="link"
-      href={`${contactMeButton.href}${me.email}`}
+      href={`mailto:${me.email}`}
     >
-      <div className="linkContainer">
+      <div className="linkContainer" title={tooltip}>
         {t(`label`)}
       </div>
     </Link>

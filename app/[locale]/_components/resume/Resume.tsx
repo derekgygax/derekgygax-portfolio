@@ -17,12 +17,12 @@ export const Resume: React.FC = () => {
       rel="noopener noreferrer"
       download
     >
-      <div className="linkContainer flex flex-row">
+      <div className="linkContainer flex flex-row" title={t('tooltip')}>
         <span>{t('label')}</span>
         <div className="socialMediaIconXs4 ml-1">
           <Icon
             id={resume.icon.id}
-            alt={resume.icon.alt}
+            showToolTip={false}
           />
         </div>
       </div>

@@ -28,13 +28,23 @@ import tailwindIcon from '@/public/assets/icons/tailwind.svg';
 import typescriptIcon from '@/public/assets/icons/typescript.svg';
 
 
+// data
+import me from '@/app/data/me.json';
+
 
 type IconProps = {
   id: string;
-  alt?: string;
+  alt?: string | undefined;
+  tooltip?: string | undefined;
+  showToolTip?: boolean;
 }
 
-export const Icon: React.FC<IconProps> = ({ id, alt }) => {
+export const Icon: React.FC<IconProps> = ({
+  id,
+  alt,
+  tooltip,
+  showToolTip = true
+}) => {
 
   const icons: Record<string, StaticImageData> = {
     angular: angularIcon,
@@ -65,10 +75,25 @@ export const Icon: React.FC<IconProps> = ({ id, alt }) => {
 
   const t = useTranslations("Icons");
 
+  alt = alt ? alt : t(`${id}.alt`);
+  tooltip = tooltip ? tooltip : t(`${id}.tooltip`);
+
+
+  if (id === 'phone') {
+    alt = `${alt} ${me.phone}`;
+    tooltip = `${tooltip} ${me.phone}`
+  } else if (id === 'email') {
+    alt = `${alt} ${me.email}`;
+    tooltip = `${tooltip} ${me.email}`
+  }
+
   return (
-    <div className="z-10" title={t(`${id}.tooltip`)}>
+    <div
+      className="z-10"
+      {...(showToolTip && { title: tooltip })}
+    >
       <Image
-        alt={alt ? alt : t(`${id}.alt`)}
+        alt={alt}
         className="w-full h-full"
         src={icons[id]}
       />

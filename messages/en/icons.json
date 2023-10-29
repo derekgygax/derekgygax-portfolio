@@ -17,20 +17,20 @@
       "tooltip": "Docker"
     },
     "download": {
-      "alt": "Icon for download",
-      "tooltip": "Download"
+      "alt": "Link to download",
+      "tooltip": "Click to download"
     },
     "email": {
-      "alt": "Icon for email",
-      "tooltip": "Email"
+      "alt": "Link to Derek Gygax's email",
+      "tooltip": "Click to send an email to Derek Gygax"
     },
     "flask": {
       "alt": "Icon for flask",
       "tooltip": "Flask"
     },
     "github": {
-      "alt": "Icon for github",
-      "tooltip": "Github"
+      "alt": "Link to Derek Gygax's github",
+      "tooltip": "Click to visit Derek Gygax's github"
     },
     "html": {
       "alt": "Icon for html",
@@ -45,8 +45,8 @@
       "tooltip": "Javascript"
     },
     "linkedIn": {
-      "alt": "Icon for linkedIn",
-      "tooltip": "LinkedIn"
+      "alt": "Link to Derek Gygax's linkedIn",
+      "tooltip": "Click to visit Derek Gygax's linkedIn"
     },
     "mappin": {
       "alt": "Icon for map location",
@@ -61,8 +61,8 @@
       "tooltip": "Next.js"
     },
     "phone": {
-      "alt": "Icon for mobile phone",
-      "tooltip": "Phone"
+      "alt": "Link to call Derek Gygax's phone number",
+      "tooltip": "Click to call Derek Gygax's phone number"
     },
     "python": {
       "alt": "Icon for python",
