@@ -15,6 +15,7 @@
       "id": "portfolio",
       "title": "Portfolio",
       "website": "/",
+      "hasWebsite": true,
       "responsibilities": [
         "code"
       ],
@@ -28,6 +29,7 @@
       "id": "fiftySevenWest",
       "title": "57 West",
       "website": "https://57west.us/",
+      "hasWebsite": true,
       "responsibilities": [
         "customer",
         "code",
@@ -43,6 +45,7 @@
       "id": "mendelgen",
       "title": "Mendelgen",
       "website": "https://mendelgen.com/",
+      "hasWebsite": true,
       "responsibilities": [
         "engineer"
       ],
@@ -55,6 +58,7 @@
       "id": "loc",
       "title": "Library of Congress",
       "website": "https://www.loc.gov/",
+      "hasWebsite": true,
       "responsibilities": [
         "general",
         "newspaper",
@@ -71,6 +75,7 @@
       "id": "copyright",
       "title": "Copyright Recordation",
       "website": "https://record.copyright.gov/remitter-portal/remitter-dash",
+      "hasWebsite": true,
       "responsibilities": [
         "general"
       ],
@@ -84,7 +89,8 @@
     "rppa": {
       "id": "rppa",
       "title": "RPPA",
-      "website": null,
+      "website": "/project/rppa",
+      "hasWebsite": false,
       "responsibilities": [
         "code"
       ],
@@ -101,6 +107,7 @@
       "id": "cravat",
       "title": "CRAVAT",
       "website": "https://cravat.us/CRAVAT/",
+      "hasWebsite": true,
       "responsibilities": [
         "code"
       ],
@@ -116,6 +123,7 @@
       "id": "mupit",
       "title": "MuPIT",
       "website": "https://mupit.icm.jhu.edu/MuPIT_Interactive/",
+      "hasWebsite": true,
       "responsibilities": [
         "code"
       ],

@@ -17,6 +17,7 @@ module.exports = {
         'quaternary-bg': '#4d4d4f',
         'primary-text': '#ffffff',
         'secondary-text': '#A1A1AA',
+        'aqua-text': '#00FFFF'
       },
       height: {
         header: '5rem'

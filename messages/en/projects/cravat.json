@@ -5,6 +5,10 @@
     "responsibilities": {
       "code": "Aided the In Silico Solutions team collaborating with the Karchin lab at Johns Hopkins University to design and develop the genomic sequence variant annotation software CRAVAT (Cancer-Related Analysis of Variants Toolkit)."
     },
-    "imageAlt": "CRAVAT, Cancer-Related Analysis of Variants Toolkit, site for processing genome variants and their relation to cancer."
+    "imageAlt": "CRAVAT, Cancer-Related Analysis of Variants Toolkit, site for processing genome variants and their relation to cancer.",
+    "metaData": {
+      "description": "",
+      "keywords": ""
+    }
   }
 }

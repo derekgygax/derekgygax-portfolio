@@ -5,6 +5,10 @@
     "responsibilities": {
       "general": "Aided in the development of a new web platform for the Copyright Office to allow for the submission of new copyrights online."
     },
-    "imageAlt": "Copyright Recordation site for submitting and processing copyrights."
+    "imageAlt": "Copyright Recordation site for submitting and processing copyrights.",
+    "metaData": {
+      "description": "",
+      "keywords": ""
+    }
   }
 }

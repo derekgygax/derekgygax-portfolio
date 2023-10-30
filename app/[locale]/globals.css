@@ -25,12 +25,20 @@ a {
 }
 
 body {
-  @apply bg-primary-bg m-0 font-inter bg-cover bg-fixed text-sm md:text-base text-primary-text
+  @apply bg-primary-bg m-0 font-inter bg-cover bg-fixed text-sm md:text-base text-primary-text flex flex-col min-h-screen
 }
 
 html,
 body {
   @apply w-full
+}
+
+header, footer {
+  @apply shrink-0
+}
+
+main {
+  @apply flex-1
 }
 
 /* Define your own classes */

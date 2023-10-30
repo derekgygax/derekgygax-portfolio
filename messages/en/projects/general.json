@@ -2,6 +2,9 @@
   "General": {
     "webLink": {
       "tooltip": "Click to visit the {websiteName} website"
+    },
+    "detailsLink": {
+      "tooltip": "Click to view details about the {projectTitle} project"
     }
   }
 }

@@ -7,6 +7,10 @@
       "code": "Responsible for building/editing code, updating external libraries, and production deployment.",
       "css": "Code optimized to ensure full functionality and an optimal user experience across both desktop and mobile browsers."
     },
-    "imageAlt": "57 West website for building Custom Stock Porfolios"
+    "imageAlt": "57 West website for building Custom Stock Porfolios",
+    "metaData": {
+      "description": "",
+      "keywords": ""
+    }
   }
 }

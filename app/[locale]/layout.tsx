@@ -53,12 +53,10 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children, params }) => {
   unstable_setRequestLocale(params.locale);
 
   return (
-    <html lang="en">
+    <html lang={params.locale}>
       <body>
         <Header />
-        <main>
-          {children}
-        </main>
+        {children}
         <Footer />
       </body>
     </html>

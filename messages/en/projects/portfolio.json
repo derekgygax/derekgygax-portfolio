@@ -5,6 +5,10 @@
     "responsibilities": {
       "code": "Responsible for building, styling, and deploying."
     },
-    "imageAlt": "Derek Gygax's portfolio website, showcasing his professional skills and abilities."
+    "imageAlt": "Derek Gygax's portfolio website, showcasing his professional skills and abilities.",
+    "metaData": {
+      "description": "",
+      "keywords": ""
+    }
   }
 }

@@ -5,6 +5,10 @@
     "responsibilities": {
       "code": "Developed a web-based application to perform bioinformatic analysis for the MD Anderson Cancer Center Reverse phase protein array (RPPA) core facility."
     },
-    "imageAlt": "MD Anderson Cancer Center logo."
+    "imageAlt": "MD Anderson Cancer Center logo.",
+    "metaData": {
+      "description": "RPPA (Reverse Phase Protein Array) pipeline facilitating the analysis of protein levels in tumor tissue and cultured cells.",
+      "keywords": "RPPA, Reverse Phase Protein Array, protein, protein levels, cancer, tumor, tumor tissue, systems biology"
+    }
   }
 }

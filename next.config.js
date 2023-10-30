@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const path = require('path')
+const path = require('path');
 
 const nextConfig = {
   // Add configuration to use sass for css

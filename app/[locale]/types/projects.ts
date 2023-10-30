@@ -7,7 +7,8 @@ export type ProjectsConfig = {
 export type ProjectConfig = {
   id: string;
   title: string;
-  website: string | null;
+  website: string;
+  hasWebsite: boolean;
   responsibilities: string[],
   technologies: string[];
 };

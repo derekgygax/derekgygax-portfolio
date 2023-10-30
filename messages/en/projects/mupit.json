@@ -5,6 +5,10 @@
     "responsibilities": {
       "code": "Aided the In Silico Solutions team collaborating with the Karchin lab at Johns Hopkins University to design and develop the 3D protein variant viewer, MuPIT (Mutation Position Imaging Toolbox)."
     },
-    "imageAlt": "MuPIT, Mutation Position Imaging Toolbox, site used for viewing proteins."
+    "imageAlt": "MuPIT, Mutation Position Imaging Toolbox, site used for viewing proteins.",
+    "metaData": {
+      "description": "",
+      "keywords": ""
+    }
   }
 }
