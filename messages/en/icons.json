@@ -95,6 +95,10 @@
     "typescript": {
       "alt": "Icon for typescript",
       "tooltip": "TypeScript"
+    },
+    "website": {
+      "alt": "Click to visit to the website",
+      "tooltip": "Click to visit the website"
     }
   }
 }

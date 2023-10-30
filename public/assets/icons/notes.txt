@@ -1,0 +1,15 @@
+All icons except github and linked in from 
+  https://www.svgrepo.com/
+Generally
+  1. push thickness all the way up and then all the way down
+  2. padding to 8%
+  3. Icon size to the top: 256px
+  4. Using #ffffff for now
+Website
+  1. Thickness all the way up and then down to 13%
+  2. padding to 8%
+  3. Icon size to the top: 256px
+  4. Using #ffffff for now
+
+LinkeIn and Github use the site
+  https://feathericons.com/

@@ -19,7 +19,7 @@ export const Project: React.FC<ProjectProps> = ({
   data,
 }) => {
 
-  const t_general = useTranslations(`General`);
+  const t_general = useTranslations('General');
   const t_project = useTranslations(`Project.${id}`);
 
   return (
@@ -62,8 +62,14 @@ export const Project: React.FC<ProjectProps> = ({
               </div>
               {data.website ? (
                 <a target="_blank" href={data.website}>
-                  <div className="px-2 py-1 inline-block rounded-lg text-sm hover:bg-quaternary-bg transition duration-300 ease-in-out">
-                    <span> {t_general("website")}</span>
+                  <div className="flex flex-row items-center pl-1 py-1 rounded-lg text-sm hover:bg-quaternary-bg transition duration-300 ease-in-out">
+                    <div className='w-9'>
+                      <Icon
+                        id="website"
+                        showToolTip={false}
+                      />
+                    </div>
+                    <span className='text-lg'>{t_general("viewWebsite")}</span>
                   </div>
                 </a>
               ) : (

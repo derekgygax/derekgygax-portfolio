@@ -26,6 +26,7 @@ import sassIcon from '@/public/assets/icons/sass.svg';
 import solrIcon from '@/public/assets/icons/solr.svg';
 import tailwindIcon from '@/public/assets/icons/tailwind.svg';
 import typescriptIcon from '@/public/assets/icons/typescript.svg';
+import websiteIcon from '@/public/assets/icons/website.svg';
 
 
 // data
@@ -71,6 +72,7 @@ export const Icon: React.FC<IconProps> = ({
     solr: solrIcon,
     tailwind: tailwindIcon,
     typescript: typescriptIcon,
+    website: websiteIcon
   };
 
   const t = useTranslations("Icons");
