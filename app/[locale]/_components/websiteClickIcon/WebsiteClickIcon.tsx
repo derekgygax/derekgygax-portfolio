@@ -1,10 +1,16 @@
-
-export const WebsiteIcon: React.FC = () => {
-
+export const WebsiteClickIcon: React.FC = () => {
   return (
-    <svg width="256px" height="256px" viewBox="-5.12 -5.12 74.24 74.24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.28" stroke="#ffffff" fill="none">
-      <g id="SVGRepo_bgCarrier" stroke-width="0" />
-      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="-5.12 -5.12 74.24 74.24"
+      xmlns="http://www.w3.org/2000/svg"
+      strokeWidth="1.28"
+      stroke="currentColor"
+      fill="none"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0" />
+      <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
       <g id="SVGRepo_iconCarrier">
         <path d="M39.93,55.72A24.86,24.86,0,1,1,56.86,32.15a37.24,37.24,0,0,1-.73,6" />
         <path d="M37.86,51.1A47,47,0,0,1,32,56.7" />
@@ -18,4 +24,4 @@ export const WebsiteIcon: React.FC = () => {
       </g>
     </svg>
   );
-}
+};
