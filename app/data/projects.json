@@ -1,14 +1,14 @@
 {
   "id": "projects",
   "projectIds": [
-    "portfolio",
     "fiftySevenWest",
     "mendelgen",
     "loc",
     "copyright",
     "rppa",
     "cravat",
-    "mupit"
+    "mupit",
+    "portfolio"
   ],
   "projects": {
     "portfolio": {
