@@ -21,6 +21,7 @@ export const Project: React.FC<ProjectProps> = ({
 
   const t_general = useTranslations('General');
   const t_project = useTranslations(`Project.${id}`);
+  const t_projectGeneral = useTranslations(`Project.General`);
 
   return (
     <div
@@ -62,7 +63,10 @@ export const Project: React.FC<ProjectProps> = ({
               </div>
               {data.website ? (
                 <a target="_blank" href={data.website}>
-                  <div className="flex flex-row items-center pl-1 py-1 rounded-lg text-sm hover:bg-quaternary-bg transition duration-300 ease-in-out">
+                  <div
+                    className="inline-flex flex-row items-center pl-1 pr-2 py-1 rounded-lg text-sm hover:bg-quaternary-bg transition duration-300 ease-in-out"
+                    title={t_projectGeneral('webLink.tooltip', { websiteName: data.title })}
+                  >
                     <div className='w-9'>
                       <Icon
                         id="website"

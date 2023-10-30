@@ -15,6 +15,7 @@ export default getRequestConfig(async ({ locale }) => ({
       ...(await import(`./messages/${locale}/projects/copyright.json`)).default,
       ...(await import(`./messages/${locale}/projects/cravat.json`)).default,
       ...(await import(`./messages/${locale}/projects/fiftySevenWest.json`)).default,
+      ...(await import(`./messages/${locale}/projects/general.json`)).default,
       ...(await import(`./messages/${locale}/projects/loc.json`)).default,
       ...(await import(`./messages/${locale}/projects/mendelgen.json`)).default,
       ...(await import(`./messages/${locale}/projects/mupit.json`)).default,
