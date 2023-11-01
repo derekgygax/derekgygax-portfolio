@@ -1,7 +1,7 @@
 {
   "rppa": {
     "jobTitle": "Bioinformatics Engineer",
-    "summary": "Private web-based pipeline for MD Anderson Cancer Center's RPPA (Reverse Phase Protein Array) core, facilitating the analysis of protein levels in tumor tissue and cultured cells. This technology provides crucial insights for cancer research, drug development, and systems biology analyses.",
+    "summary": "Private web-based pipeline for MD Anderson Cancer Center's RPPA (Reverse Phase Protein Array) core, automating the analysis of protein levels in tumor tissue and cultured cells. This technology provides crucial insights for cancer research, drug development, and systems biology analyses.",
     "responsibilities": {
       "code": "Developed a web-based application to perform bioinformatic analysis for the MD Anderson Cancer Center Reverse phase protein array (RPPA) core facility."
     },
