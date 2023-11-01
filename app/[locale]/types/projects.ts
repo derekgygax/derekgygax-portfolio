@@ -6,6 +6,7 @@ export type ProjectsConfig = {
 
 export type ProjectConfig = {
   id: string;
+  isThisProject: boolean;
   title: string;
   website: string;
   hasWebsite: boolean;

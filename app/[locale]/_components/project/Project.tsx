@@ -27,7 +27,7 @@ export const Project: React.FC<ProjectProps> = ({
 
   return (
     <Link
-      target="_blank"
+      target={data.hasWebsite && !data.isThisProject ? "_blank" : "_self"}
       href={data.website}
     >
       <div

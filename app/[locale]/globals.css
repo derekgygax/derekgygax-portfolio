@@ -47,8 +47,12 @@ main {
     @apply font-normal no-underline whitespace-nowrap tracking-wide text-xl text-white;
   }
 
-  .linkContainer {
-    @apply p-2 rounded-lg transition duration-300 ease-in-out hover:bg-tertiary-bg hover:text-aqua-text;
+  .buttonContainer {
+    @apply p-2 rounded-lg transition duration-300 ease-in-out bg-tertiary-bg hover:text-aqua-text;
+  }
+
+  .iconLinkContainer {
+    @apply p-2 rounded-lg transition duration-300 ease-in-out hover:text-aqua-text;
   }
 
   .maxWidth {

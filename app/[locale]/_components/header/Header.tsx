@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
                   target="_blank"
                   href={media.href}
                 >
-                  <div className="linkContainer socialMediaIcon">
+                  <div className="iconLinkContainer socialMediaIcon">
                     <Icon
                       id={media.id}
                       isLink={true}

@@ -27,7 +27,7 @@ export const ConnectionIcons: React.FC = () => {
                 target={icon.type === "link" ? "_blank" : "_self"}
                 href={href}
               >
-                <div className="linkContainer socialMediaIconSm">
+                <div className="iconLinkContainer socialMediaIconSm">
                   <Icon
                     id={icon.id}
                     isLink={true}

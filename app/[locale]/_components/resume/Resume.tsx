@@ -19,7 +19,7 @@ export const Resume: React.FC = () => {
       download
     >
       <div
-        className="linkContainer flex flex-row"
+        className="buttonContainer flex flex-row"
         title={t('tooltip', { myName: me.name })}
       >
         <span>{t('label')}</span>
