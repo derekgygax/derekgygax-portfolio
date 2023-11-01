@@ -26,6 +26,7 @@ export const Resume: React.FC = () => {
         <div className="socialMediaIconXs4 ml-1">
           <Icon
             id={resume.icon.id}
+            isLink={true}
             showToolTip={false}
           />
         </div>

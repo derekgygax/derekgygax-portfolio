@@ -6,7 +6,6 @@ import Link from 'next-intl/link';
 import { ProjectConfig } from "../../types/projects";
 
 import { Icon } from '../icon/Icon';
-import { WebsiteClickIcon } from '../websiteClickIcon/WebsiteClickIcon';
 
 type ProjectProps = {
   id: string;
@@ -73,7 +72,10 @@ export const Project: React.FC<ProjectProps> = ({
                   className="inline-flex flex-row items-center pl-1 pr-2 py-1 rounded-lg group-hover:text-aqua-text"
                 >
                   <div className='w-9'>
-                    <WebsiteClickIcon />
+                    <Icon
+                      id="website"
+                      isLink={true}
+                    />
                   </div>
                   <span className='text-lg'>{data.hasWebsite ? t_general("viewWebsite") : t_general("viewDetails")}</span>
                 </div>

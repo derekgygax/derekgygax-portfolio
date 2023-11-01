@@ -30,6 +30,7 @@ export const ConnectionIcons: React.FC = () => {
                 <div className="linkContainer socialMediaIconSm">
                   <Icon
                     id={icon.id}
+                    isLink={true}
                   />
                 </div>
               </a>

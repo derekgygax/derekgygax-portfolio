@@ -1,4 +1,4 @@
-export const WebsiteClickIcon: React.FC = () => {
+export const WebsiteIcon: React.FC = () => {
   return (
     <svg
       width="100%"

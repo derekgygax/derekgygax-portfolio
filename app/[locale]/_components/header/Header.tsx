@@ -27,6 +27,7 @@ export const Header: React.FC = () => {
                   <div className="linkContainer socialMediaIcon">
                     <Icon
                       id={media.id}
+                      isLink={true}
                     />
                   </div>
                 </a>
