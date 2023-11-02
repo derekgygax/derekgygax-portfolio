@@ -20,7 +20,7 @@ export const Header: React.FC = () => {
           <Link
             href="/"
           >
-            <div className='w-12 mr-1 md:mr-4'>
+            <div className='w-12 mr-2 md:mr-4'>
               <Image
                 src={logo}
                 alt="derek gygax logo"
