@@ -38,7 +38,7 @@ export const AboutMe: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="self-start mt-1">
+            <div className="self-start mt-2">
               <Resume />
             </div>
           </div>

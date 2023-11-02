@@ -23,7 +23,7 @@ export const Resume: React.FC = () => {
         title={t('tooltip', { myName: me.name })}
       >
         <span>{t('label')}</span>
-        <div className="md:socialMediaIconXs4 ml-1">
+        <div className="md:socialMediaIconXs4 ml-1 items-center">
           <Icon
             id={resume.icon.id}
             isLink={true}
