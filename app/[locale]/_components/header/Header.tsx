@@ -1,45 +1,19 @@
-import Image from 'next/image';
-import Link from 'next-intl/link';
-import { useTranslations } from 'next-intl';
-
 // components
 import { ContactMeButton } from "../contactMeButton/ContactMeButton";
 import { Icon } from "../icon/Icon";
 import { Location } from "../location/Location";
-
-// logo
-import logo from '@/public/assets/derekgygax_logo.jpg';
+import { Logo } from '../logo/Logo';
 
 // data
-import logoData from '@/app/data/logo.json';
-import me from '@/app/data/me.json';
 import socialMedia from '@/app/data/socialMedia.json';
 
 export const Header: React.FC = () => {
-
-  const t = useTranslations("Logo");
-
   return (
     <header className="bg-primary-bg sticky h-header top-0 z-10 flex items-center">
       <div className="maxWidth w-full mx-auto px-4 grid grid-rows-1 grid-cols-3 md:grid-cols-6 md:gap-y-4">
-        <div className='flex items-center col-start-1 col-end-3'>
-          <Link
-            href={logoData.href}
-          >
-            <div
-              className='w-12 md:w-16 mr-2 md:mr-4'
-              title={t("tooltip", { myName: me.name })}
-            >
-              <Image
-                src={logo}
-                alt={t("alt", { myName: me.name })}
-                className='rounded'
-              />
-            </div>
-          </Link>
-          <div className="navSection">
-            <Location />
-          </div>
+        <div className='navSection col-start-1 col-end-3'>
+          <Logo />
+          <Location />
         </div>
         <div className="hidden md:navSection justify-around md:col-start-3 md:col-end-4">
         </div>

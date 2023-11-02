@@ -97,7 +97,6 @@ export const Icon: React.FC<IconProps> = ({
 
   return (
     <div
-      className="z-10"
       {...(showToolTip && { title: tooltip })}
     >
       {isLink && LinkedComponent ? (
