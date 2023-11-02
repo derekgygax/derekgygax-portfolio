@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 // components
 import { AboutMe } from './_components/aboutMe/AboutMe';
 import { Projects } from './_components/projects/Projects';
-import { ConnectionIcons } from './_components/connectionIcons/ConnectionIcons';
 
 // data
 import { LOCALES } from '@/locales.config';
@@ -62,7 +61,6 @@ const HomePage: React.FC<HomePageProps> = ({ params }) => {
     <main>
       <AboutMe />
       <Projects />
-      <ConnectionIcons />
     </main>
   )
 }

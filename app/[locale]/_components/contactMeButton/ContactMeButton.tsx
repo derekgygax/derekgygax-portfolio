@@ -20,7 +20,7 @@ export const ContactMeButton: React.FC = () => {
       className="link"
       href={`mailto:${me.email}`}
     >
-      <div className="buttonContainer" title={tooltip}>
+      <div className="buttonContainer text-base md:text-xl" title={tooltip}>
         {t(`label`)}
       </div>
     </Link>

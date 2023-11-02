@@ -19,11 +19,11 @@ export const Resume: React.FC = () => {
       download
     >
       <div
-        className="buttonContainer flex flex-row"
+        className="buttonContainer flex flex-row text-base md:text-lg"
         title={t('tooltip', { myName: me.name })}
       >
         <span>{t('label')}</span>
-        <div className="socialMediaIconXs4 ml-1">
+        <div className="md:socialMediaIconXs4 ml-1">
           <Icon
             id={resume.icon.id}
             isLink={true}
