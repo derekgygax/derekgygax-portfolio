@@ -1,8 +1,5 @@
-import { getTranslator } from 'next-intl/server';
-// TODO
-// This is a temporary work around that should be removed
-// in the future
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import { LOCALES } from '@/navigation';
 
 // types
 import type { Metadata } from 'next'
@@ -14,11 +11,21 @@ import { Footer } from './_components/footer/Footer';
 // styles
 import './globals.css';
 
+// TODO
+// This is a temporary work around that should be removed
+// in the future
+import { unstable_setRequestLocale } from 'next-intl/server';
+
+// Generate the urls that code exist at this level form the LOCALES
+export function generateStaticParams() {
+  return LOCALES.map((locale) => ({ locale }));
+}
+
 // Generate the Metadata for the root layout
 export async function generateMetadata(
   { params: { locale } }: { params: { locale: string } }
 ): Promise<Metadata> {
-  const t = await getTranslator(locale, 'RootLayout.Metadata');
+  const t = await getTranslations({ locale: locale, namespace: 'RootLayout.Metadata' });
 
   // TODO Does this have all the sections it needs like 57West does
   return {

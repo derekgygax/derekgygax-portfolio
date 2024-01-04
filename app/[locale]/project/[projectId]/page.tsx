@@ -1,12 +1,12 @@
 import { notFound } from 'next/navigation';
-import { getTranslator } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 
 // types
 import type { Metadata } from 'next'
 import type { ProjectsConfig } from '../../types/projects';
 
 // data
-import { LOCALES } from '@/locales.config';
+import { LOCALES } from '@/navigation';
 import projectsData from '@/app/data/projects.json';
 
 // TODO
@@ -35,7 +35,7 @@ export async function generateMetadata(
   const projects = projectsData as ProjectsConfig;
 
   // TODO This section has only been done for RPPA in the JSON files
-  const t = await getTranslator(locale, `Project.${projectId}`);
+  const t = await getTranslations({ locale: locale, namespace: `Project.${projectId}` });
 
   return {
     title: projects.projects[projectId].title,
@@ -47,20 +47,8 @@ export async function generateMetadata(
 }
 
 // Generate all params that could exist for this url
-// example /en/rppa  OR  es/rppa  OR  en/loc  OR es/loc
 export function generateStaticParams() {
-  return LOCALES.reduce((
-    accumulator: { locale: string; projectId: string }[],
-    locale
-  ) => {
-    projectsData.projectIds.forEach((id: string) => {
-      accumulator.push({
-        locale: locale,
-        projectId: id
-      });
-    });
-    return accumulator;
-  }, []);
+  return projectsData.projectIds.map((id) => ({ projectId: id }));
 }
 
 

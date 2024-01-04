@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next-intl/link';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/navigation';
 
 // logo
 import logo from '@/public/assets/derekgygax_logo.jpg';

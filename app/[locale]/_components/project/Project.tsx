@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import { useTranslations } from "next-intl";
-import Link from 'next-intl/link';
+import { Link } from '@/navigation';
 
 // components
 import { ProjectConfig } from "../../types/projects";
