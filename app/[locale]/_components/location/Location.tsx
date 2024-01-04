@@ -15,7 +15,7 @@ export const Location: React.FC = () => {
           showToolTip={false}
         />
       </div>
-      <div className="flex flex-row flex-nowrap">
+      <div className="flex flex-row">
         <div className='whitespace-nowrap'>
           {me.location.city}
         </div>

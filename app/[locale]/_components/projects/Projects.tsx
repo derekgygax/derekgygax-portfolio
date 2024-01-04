@@ -49,11 +49,11 @@ export const Projects: React.FC = () => {
   return (
     <section id={projectsData.id}>
       <div className="section">
-        <div className="pb-2 md:pb-8">
+        <header className="pb-2 md:pb-8">
           <h1 className="m-0 text-3xl md:text-5xl font-bold pb-2">
             {t('title')}
           </h1>
-        </div>
+        </header>
         <div className="md:grid md:grid-cols-2 md:grid-rows-4 gap-y-4 gap-x-4">
           {projects.projectIds.map((id: string) => {
             return (

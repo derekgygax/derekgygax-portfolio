@@ -9,9 +9,7 @@ export const Footer: React.FC = () => {
     <footer className="pt-2 mb-20">
       <div className="maxWidth h-full mx-auto px-4">
         <ConnectionIcons />
-        <div className="text-center text-sm">
-          <span>{`${t('copyright')}`}</span>
-        </div>
+        <p className="text-center text-sm">{`${t('copyright')}`}</p>
       </div>
     </footer>
   )

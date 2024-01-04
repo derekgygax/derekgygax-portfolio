@@ -15,21 +15,19 @@ export const Resume: React.FC = () => {
     <a
       href="/assets/DerekGygax_resume.pdf"
       target="_blank"
+      aria-label={`Download ${me.name} Resume`}
       rel="noopener noreferrer"
       download
+      className="buttonContainer flex flex-row text-base md:text-lg"
+      title={t('tooltip', { myName: me.name })}
     >
-      <div
-        className="buttonContainer flex flex-row text-base md:text-lg"
-        title={t('tooltip', { myName: me.name })}
-      >
-        <span>{t('label')}</span>
-        <div className="md:socialMediaIconXs4 ml-1 items-center">
-          <Icon
-            id={resume.icon.id}
-            isLink={true}
-            showToolTip={false}
-          />
-        </div>
+      {t('label')}
+      <div className="md:socialMediaIconXs4 ml-1 items-center">
+        <Icon
+          id={resume.icon.id}
+          isLink={true}
+          showToolTip={false}
+        />
       </div>
     </a>
   )

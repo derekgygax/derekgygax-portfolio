@@ -30,7 +30,7 @@ export const Project: React.FC<ProjectProps> = ({
       target={data.hasWebsite && !data.isThisProject ? "_blank" : "_self"}
       href={data.website}
     >
-      <div
+      <article
         className="group h-full my-2 md:my-0 rounded-2xl hover:bg-secondary-bg transition duration-300 ease-in-out"
         title={tooltip}
       >
@@ -44,16 +44,14 @@ export const Project: React.FC<ProjectProps> = ({
               />
             </div>
             <div className="flex flex-col justify-between box-border p-4 bg-tertiary-bg w-full h-full rounded-b-xl">
-              <div className='pb-4'>
-                <div className="mt-4 mb-4">
-                  <h2 className="m-0 text-2xl">{data.title}</h2>
-                  <h4 className="m-0 text-lg">{t_project('jobTitle')}</h4>
-                </div>
-                <div className="text-secondary-text">
-                  <p>{t_project('summary')}</p>
-                </div>
+              <header className="mt-4 mb-4">
+                <h2 className="m-0 text-2xl">{data.title}</h2>
+                <h4 className="m-0 text-lg">{t_project('jobTitle')}</h4>
+              </header>
+              <div className="text-secondary-text">
+                <p>{t_project('summary')}</p>
               </div>
-              <div>
+              <footer className='pt-4'>
                 <div className="flex flex-row flex-nowrap w-full">
                   {data.technologies.map((tech) => {
                     return (
@@ -79,11 +77,11 @@ export const Project: React.FC<ProjectProps> = ({
                   </div>
                   <span className='text-lg'>{data.hasWebsite ? t_general("viewWebsite") : t_general("viewDetails")}</span>
                 </div>
-              </div>
+              </footer>
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </Link>
   )
 }

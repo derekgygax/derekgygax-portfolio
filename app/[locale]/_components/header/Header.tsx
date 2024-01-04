@@ -15,8 +15,6 @@ export const Header: React.FC = () => {
           <Logo />
           <Location />
         </div>
-        <div className="hidden md:navSection justify-around md:col-start-3 md:col-end-4">
-        </div>
         <div className="hidden md:navSection md:col-start-5 md:col-end-6 justify-center">
           <div className="flex w-3/5 justify-between">
             {socialMedia.map((media) => {

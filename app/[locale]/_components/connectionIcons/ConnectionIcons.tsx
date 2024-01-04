@@ -8,7 +8,7 @@ import me from '@/app/data/me.json';
 export const ConnectionIcons: React.FC = () => {
 
   return (
-    <section>
+    <nav>
       <div className="section flex justify-center pb-2">
         <div className="grid grid-rows-1 grid-cols-4 gap-y-2 md:gap-y-4 text-center justify-center w-2/3 md:w-2/5">
           {connectionIcons.icons.map((icon) => {
@@ -38,6 +38,6 @@ export const ConnectionIcons: React.FC = () => {
           })}
         </div>
       </div>
-    </section>
+    </nav>
   )
 }
