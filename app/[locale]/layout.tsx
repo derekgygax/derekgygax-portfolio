@@ -1,3 +1,4 @@
+import type { Viewport } from 'next'
 import { getTranslations } from 'next-intl/server';
 import { LOCALES } from '@/navigation';
 
@@ -29,6 +30,8 @@ export async function generateMetadata(
 
   // TODO Does this have all the sections it needs like 57West does
   return {
+    // TODO look into this!
+    metadataBase: new URL('https://www.derekgygax.com'),
     openGraph: {
       type: 'website',
       title: t('openGraph.title'),
@@ -38,11 +41,15 @@ export async function generateMetadata(
       // url: 'https://57west.us',
     },
     // TODO IDK ABOUT THESE
-    viewport: 'width=device-width, initial-scale=1.0',
     twitter: {
       card: 'summary_large_image',
     }
   };
+}
+// Viewport Metadata
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0
 }
 
 type RootLayoutProps = {
