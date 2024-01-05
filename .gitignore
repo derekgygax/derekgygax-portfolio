@@ -40,3 +40,4 @@ package-lock.json
 
 # vs code for connecting to the database
 .vscode
+portfolio.session.sql
