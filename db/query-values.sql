@@ -1,0 +1,24 @@
+-- generally select all users
+-- SELECT *
+-- FROM users;
+--
+-- Get the project and the icons
+-- select projects.name,
+--   pd.title,
+--   icons.name,
+--   ia.text
+-- from projects
+--   inner join project_details as pd on projects.id = pd.project_id
+--   inner join project_icons as pi on projects.id = pi.project_id
+--   inner join icons on pi.icon_name = icons.name
+--   INNER JOIN icon_alt AS ia ON icons.icon_alt_id = ia.id;
+--
+-- Select the project that the user has worked on.
+-- SELECT u.first_name,
+--   u.last_name,
+--   p.name,
+--   pd.title
+-- from users as u
+--   INNER JOIN user_projects as up on u.id = up.user_id
+--   INNER JOIN projects as p on up.project_id = p.id
+--   INNER JOIN project_details as pd on p.id = pd.project_id;

@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS projects_icons;
+DROP TABLE IF EXISTS icons;
+DROP TABLE IF EXISTS icon_alt;
+DROP TABLE IF EXISTS project_details;
+DROP TABLE IF EXISTS projects;
+DROP TABLE IF EXISTS user_roles;
+DROP TABLE IF EXISTS project_links;
+DROP TABLE IF EXISTS roles;
+DROP TABLE IF EXISTS users;
