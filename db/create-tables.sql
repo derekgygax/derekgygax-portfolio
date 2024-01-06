@@ -41,7 +41,7 @@ CREATE TABLE projects (
   -- boolean to say this project is the same one the DB is used for
   current_project boolean NOT NULL,
   -- Order displayed on the portfolio page
-  display_order SMALLINT CHECK NOT NULL,
+  display_order SMALLINT NOT NULL,
   -- Reference to the tool tip used when hovering over the project
   project_links_id INT REFERENCES project_links (id) ON DELETE RESTRICT
 );
@@ -84,5 +84,6 @@ CREATE TABLE project_icons (
 -- Linking table between the user and the projects they work on
 CREATE TABLE user_projects (
   user_id INT REFERENCES users (id) ON DELETE CASCADE,
-  project_id INT REFERENCES projects (id) ON DELETE CASCADE
+  project_id INT REFERENCES projects (id) ON DELETE CASCADE,
+  PRIMARY KEY (user_id, project_id)
 );
