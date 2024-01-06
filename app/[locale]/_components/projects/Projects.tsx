@@ -1,11 +1,14 @@
 import { StaticImageData } from 'next/image';
-import { useTranslations } from "next-intl"
+import { getTranslations } from 'next-intl/server';
 
 // components
 import { Project } from '../project/Project';
 
 // data
 import projectsData from '@/app/data/projects.json';
+
+// database calls
+import { getNamesInOrder } from '@/lib/db/projects';
 
 // types
 import { ProjectsConfig } from '../../types/projects';
@@ -22,11 +25,13 @@ import cravatImage from '@/public/assets/projects/cravat.png';
 import mupitImage from '@/public/assets/projects/mupit.png';
 import portfolioImage from '@/public/assets/projects/portfolio.png';
 
-export const Projects: React.FC = () => {
+export const Projects: React.FC = async () => {
+
+  const projectNames = await getNamesInOrder();
 
   const projects = projectsData as ProjectsConfig;
 
-  const t = useTranslations("Projects");
+  const t = await getTranslations("Projects");
 
   const images: Record<string, StaticImageData> = {
     fiftySevenWest: fiftySevenWestImage,
@@ -40,7 +45,7 @@ export const Projects: React.FC = () => {
   }
 
   // TODO
-  // DOing this and running npm run build you can see that
+  // Doing this and running npm run build you can see that
   // for some reason everything is building twice ... not sure
   // why. Figure that out!!!
   // console.log("SDJHOSIFJSBDFKLSDJB");
