@@ -3,49 +3,50 @@ import { useTranslations } from "next-intl";
 import { Link } from '@/navigation';
 
 // components
-import { ProjectConfig } from "../../types/projects";
+import { ProjectConfig, Technology } from "../../../../types/projects";
 
 import { Icon } from '../icon/Icon';
 
 type ProjectProps = {
-  id: string;
+  name: string;
   image: StaticImageData;
-  data: ProjectConfig;
+  isCurrenProject: boolean;
+  website: string;
+  technologies: Technology[]
 }
 
 export const Project: React.FC<ProjectProps> = ({
-  id,
+  name,
   image,
-  data,
+  isCurrenProject,
+  website,
+  technologies
 }) => {
 
-  const t_general = useTranslations('General');
-  const t_project = useTranslations(`Project.${id}`);
-  const t_projectGeneral = useTranslations(`Project.General`);
-
-  const tooltip = data.hasWebsite ? t_projectGeneral('webLink.tooltip', { websiteName: data.title }) : t_projectGeneral('detailsLink.tooltip', { projectTitle: data.title })
+  const t_project = useTranslations(`Project.${name}`);
 
   return (
     <Link
-      target={data.hasWebsite && !data.isThisProject ? "_blank" : "_self"}
-      href={data.website}
+      target={!isCurrenProject ? "_blank" : "_self"}
+      // target={data.hasWebsite && !data.isThisProject ? "_blank" : "_self"}
+      href={website}
     >
       <article
         className="group h-full my-2 md:my-0 rounded-2xl hover:bg-secondary-bg transition duration-300 ease-in-out"
-        title={tooltip}
+        title={t_project("projectLink.tooltip")}
       >
         <div className="p-2 h-full">
           <div className="h-full border border-tertiary-bg rounded-xl flex flex-col hover:border-quaternary-bg transition duration-300 ease-in-out">
             <div>
               <Image
                 src={image}
-                alt={t_project('imageAlt')}
+                alt={t_project('imgAlt')}
                 className="w-full h-full rounded-t-xl"
               />
             </div>
             <div className="flex flex-col justify-between box-border p-4 bg-tertiary-bg w-full h-full rounded-b-xl">
               <header className="mt-4 mb-4">
-                <h2 className="m-0 text-2xl">{data.title}</h2>
+                <h2 className="m-0 text-2xl">{t_project('title')}</h2>
                 <h4 className="m-0 text-lg">{t_project('jobTitle')}</h4>
               </header>
               <div className="text-secondary-text">
@@ -53,14 +54,14 @@ export const Project: React.FC<ProjectProps> = ({
               </div>
               <footer className='pt-4'>
                 <div className="flex flex-row flex-nowrap w-full">
-                  {data.technologies.map((tech) => {
+                  {technologies.map((tech) => {
                     return (
                       <div
-                        key={`project_${id}_tech_${tech}`}
+                        key={`project_${name}_tech_${tech.name}`}
                         className="w-9 p-2"
                       >
                         <Icon
-                          id={tech}
+                          id={tech.name}
                         />
                       </div>
                     );
@@ -75,7 +76,7 @@ export const Project: React.FC<ProjectProps> = ({
                       isLink={true}
                     />
                   </div>
-                  <span className='text-lg'>{data.hasWebsite ? t_general("viewWebsite") : t_general("viewDetails")}</span>
+                  <span className='text-lg'>{t_project("projectLink.label")}</span>
                 </div>
               </footer>
             </div>

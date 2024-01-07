@@ -15,8 +15,8 @@ VALUES (
     '+14107778985'
   );
 -- --
--- -- Roles
-INSERT INTO roles (title)
+-- -- Jobs
+INSERT INTO jobs (title)
 VALUES ('Software Engineer'),
   ('Bioinformatics Engineer');
 --
@@ -31,8 +31,8 @@ VALUES (
     'View Project Details'
   );
 --
--- User Roles
-INSERT INTO user_roles (user_id, role_title)
+-- User Jobs
+INSERT INTO user_jobs (user_id, job_title)
 VALUES (1, 'Software Engineer'),
   (1, 'Bioinformatics Engineer');
 --
@@ -95,7 +95,7 @@ VALUES (
 -- fiftySevenWest
 INSERT INTO project_details (
     title,
-    role_title,
+    job_title,
     summary,
     img_alt,
     project_id
@@ -156,6 +156,17 @@ VALUES (
     'Derek Gygax''s portfolio website, showcasing his professional skills and abilities.',
     8
   );
+--
+-- Project Metadata
+INSERT INTO project_metadata (title, description, keywords, project_id)
+VALUES ('57 West', '', '', 1),
+  ('Mendelgen', '', '', 2),
+  ('Library of Congress', '', '', 3),
+  ('Copyright Recordation', '', '', 4),
+  ('RPPA', '', '', 5),
+  ('CRAVAT', '', '', 6),
+  ('MuPIT', '', '', 7),
+  ('Portfolio', '', '', 8);
 --
 -- Icon Alt
 INSERT INTO icon_alt (text)

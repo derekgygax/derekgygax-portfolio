@@ -8,10 +8,7 @@ import { Project } from '../project/Project';
 import projectsData from '@/app/data/projects.json';
 
 // database calls
-import { getNamesInOrder } from '@/lib/db/projects';
-
-// types
-import { ProjectsConfig } from '../../types/projects';
+import { getProjectData } from '@/lib/db/projects';
 
 // images
 import fiftySevenWestImage from '@/public/assets/projects/fiftySevenWest.png';
@@ -27,10 +24,14 @@ import portfolioImage from '@/public/assets/projects/portfolio.png';
 
 export const Projects: React.FC = async () => {
 
-  const projectNames = await getNamesInOrder();
+  const projects = await getProjectData();
 
-  const projects = projectsData as ProjectsConfig;
+  // TODO does the locale need to be passed here OR only in the metadata one??
+  // TODO does the locale need to be passed here OR only in the metadata one??
+  // TODO does the locale need to be passed here OR only in the metadata one??
+  // TODO does the locale need to be passed here OR only in the metadata one??
 
+  // TODO does the locale need to be passed here OR only in the metadata one??
   const t = await getTranslations("Projects");
 
   const images: Record<string, StaticImageData> = {
@@ -44,13 +45,6 @@ export const Projects: React.FC = async () => {
     portfolio: portfolioImage
   }
 
-  // TODO
-  // Doing this and running npm run build you can see that
-  // for some reason everything is building twice ... not sure
-  // why. Figure that out!!!
-  // console.log("SDJHOSIFJSBDFKLSDJB");
-
-
   return (
     <section id={projectsData.id}>
       <div className="section">
@@ -60,13 +54,15 @@ export const Projects: React.FC = async () => {
           </h1>
         </header>
         <div className="md:grid md:grid-cols-2 md:grid-rows-4 gap-y-4 gap-x-4">
-          {projects.projectIds.map((id: string) => {
+          {projects.map((project) => {
             return (
               <Project
-                key={`project_${id}`}
-                id={id}
-                image={images[id]}
-                data={projects.projects[id]}
+                key={`project_${project.name}`}
+                name={project.name}
+                image={images[project.name]}
+                isCurrenProject={project.isCurrentProject}
+                website={project.website}
+                technologies={project.technologies}
               />
             )
           })}

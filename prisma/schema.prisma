@@ -21,15 +21,21 @@ model icons {
   project_icons project_icons[]
 }
 
+model jobs {
+  title           String            @id @db.VarChar(50)
+  project_details project_details[]
+  user_jobs       user_jobs[]
+}
+
 model project_details {
-  id         Int       @id @default(autoincrement())
-  title      String    @db.VarChar(100)
-  role_title String?   @db.VarChar(50)
+  id         Int      @id @default(autoincrement())
+  title      String   @db.VarChar(100)
+  job_title  String   @db.VarChar(50)
   summary    String
   img_alt    String
-  project_id Int?
-  projects   projects? @relation(fields: [project_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
-  roles      roles?    @relation(fields: [role_title], references: [title], onDelete: Restrict)
+  project_id Int
+  jobs       jobs     @relation(fields: [job_title], references: [title])
+  projects   projects @relation(fields: [project_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
 }
 
 model project_icons {
@@ -48,23 +54,36 @@ model project_links {
   projects projects[]
 }
 
+model project_metadata {
+  id          Int      @id @default(autoincrement())
+  title       String   @db.VarChar(100)
+  description String   @db.VarChar(200)
+  keywords    String   @db.VarChar(200)
+  project_id  Int
+  projects    projects @relation(fields: [project_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
 model projects {
-  id               Int               @id @default(autoincrement())
-  name             String            @db.VarChar(50)
-  url              String            @db.VarChar(300)
+  id               Int                @id @default(autoincrement())
+  name             String             @db.VarChar(50)
+  url              String             @db.VarChar(300)
   current_project  Boolean
-  display_order    Int               @db.SmallInt
-  project_links_id Int?
+  display_order    Int                @db.SmallInt
+  project_links_id Int
   project_details  project_details[]
   project_icons    project_icons[]
-  project_links    project_links?    @relation(fields: [project_links_id], references: [id], onDelete: Restrict, onUpdate: NoAction)
+  project_metadata project_metadata[]
+  project_links    project_links      @relation(fields: [project_links_id], references: [id], onUpdate: NoAction)
   user_projects    user_projects[]
 }
 
-model roles {
-  title           String            @id @db.VarChar(50)
-  project_details project_details[]
-  user_roles      user_roles[]
+model user_jobs {
+  user_id   Int
+  job_title String @db.VarChar(50)
+  jobs      jobs   @relation(fields: [job_title], references: [title])
+  users     users  @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@id([user_id, job_title])
 }
 
 model user_projects {
@@ -76,15 +95,6 @@ model user_projects {
   @@id([user_id, project_id])
 }
 
-model user_roles {
-  user_id    Int
-  role_title String @db.VarChar(50)
-  roles      roles  @relation(fields: [role_title], references: [title])
-  users      users  @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
-
-  @@id([user_id, role_title])
-}
-
 model users {
   id            Int             @id @default(autoincrement())
   first_name    String          @db.VarChar(20)
@@ -92,6 +102,6 @@ model users {
   last_name     String          @db.VarChar(20)
   email         String          @unique @db.VarChar(50)
   phone         String          @unique @db.VarChar(25)
+  user_jobs     user_jobs[]
   user_projects user_projects[]
-  user_roles    user_roles[]
 }

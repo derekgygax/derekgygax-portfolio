@@ -1,3 +1,6 @@
+-- TODO A LOT Of
+--   NOT NULL
+-- missing
 --
 -- User
 CREATE TABLE users (
@@ -9,8 +12,8 @@ CREATE TABLE users (
   phone VARCHAR(25) NOT NULL UNIQUE
 );
 --
--- Roles - For Job Titles
-CREATE TABLE roles (title VARCHAR(50) PRIMARY KEY);
+-- Jobs - For Job Titles
+CREATE TABLE jobs (title VARCHAR(50) PRIMARY KEY);
 --
 -- Project Links - the link to the project website or more details
 CREATE TABLE project_links (
@@ -21,11 +24,11 @@ CREATE TABLE project_links (
   label VARCHAR(100) NOT NULL
 );
 --
--- Linking table users and roles
-CREATE TABLE user_roles (
+-- Linking table users and jobs
+CREATE TABLE user_jobs (
   user_id INT REFERENCES users (id) ON DELETE CASCADE,
-  role_title VARCHAR(50) REFERENCES roles (title) ON DELETE RESTRICT ON UPDATE CASCADE,
-  PRIMARY KEY (user_id, role_title)
+  job_title VARCHAR(50) REFERENCES jobs (title) ON DELETE RESTRICT ON UPDATE CASCADE,
+  PRIMARY KEY (user_id, job_title)
 );
 --
 -- Projects
@@ -43,7 +46,7 @@ CREATE TABLE projects (
   -- Order displayed on the portfolio page
   display_order SMALLINT NOT NULL,
   -- Reference to the tool tip used when hovering over the project
-  project_links_id INT REFERENCES project_links (id) ON DELETE RESTRICT
+  project_links_id INT NOT NULL REFERENCES project_links (id) ON DELETE RESTRICT
 );
 --
 -- Project Details
@@ -52,13 +55,26 @@ CREATE TABLE project_details (
   -- Title of the project for display
   title VARCHAR(100) NOT NULL,
   -- The job you had for the project
-  role_title VARCHAR(50) REFERENCES roles (title) ON DELETE RESTRICT ON UPDATE CASCADE,
+  job_title VARCHAR(50) NOT NULL REFERENCES jobs (title) ON DELETE RESTRICT ON UPDATE CASCADE,
   -- A quick summary of the project
   summary TEXT NOT NULL,
   -- The project has an image. This is what is displayed if the image doesn't load
   img_alt TEXT NOT NULL,
   -- Foreign key referencing the project id
-  project_id INT REFERENCES projects (id) ON DELETE CASCADE
+  project_id INT NOT NULL REFERENCES projects (id) ON DELETE CASCADE
+);
+--
+-- Project Metadata
+CREATE TABLE project_metadata (
+  id SERIAL PRIMARY KEY,
+  -- Title of the project for metadata (page title at top of tab)
+  title VARCHAR(100) NOT NULL,
+  -- Description of the project for metadata
+  description VARCHAR(200) NOT NULL,
+  -- Keywords of the project for metadata
+  keywords VARCHAR(200) NOT NULL,
+  -- Foreign key referencing the project id
+  project_id INT NOT NULL REFERENCES projects (id) ON DELETE CASCADE
 );
 --
 -- Icons Alt wording

@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 
 // types
 import type { Metadata } from 'next'
-import type { ProjectsConfig } from '../../types/projects';
+import type { ProjectsConfig } from '../../../../types/projects';
 
 // data
 import { LOCALES } from '@/navigation';
@@ -13,6 +13,7 @@ import projectsData from '@/app/data/projects.json';
 // This is a temporary work around that should be removed
 // in the future
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 
 
 // TODO is this right. Do you need others
@@ -32,13 +33,11 @@ export async function generateMetadata(
   }
 ): Promise<Metadata> {
 
-  const projects = projectsData as ProjectsConfig;
-
   // TODO This section has only been done for RPPA in the JSON files
   const t = await getTranslations({ locale: locale, namespace: `Project.${projectId}` });
 
   return {
-    title: projects.projects[projectId].title,
+    title: t('metaData.title'),
     description: t('metaData.description'),
     // TODO really need to make these better
     // TODO you need to learn about this still
@@ -59,30 +58,30 @@ type ProjectDetailsPageProps = {
   };
 }
 
-const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ params }) => {
+const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ params: { locale, projectId } }) => {
 
   // Validate that the incoming `locale` parameter is valid
-  const isValidLocale = LOCALES.some((cur) => cur === params.locale);
+  const isValidLocale = LOCALES.some((cur) => cur === locale);
   if (!isValidLocale) notFound();
 
   const projects = projectsData as ProjectsConfig;
 
   // Validate that the incoming `projectId` parameter is valid
   const isValidProjectId = projects.projectIds.some((id) => {
-    return id === params.projectId
+    return id === projectId
   });
   if (!isValidProjectId) notFound();
 
-  const project = projects.projects[params.projectId];
+  const t = useTranslations(`Project.${projectId}`);
 
   // This is a temporary work around that should be removed
   // in the future
-  unstable_setRequestLocale(params.locale);
+  unstable_setRequestLocale(locale);
 
   return (
     // TODO this is just for the title while building, needs changing
     <main className='flex flex-cols items-center'>
-      <h1 className="flex-1 section text-4xl pb-12">The details page for {project.title} is currently being constructed.</h1>
+      <h1 className="flex-1 section text-4xl pb-12">The details page for {t("title")} is currently being constructed.</h1>
     </main>
   )
 }

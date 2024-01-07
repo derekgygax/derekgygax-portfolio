@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS user_projects;
 DROP TABLE IF EXISTS project_icons;
 DROP TABLE IF EXISTS project_details;
+DROP TABLE IF EXISTS project_metadata;
 DROP TABLE IF EXISTS user_roles;
 DROP TABLE IF EXISTS projects;
 DROP TABLE IF EXISTS project_links;
