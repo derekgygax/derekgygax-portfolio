@@ -60,6 +60,10 @@ type ProjectDetailsPageProps = {
 
 const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ params: { locale, projectId } }) => {
 
+  // This is a temporary work around that should be removed
+  // in the future
+  unstable_setRequestLocale(locale);
+
   // Validate that the incoming `locale` parameter is valid
   const isValidLocale = LOCALES.some((cur) => cur === locale);
   if (!isValidLocale) notFound();
@@ -74,9 +78,6 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ params: { local
 
   const t = useTranslations(`Project.${projectId}`);
 
-  // This is a temporary work around that should be removed
-  // in the future
-  unstable_setRequestLocale(locale);
 
   return (
     // TODO this is just for the title while building, needs changing
