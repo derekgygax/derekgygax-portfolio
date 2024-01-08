@@ -8,10 +8,10 @@ export class Portfolio {
   public static user: User | null = null;
   private static projects: Project[] | null = null;
 
-  // for the caching
+  // for caching
   private static populatePromise: Promise<void> | null = null;
 
-  private static populatePortfolio(): Promise<void> {
+  private static populatePortfolio(where: string): Promise<void> {
     if (!Portfolio.populatePromise) {
       Portfolio.populatePromise = new Promise(async (resolve, reject) => {
         try {
@@ -35,24 +35,20 @@ export class Portfolio {
     return Portfolio.populatePromise;
   }
 
-  // Check the object is populated before trying to use it
-  private static async checkPopulated() {
-    if (!Portfolio.user) {
-      await Portfolio.populatePortfolio();
-    }
-  }
-
-
   public static async getUser(): Promise<User> {
 
-    await Portfolio.checkPopulated();
+    if (!Portfolio.user) {
+      await Portfolio.populatePortfolio('getUser');
+    }
 
     return Portfolio.user!;
   }
 
   public static async getProjectSkeletons(): Promise<ProjectSkeleton[]> {
 
-    await Portfolio.checkPopulated();
+    if (!Portfolio.projects) {
+      await Portfolio.populatePortfolio('getProjectSkeletons');
+    }
 
     return Portfolio.projects?.map((project: Project) => {
       return project.getSkeleton();
@@ -60,8 +56,9 @@ export class Portfolio {
   }
 
   public static async getProjectTranslations(): Promise<Record<string, ProjectTranlation>> {
-
-    await Portfolio.checkPopulated();
+    if (!Portfolio.projects) {
+      await Portfolio.populatePortfolio('getProjectTranslations');
+    }
 
     return Portfolio.projects?.reduce((accumulator: Record<string, ProjectTranlation>, project: Project) => {
       accumulator[project.getName()] = project.getTranslation();
@@ -70,7 +67,9 @@ export class Portfolio {
   }
 
   public static async getProjectNames(): Promise<string[]> {
-    await Portfolio.checkPopulated();
+    if (!Portfolio.projects) {
+      await Portfolio.populatePortfolio('getProjectNames');
+    }
 
     return Portfolio.projects?.map((project: Project) => {
       return project.getName();
