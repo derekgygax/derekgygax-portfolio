@@ -16,12 +16,12 @@ VALUES (
   );
 -- --
 -- -- Jobs
-INSERT INTO jobs (title)
+INSERT INTO job (title)
 VALUES ('Software Engineer'),
   ('Bioinformatics Engineer');
 --
 -- Project Link
-INSERT INTO project_links (tooltip, label)
+INSERT INTO project_link (tooltip, label)
 VALUES (
     'Click to visit the {PROJECT_TITLE} website',
     'View Website'
@@ -32,13 +32,13 @@ VALUES (
   );
 --
 -- User Jobs
-INSERT INTO user_jobs (user_id, job_title)
+INSERT INTO user_job (user_id, job_title)
 VALUES (1, 'Software Engineer'),
   (1, 'Bioinformatics Engineer');
 --
 -- Project
 -- -- 57West
-INSERT INTO projects (
+INSERT INTO project (
     name,
     url,
     current_project,
@@ -93,7 +93,7 @@ VALUES (
 --
 -- Project Details
 -- fiftySevenWest
-INSERT INTO project_details (
+INSERT INTO project_detail (
     title,
     job_title,
     summary,
@@ -182,7 +182,7 @@ VALUES ('Icon for {ICON_NAME}'),
   ('Click to download');
 --
 -- Icons
-INSERT INTO icons (name, tooltip, icon_alt_id)
+INSERT INTO icon (name, tooltip, icon_alt_id)
 VALUES ('angular', 'Angular', 1),
   ('aws', 'AWS', 1),
   ('django', 'Django', 1),
@@ -226,7 +226,7 @@ VALUES ('angular', 'Angular', 1),
   ('website', 'Click to visit the website', 7);
 --
 -- Project Icons
-INSERT INTO project_icons (project_id, icon_name)
+INSERT INTO project_icon (project_id, icon_name)
 VALUES (8, 'nextjs'),
   (8, 'typescript'),
   (8, 'tailwind'),
@@ -261,7 +261,7 @@ VALUES (8, 'nextjs'),
   (7, 'docker');
 --
 -- User Projects
-INSERT INTO user_projects (user_id, project_id)
+INSERT INTO user_project (user_id, project_id)
 VALUES (1, 1),
   (1, 2),
   (1, 3),
