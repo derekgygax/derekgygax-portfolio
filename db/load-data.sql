@@ -182,48 +182,72 @@ VALUES ('Icon for {ICON_NAME}'),
   ('Click to download');
 --
 -- Icons
-INSERT INTO icon (name, tooltip, icon_alt_id)
-VALUES ('angular', 'Angular', 1),
-  ('aws', 'AWS', 1),
-  ('django', 'Django', 1),
-  ('docker', 'Docker', 1),
-  ('download', 'Click to download', 8),
+INSERT INTO icon (name, icon_alt_id)
+VALUES ('angular', 1),
+  ('aws', 1),
+  ('django', 1),
+  ('docker', 1),
+  ('download', 8),
+  ('email', 2),
+  ('flask', 1),
+  ('github', 3),
+  ('html', 1),
+  ('java', 1),
+  ('javascript', 1),
+  ('linkedIn', 4),
+  ('mappin', 5),
+  ('mysql', 1),
+  ('nextjs', 1),
+  ('phone', 6),
+  ('python', 1),
+  ('r', 1),
+  ('react', 1),
+  ('redux', 1),
+  ('sass', 1),
+  ('solr', 1),
+  ('tailwind', 1),
+  ('typescript', 1),
+  ('website', 7);
+--
+-- Icon Tooltip
+INSERT INTO icon_tooltip (name, tooltip)
+VALUES ('angular', 'Angular'),
+  ('aws', 'AWS'),
+  ('django', 'Django'),
+  ('docker', 'Docker'),
+  ('download', 'Click to download'),
   (
     'email',
-    'Click to send an email to {USER_NAME} at {USER_EMAIL}',
-    2
+    'Click to send an email to {USER_NAME} at {USER_EMAIL}'
   ),
-  ('flask', 'Flask', 1),
+  ('flask', 'Flask'),
   (
     'github',
-    'Click to visit {USER_NAME}''s github',
-    3
+    'Click to visit {USER_NAME}''s github'
   ),
-  ('html', 'HTML', 1),
-  ('java', 'Java', 1),
-  ('javascript', 'Javascript', 1),
+  ('html', 'HTML'),
+  ('java', 'Java'),
+  ('javascript', 'Javascript'),
   (
     'linkedIn',
-    'Click to visit {USER_NAME}''s LinkedIn',
-    4
+    'Click to visit {USER_NAME}''s LinkedIn'
   ),
-  ('mappin', 'MapPin', 5),
-  ('mysql', 'Mysql', 1),
-  ('nextjs', 'Next.js', 1),
+  ('mappin', 'MapPin'),
+  ('mysql', 'Mysql'),
+  ('nextjs', 'Next.js'),
   (
     'phone',
-    'Click to call {USER_NAME}''s phone number {USER_PHONE}',
-    6
+    'Click to call {USER_NAME}''s phone number {USER_PHONE}'
   ),
-  ('python', 'Python', 1),
-  ('r', 'R', 1),
-  ('react', 'React', 1),
-  ('redux', 'Redux', 1),
-  ('sass', 'Sass', 1),
-  ('solr', 'Solr', 1),
-  ('tailwind', 'Tailwind', 1),
-  ('typescript', 'TypeScript', 1),
-  ('website', 'Click to visit the website', 7);
+  ('python', 'Python'),
+  ('r', 'R'),
+  ('react', 'React'),
+  ('redux', 'Redux'),
+  ('sass', 'Sass'),
+  ('solr', 'Solr'),
+  ('tailwind', 'Tailwind'),
+  ('typescript', 'TypeScript'),
+  ('website', 'Click to visit the website');
 --
 -- Project Icons
 INSERT INTO project_icon (project_id, icon_name)

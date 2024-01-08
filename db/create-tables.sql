@@ -86,14 +86,20 @@ CREATE TABLE icon_alt (
 -- Icons
 CREATE TABLE icon (
   name VARCHAR(20) PRIMARY KEY,
-  tooltip VARCHAR(100) NOT NULL,
-  icon_alt_id INT REFERENCES icon_alt (id) ON DELETE RESTRICT
+  icon_alt_id INT NOT NULL REFERENCES icon_alt (id) ON DELETE RESTRICT
+);
+--
+-- Icons Tooltips (Need two for language variations)
+CREATE TABLE icon_tooltip (
+  name VARCHAR(20) REFERENCES icon (name) ON DELETE CASCADE ON UPDATE CASCADE,
+  tooltip VARCHAR(150) NOT NULL,
+  PRIMARY KEY (name, tooltip)
 );
 --
 -- Linking table between the icon and the project that use them
 CREATE TABLE project_icon (
   project_id INT REFERENCES project (id) ON DELETE CASCADE,
-  icon_name VARCHAR(20) REFERENCES icon (name) ON DELETE CASCADE,
+  icon_name VARCHAR(20) REFERENCES icon (name) ON DELETE CASCADE ON UPDATE CASCADE,
   PRIMARY KEY (project_id, icon_name)
 );
 --

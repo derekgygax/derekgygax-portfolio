@@ -60,13 +60,8 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
                   }
                 },
                 project_icon: {
-                  include: {
-                    icon: {
-                      select: {
-                        name: true,
-                        tooltip: true
-                      }
-                    }
+                  select: {
+                    icon_name: true
                   }
                 }
               }
@@ -91,6 +86,8 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
         // TODO in the future you need to fix this for language
         const projectDetails = projectInfo.project.project_detail[0];
         const projectMetadata = projectInfo.project.project_metadata[0];
+        // TODO this might be stupid and you don't need to do this
+        // Because you are still using the translations ... you will see as you get further in
         const projectLink = {
           ...projectInfo.project.project_link,
           tooltip: projectInfo.project.project_link.tooltip.replace('{PROJECT_TITLE}', projectDetails.title)
@@ -109,10 +106,9 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
           link: new Link(projectLink),
           metaData: new MetaData(projectMetadata),
           technologies: projectInfo.project.project_icon.map((iconMeta) => {
-            const technology = new Technology(
-              iconMeta.icon.name,
-              iconMeta.icon.tooltip
-            );
+            const technology = new Technology({
+              name: iconMeta.icon_name,
+            });
             return technology;
           })
         });

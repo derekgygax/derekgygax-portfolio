@@ -21,7 +21,6 @@ export interface ProjectLink {
 
 export interface Technology {
   name: string;
-  tooltip: string;
 };
 
 export interface ProjectSkeleton {

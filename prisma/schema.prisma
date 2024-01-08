@@ -9,9 +9,9 @@ datasource db {
 
 model icon {
   name         String         @id @db.VarChar(20)
-  tooltip      String         @db.VarChar(100)
-  icon_alt_id  Int?
-  icon_alt     icon_alt?      @relation(fields: [icon_alt_id], references: [id], onDelete: Restrict, onUpdate: NoAction)
+  icon_alt_id  Int
+  icon_alt     icon_alt       @relation(fields: [icon_alt_id], references: [id], onUpdate: NoAction)
+  icon_tooltip icon_tooltip[]
   project_icon project_icon[]
 }
 
@@ -19,6 +19,14 @@ model icon_alt {
   id   Int    @id @default(autoincrement())
   text String @db.VarChar(100)
   icon icon[]
+}
+
+model icon_tooltip {
+  name    String @db.VarChar(20)
+  tooltip String @db.VarChar(150)
+  icon    icon   @relation(fields: [name], references: [name], onDelete: Cascade)
+
+  @@id([name, tooltip])
 }
 
 model job {
@@ -55,7 +63,7 @@ model project_detail {
 model project_icon {
   project_id Int
   icon_name  String  @db.VarChar(20)
-  icon       icon    @relation(fields: [icon_name], references: [name], onDelete: Cascade, onUpdate: NoAction)
+  icon       icon    @relation(fields: [icon_name], references: [name], onDelete: Cascade)
   project    project @relation(fields: [project_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
 
   @@id([project_id, icon_name])
