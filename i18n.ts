@@ -21,7 +21,6 @@ export default getRequestConfig(async ({ locale }) => {
       ...(await import(`./messages/${locale}/aboutMe.json`)).default,
       ContactMeButton: await getContactMeButtonTranslation(),
       ...(await import(`./messages/${locale}/footer.json`)).default,
-      ...(await import(`./messages/${locale}/general.json`)).default,
       ...(await import(`./messages/${locale}/homePage.json`)).default,
       Icons: iconTranslations,
       ...(await import(`./messages/${locale}/logo.json`)).default,
