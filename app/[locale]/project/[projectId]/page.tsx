@@ -3,7 +3,9 @@ import { getTranslations } from 'next-intl/server';
 
 // types
 import type { Metadata } from 'next'
-import type { ProjectsConfig } from '../../../../types/projects';
+
+// Portfolio Object
+import { Portfolio } from '@/models/Portfolio';
 
 // data
 import { LOCALES } from '@/navigation';
@@ -13,7 +15,6 @@ import projectsData from '@/app/data/projects.json';
 // This is a temporary work around that should be removed
 // in the future
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { useTranslations } from 'next-intl';
 
 
 // TODO is this right. Do you need others
@@ -46,8 +47,11 @@ export async function generateMetadata(
 }
 
 // Generate all params that could exist for this url
-export function generateStaticParams() {
-  return projectsData.projectIds.map((id) => ({ projectId: id }));
+export async function generateStaticParams() {
+  // Get the project names from the Portfolio object
+  const projectNames = await Portfolio.getProjectNames();
+
+  return projectNames.map((name) => ({ projectId: name }));
 }
 
 
@@ -58,7 +62,7 @@ type ProjectDetailsPageProps = {
   };
 }
 
-const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ params: { locale, projectId } }) => {
+const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = async ({ params: { locale, projectId } }) => {
 
   // This is a temporary work around that should be removed
   // in the future
@@ -68,15 +72,16 @@ const ProjectDetailsPage: React.FC<ProjectDetailsPageProps> = ({ params: { local
   const isValidLocale = LOCALES.some((cur) => cur === locale);
   if (!isValidLocale) notFound();
 
-  const projects = projectsData as ProjectsConfig;
+  // Get the project names from the Portfolio object
+  const projectNames = await Portfolio.getProjectNames();
 
   // Validate that the incoming `projectId` parameter is valid
-  const isValidProjectId = projects.projectIds.some((id) => {
-    return id === projectId
+  const isValidProjectId = projectNames.some((name) => {
+    return name === projectId
   });
   if (!isValidProjectId) notFound();
 
-  const t = useTranslations(`Project.${projectId}`);
+  const t = await getTranslations(`Project.${projectId}`);
 
 
   return (

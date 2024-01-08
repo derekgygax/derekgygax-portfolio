@@ -69,4 +69,12 @@ export class Portfolio {
     }, {} as Record<string, ProjectTranlation>)!;
   }
 
+  public static async getProjectNames(): Promise<string[]> {
+    await Portfolio.checkPopulated();
+
+    return Portfolio.projects?.map((project: Project) => {
+      return project.getName();
+    })!;
+  }
+
 }
