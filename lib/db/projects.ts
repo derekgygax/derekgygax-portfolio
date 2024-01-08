@@ -22,13 +22,13 @@ export const getProjectData = async (): Promise<ProjectSkeleton[]> => {
     const userDetails = await prisma?.users.findUniqueOrThrow({
       where: { email: USER_EMAIL },
       include: {
-        user_projects: {
+        user_project: {
           include: {
-            projects: {
+            project: {
               include: {
-                project_icons: {
+                project_icon: {
                   include: {
-                    icons: {
+                    icon: {
                       select: {
                         name: true,
                         tooltip: true
@@ -45,16 +45,16 @@ export const getProjectData = async (): Promise<ProjectSkeleton[]> => {
 
     // TODO it originally said to use flatMap but idk why?
     // maybe when you put the translations in it will make sense
-    const projects: ProjectSkeleton[] = userDetails?.user_projects
+    const projects: ProjectSkeleton[] = userDetails?.user_project
       .map((projectMeta): ProjectSkeleton => {
-        const project = projectMeta.projects;
+        const project = projectMeta.project;
         return {
           name: project.name,
           website: project.url,
           isCurrentProject: project.current_project,
           displayOrder: project.display_order,
-          technologies: project.project_icons.map((iconMeta) => {
-            const icon = iconMeta.icons;
+          technologies: project.project_icon.map((iconMeta) => {
+            const icon = iconMeta.icon;
             return icon;
           })
         }
@@ -80,17 +80,17 @@ export const getProjectTranslations = async () => {
         email: USER_EMAIL
       },
       include: {
-        user_projects: {
+        user_project: {
           include: {
-            projects: {
+            project: {
               include: {
-                project_links: {
+                project_link: {
                   select: {
                     tooltip: true,
                     label: true
                   }
                 },
-                project_details: {
+                project_detail: {
                   select: {
                     title: true,
                     job_title: true,
@@ -113,15 +113,15 @@ export const getProjectTranslations = async () => {
     });
     // TODO it originally said to use flatMap but idk why?
     // maybe when you put the translations in it will make sense
-    const projectsArray = userProjects?.user_projects
-      .map(up => up.projects);
+    const projectsArray = userProjects?.user_project
+      .map(up => up.project);
     const projects = projectsArray?.reduce((acc: Record<string, ProjectTranlation>, project) => {
       // TODO in the future you need to fix this for language
-      const details = project.project_details[0];
+      const details = project.project_detail[0];
       const metaData = project.project_metadata[0];
       const projectLink: ProjectLink = {
-        ...project.project_links,
-        tooltip: project.project_links.tooltip.replace('{PROJECT_TITLE}', details.title)
+        ...project.project_link,
+        tooltip: project.project_link.tooltip.replace('{PROJECT_TITLE}', details.title)
       }
       acc[project.name] = {
         title: details.title,
