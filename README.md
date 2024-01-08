@@ -9,6 +9,22 @@
   npx prisma db pull // pull an already made database back into a schema in prisma
   npx prisma studio // shows the database in a webpage so you can pick it apart
   npx prisma generate  // MUST DO EVERY TIME YOU CHANGE THE DB
+
+  To update the database with Prisma
+  --update the schema manually
+  npx prisma format  // Formats the schema or something
+  IF IN DEV
+  npx prisma migrate dev --name {MIGRATION NAME YOU CHOOSE}    // to push schema to DEV
+  Review it --chat gpt said we should
+  IF IN PRODUCTION
+  npx prisma migrate dev --create-only
+  npx prisma migrate deploy
+
+  UPDATE THE CLIENT!
+  npx prisma generate
+
+
+
 ```
 
 ## Prerequisites

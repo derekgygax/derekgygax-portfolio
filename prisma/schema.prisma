@@ -7,6 +7,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model contact_me_button {
+  label   String @db.VarChar(30)
+  tooltip String @db.VarChar(100)
+
+  @@id([label, tooltip])
+}
+
 model icon {
   name         String         @id @db.VarChar(20)
   icon_alt_id  Int

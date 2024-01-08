@@ -4,6 +4,7 @@ import { LOCALES } from "./navigation";
 
 import { Portfolio } from "./models/Portfolio";
 import { getIconTranlastions } from "./lib/db/icon";
+import { getContactMeButtonTranslation } from "./lib/db/contactMeButton";
 
 const locales = LOCALES;
 
@@ -18,7 +19,7 @@ export default getRequestConfig(async ({ locale }) => {
   return {
     messages: {
       ...(await import(`./messages/${locale}/aboutMe.json`)).default,
-      ...(await import(`./messages/${locale}/contactMeButton.json`)).default,
+      ContactMeButton: await getContactMeButtonTranslation(),
       ...(await import(`./messages/${locale}/footer.json`)).default,
       ...(await import(`./messages/${locale}/general.json`)).default,
       ...(await import(`./messages/${locale}/homePage.json`)).default,

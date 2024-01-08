@@ -27,8 +27,4 @@ export class User {
     this.email = email;
     this.phone = phone;
   }
-
-  public getFirstName(): string {
-    return this.firstName;
-  }
 }

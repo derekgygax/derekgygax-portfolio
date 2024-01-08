@@ -294,3 +294,10 @@ VALUES (1, 1),
   (1, 6),
   (1, 7),
   (1, 8);
+--
+-- Contact Me Button
+INSERT INTO contact_me_button (label, tooltip)
+VALUES (
+    'Contact Me',
+    'Click to send an email to {USER_NAME} at {USER_EMAIL}'
+  )

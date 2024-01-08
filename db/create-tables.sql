@@ -109,3 +109,11 @@ CREATE TABLE user_project (
   project_id INT REFERENCES project (id) ON DELETE CASCADE,
   PRIMARY KEY (user_id, project_id)
 );
+--
+--
+-- Contact Me Button
+CREATE TABLE contact_me_button (
+  label VARCHAR(30),
+  tooltip VARCHAR(100),
+  PRIMARY KEY (label, tooltip)
+)
