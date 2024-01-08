@@ -4,14 +4,11 @@ import { LOCALES } from "./navigation";
 
 import { Portfolio } from "./models/Portfolio";
 
-import { getProjectTranslations } from "./lib/db/projects";
-
 const locales = LOCALES;
 
 export default getRequestConfig(async ({ locale }) => {
 
-  const projects = await getProjectTranslations();
-  // const projectTranslations = await Portfolio.getProjectTranslations();
+  const projectTranslations = await Portfolio.getProjectTranslations();
 
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
@@ -28,8 +25,7 @@ export default getRequestConfig(async ({ locale }) => {
       ...(await import(`./messages/${locale}/projects.json`)).default,
       ...(await import(`./messages/${locale}/resume.json`)).default,
       ...(await import(`./messages/${locale}/rootLayout.json`)).default,
-      // Project: projectTranslations
-      Project: projects
+      Project: projectTranslations
     }
   }
 });
