@@ -7,8 +7,7 @@ import { Project } from '../project/Project';
 // data
 import projectsData from '@/app/data/projects.json';
 
-// database calls
-import { getProjectData } from '@/lib/db/projects';
+import { Portfolio } from '@/models/Portfolio';
 
 // images
 import fiftySevenWestImage from '@/public/assets/projects/fiftySevenWest.png';
@@ -24,7 +23,7 @@ import portfolioImage from '@/public/assets/projects/portfolio.png';
 
 export const Projects: React.FC = async () => {
 
-  const projects = await getProjectData();
+  const projects = await Portfolio.getProjectSkeletons();
 
   // TODO does the locale need to be passed here OR only in the metadata one??
   // TODO does the locale need to be passed here OR only in the metadata one??
