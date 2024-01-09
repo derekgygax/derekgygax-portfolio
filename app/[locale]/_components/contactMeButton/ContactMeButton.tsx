@@ -1,26 +1,20 @@
 import { Link } from '@/navigation';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 
-// data
-import contactMeButton from '@/app/data/contactMeButton.json';
-import me from '@/app/data/me.json';
+// Portfolio
+import { Portfolio } from '@/models/Portfolio';
 
-export const ContactMeButton: React.FC = () => {
+export const ContactMeButton: React.FC = async () => {
 
-  const t = useTranslations("ContactMeButton")
-
-  const tooltip = t('tooltip', {
-    myName: me.name,
-    email: me.email
-  });
+  const t = await getTranslations(`General.contactMeButton`)
 
   return (
     <Link
       className="link"
-      href={`mailto:${me.email}`}
+      href={t("href")}
     >
-      <div className="buttonContainer text-base md:text-xl" title={tooltip}>
+      <div className="buttonContainer text-base md:text-xl" title={t('tooltip')}>
         {t(`label`)}
       </div>
     </Link>

@@ -206,4 +206,19 @@ CREATE TABLE contact_me_button (
   label VARCHAR(30) NOT NULL,
   tooltip VARCHAR(100) NOT NULL,
   PRIMARY KEY (label, tooltip)
+);
+--
+-- General: This is to hold translations that we didn't know where else to put
+CREATE TABLE general (
+  name VARCHAR(50) PRIMARY KEY,
+  href VARCHAR(100) NOT NULL
+);
+--
+-- General details. This is to hold the stuff that could be in a different language
+CREATE TABLE general_details (
+  id SERIAL PRIMARY KEY,
+  label VARCHAR(50) NOT NULL,
+  tooltip VARCHAR(100) NOT NULL,
+  alt VARCHAR(100),
+  general_name VARCHAR(50) NOT NULL REFERENCES general (name) ON DELETE RESTRICT ON UPDATE CASCADE
 )

@@ -4,22 +4,21 @@ import { useTranslations } from "next-intl"
 import { Icon } from "../icon/Icon";
 
 // data
-import me from '@/app/data/me.json';
 import resume from '@/app/data/resume.json';
 
 export const Resume: React.FC = () => {
 
-  const t = useTranslations('Resume');
+  const t = useTranslations('General.resume');
 
   return (
     <a
-      href="/assets/DerekGygax_resume.pdf"
+      href={t('href')}
       target="_blank"
-      aria-label={`Download ${me.name} Resume`}
+      aria-label={t('tooltip')}
       rel="noopener noreferrer"
       download
       className="buttonContainer flex flex-row text-base md:text-lg"
-      title={t('tooltip', { myName: me.name })}
+      title={t('tooltip')}
     >
       {t('label')}
       <div className="md:socialMediaIconXs4 ml-1 items-center">

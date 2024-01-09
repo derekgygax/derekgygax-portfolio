@@ -409,3 +409,30 @@ VALUES (
     'Contact Me',
     'Click to send an email to {USER_FULL_NAME} at {USER_EMAIL}'
   );
+--
+-- General
+INSERT INTO general (name, href)
+VALUES ('contactMeButton', 'mailto:{USER_EMAIL}'),
+  ('logo', '/'),
+  ('resume', '/assets/DerekGygax_resume.pdf');
+--
+-- General Details
+INSERT INTO general_details (label, tooltip, alt, general_name)
+VALUES (
+    'Contact Me',
+    'Click to send an email to {USER_FULL_NAME} at {USER_EMAIL}',
+    '',
+    'contactMeButton'
+  ),
+  (
+    '',
+    'Click to return to {USER_FULL_NAME}''s home page',
+    '{USER_FULL_NAME}''s logo',
+    'logo'
+  ),
+  (
+    'Resume',
+    'Click to download {USER_FULL_NAME}''s resume',
+    '',
+    'resume'
+  );

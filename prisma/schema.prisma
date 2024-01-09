@@ -231,3 +231,18 @@ model user_footer {
 
   @@id([user_id, footer_id])
 }
+
+model general {
+  name            String            @id @db.VarChar(50)
+  href            String            @db.VarChar(100)
+  general_details general_details[]
+}
+
+model general_details {
+  id           Int     @id @default(autoincrement())
+  label        String  @db.VarChar(50)
+  tooltip      String  @db.VarChar(100)
+  alt          String? @db.VarChar(100)
+  general_name String  @db.VarChar(50)
+  general      general @relation(fields: [general_name], references: [name])
+}

@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS genera_details;
+DROP TABLE IF EXISTS general;
 DROP TABLE IF EXISTS contact_me_button;
 DROP TABLE IF EXISTS user_footer;
 DROP TABLE IF EXISTS footer;
