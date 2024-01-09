@@ -118,6 +118,13 @@ CREATE TABLE icon (
   icon_alt_id INT NOT NULL REFERENCES icon_alt (id) ON DELETE RESTRICT
 );
 --
+-- Icon Links. For icons that will link to stuff ...
+CREATE TABLE icon_link (
+  icon_name VARCHAR(20) PRIMARY KEY REFERENCES icon (name) ON DELETE CASCADE ON UPDATE CASCADE,
+  target VARCHAR(20) NOT NULL,
+  href VARCHAR(50) NOT NULL
+);
+--
 -- Icons Tooltips (Need two for language variations)
 CREATE TABLE icon_tooltip (
   name VARCHAR(20) REFERENCES icon (name) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -125,10 +132,18 @@ CREATE TABLE icon_tooltip (
   PRIMARY KEY (name, tooltip)
 );
 --
+-- Contact (Linking the user to the icon_link table that can be used for contact). It is passing icon which makes me nervous but hopefully you have related all the data enough
+CREATE TABLE contact (
+  icon_name VARCHAR(20) NOT NULL REFERENCES icon_link (icon_name) ON DELETE RESTRICT ON UPDATE CASCADE,
+  user_id INT NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+  display_order INT NOT NULL,
+  PRIMARY KEY (icon_name, user_id)
+);
+--
 -- Linking table between the icon and the project that use them
 CREATE TABLE project_icon (
   project_id INT REFERENCES project (id) ON DELETE CASCADE,
-  icon_name VARCHAR(20) REFERENCES icon (name) ON DELETE CASCADE ON UPDATE CASCADE,
+  icon_name VARCHAR(20) REFERENCES icon (name) ON DELETE RESTRICT ON UPDATE CASCADE,
   PRIMARY KEY (project_id, icon_name)
 );
 --

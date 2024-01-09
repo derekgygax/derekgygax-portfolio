@@ -1,35 +1,29 @@
 // components
 import { Icon } from "../icon/Icon";
 
-// data
-import connectionIcons from '@/app/data/connectionIcons.json';
-import me from '@/app/data/me.json';
+// Portfolio
+import { Portfolio } from "@/models/Portfolio";
 
-export const ConnectionIcons: React.FC = () => {
+export const ConnectionIcons: React.FC = async () => {
+
+  const user = await Portfolio.getUser();
+  const contacts = user.getContacts();
 
   return (
     <nav>
       <div className="section flex justify-center pb-2">
         <div className="grid grid-rows-1 grid-cols-4 gap-y-2 md:gap-y-4 text-center justify-center w-2/3 md:w-2/5">
-          {connectionIcons.icons.map((icon) => {
-
-            let href = icon.href;
-            if (icon.id === 'phone') {
-              href = href.replace('{phone}', me.phone);
-            } else if (icon.id === 'email') {
-              href = href.replace('{email}', me.email);
-            }
-
+          {contacts.map((contact) => {
             return (
               <a
-                key={`footer_icon_${icon.id}`}
+                key={`footer_icon_${contact.name}`}
                 className="flex justify-center"
-                target={icon.type === "link" ? "_blank" : "_self"}
-                href={href}
+                target={contact.target}
+                href={contact.href}
               >
                 <div className="iconLinkContainer socialMediaIconSm">
                   <Icon
-                    id={icon.id}
+                    id={contact.name}
                     isLink={true}
                   />
                 </div>

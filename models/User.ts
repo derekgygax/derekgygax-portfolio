@@ -1,5 +1,6 @@
 import { capitalizeFirstLetter } from "@/lib/utils";
 import { Bio } from "./Bio";
+import { Contact } from "./Contact";
 import { Location } from "./Location";
 
 export class User {
@@ -15,6 +16,7 @@ export class User {
   private imgAlt: string;
   private bios: Bio[];
   private location: Location;
+  private contacts: Contact[];
 
   constructor(
     {
@@ -29,7 +31,8 @@ export class User {
       summary,
       imgAlt,
       bios,
-      location
+      location,
+      contacts
     }:
       {
         firstName: string;
@@ -44,6 +47,7 @@ export class User {
         imgAlt: string;
         bios: Bio[];
         location: Location;
+        contacts: Contact[]
       }
   ) {
     this.firstName = firstName;
@@ -58,6 +62,7 @@ export class User {
     this.imgAlt = imgAlt;
     this.bios = bios;
     this.location = location;
+    this.contacts = contacts;
   }
 
   public getEmail() {
@@ -97,7 +102,15 @@ export class User {
   }
 
 
-  getLocation() {
+  public getLocation() {
     return this.location;
+  }
+
+  public getContacts() {
+    return this.contacts;
+  }
+
+  public setContacts(contacts: Contact[]) {
+    this.contacts = contacts
   }
 }

@@ -252,6 +252,13 @@ VALUES ('angular', 1),
   ('typescript', 1),
   ('website', 7);
 --
+-- Icon Link
+INSERT INTO icon_link (icon_name, target, href)
+VALUES ('github', '_blank', '{USER_GITHUB}'),
+  ('linkedIn', '_blank', '{USER_LINKEDIN}'),
+  ('phone', '_self', 'tel:{USER_PHONE}'),
+  ('email', '_self', 'mailto:{USER_EMAIL}');
+--
 -- Icon Tooltip
 INSERT INTO icon_tooltip (name, tooltip)
 VALUES ('angular', 'Angular'),
@@ -291,6 +298,13 @@ VALUES ('angular', 'Angular'),
   ('tailwind', 'Tailwind'),
   ('typescript', 'TypeScript'),
   ('website', 'Click to visit the website');
+--
+-- Contact
+INSERT INTO contact (icon_name, user_id, display_order)
+VALUES ('phone', 1, 1),
+  ('email', 1, 2),
+  ('github', 1, 3),
+  ('linkedIn', 1, 4);
 --
 -- Project Icons
 INSERT INTO project_icon (project_id, icon_name)

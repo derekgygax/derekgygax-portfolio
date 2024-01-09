@@ -1,12 +1,14 @@
 DROP TABLE IF EXISTS contact_me_button;
 DROP TABLE IF EXISTS user_project;
 DROP TABLE IF EXISTS project_icon;
+DROP TABLE IF EXISTS contact;
 DROP TABLE IF EXISTS project_detail;
 DROP TABLE IF EXISTS project_metadata;
 DROP TABLE IF EXISTS user_job;
 DROP TABLE IF EXISTS project;
 DROP TABLE IF EXISTS project_link;
 DROP TABLE IF EXISTS icon_tooltip;
+DROP TABLE IF EXISTS icon_link;
 DROP TABLE IF EXISTS icon;
 DROP TABLE IF EXISTS icon_alt;
 DROP TABLE IF EXISTS job;

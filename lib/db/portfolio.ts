@@ -8,6 +8,7 @@ import { Link } from "@/models/Link";
 import { MetaData } from "@/models/Metadata";
 import { Bio } from "@/models/Bio";
 import { Location } from "@/models/Location";
+import { Contact } from "@/models/Contact";
 
 // USER
 const USER_EMAIL = process.env.USER_EMAIL;
@@ -37,6 +38,11 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
       where: { email: USER_EMAIL },
       include: {
         location: true,
+        contact: {
+          include: {
+            icon_link: true
+          }
+        },
         user_detail: {
           include: {
             user_bio: true
@@ -84,6 +90,19 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
       }
     });
 
+    const userContacts = userInfo.contact.map((contactLink) => {
+      return new Contact({
+        name: contactLink.icon_link.icon_name,
+        target: contactLink.icon_link.target,
+        href: contactLink.icon_link.href
+          .replace('{USER_LINKEDIN}', userInfo.linked_in || '')
+          .replace('{USER_GITHUB}', userInfo.github || '')
+          .replace('{USER_PHONE}', userInfo.phone)
+          .replace('{USER_EMAIL}', userInfo.email),
+        displayOrder: contactLink.display_order
+      })
+    }).sort((a, b) => a.displayOrder - b.displayOrder);
+
     const user = new User({
       firstName: userInfo.first_name,
       middleName: userInfo.middle_name || '',
@@ -110,7 +129,8 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
         stateFull: userInfo.location.state_full,
         countryAbbr: userInfo.location.country_abbr,
         countryFull: userInfo.location.country_full,
-      })
+      }),
+      contacts: userContacts
     });
 
     // TODO it originally said to use flatMap but idk why?

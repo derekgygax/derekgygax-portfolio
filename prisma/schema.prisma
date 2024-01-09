@@ -7,6 +7,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model contact {
+  icon_name     String    @db.VarChar(20)
+  user_id       Int
+  display_order Int
+  icon_link     icon_link @relation(fields: [icon_name], references: [icon_name])
+  users         users     @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@id([icon_name, user_id])
+}
+
 model contact_me_button {
   label   String @db.VarChar(30)
   tooltip String @db.VarChar(100)
@@ -18,6 +28,7 @@ model icon {
   name         String         @id @db.VarChar(20)
   icon_alt_id  Int
   icon_alt     icon_alt       @relation(fields: [icon_alt_id], references: [id], onUpdate: NoAction)
+  icon_link    icon_link?
   icon_tooltip icon_tooltip[]
   project_icon project_icon[]
 }
@@ -26,6 +37,14 @@ model icon_alt {
   id   Int    @id @default(autoincrement())
   text String @db.VarChar(100)
   icon icon[]
+}
+
+model icon_link {
+  icon_name String    @id @db.VarChar(20)
+  target    String    @db.VarChar(20)
+  href      String    @db.VarChar(50)
+  contact   contact[]
+  icon      icon      @relation(fields: [icon_name], references: [name], onDelete: Cascade)
 }
 
 model icon_tooltip {
@@ -80,7 +99,7 @@ model project_detail {
 model project_icon {
   project_id Int
   icon_name  String  @db.VarChar(20)
-  icon       icon    @relation(fields: [icon_name], references: [name], onDelete: Cascade)
+  icon       icon    @relation(fields: [icon_name], references: [name])
   project    project @relation(fields: [project_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
 
   @@id([project_id, icon_name])
@@ -148,6 +167,7 @@ model users {
   github       String?        @unique @db.VarChar(300)
   linked_in    String?        @unique @db.VarChar(300)
   location_id  Int
+  contact      contact[]
   user_detail  user_detail[]
   user_job     user_job[]
   user_project user_project[]
