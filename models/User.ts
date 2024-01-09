@@ -8,6 +8,8 @@ export class User {
   private lastName: string;
   private email: string;
   private phone: string;
+  private github: string;
+  private linkedIn: string;
   private jobTitles: string[];
   private summary: string;
   private imgAlt: string;
@@ -21,6 +23,8 @@ export class User {
       lastName,
       email,
       phone,
+      github,
+      linkedIn,
       jobTitles,
       summary,
       imgAlt,
@@ -33,6 +37,8 @@ export class User {
         lastName: string;
         email: string;
         phone: string;
+        github: string;
+        linkedIn: string;
         jobTitles: string[];
         summary: string;
         imgAlt: string;
@@ -45,6 +51,8 @@ export class User {
     this.lastName = lastName;
     this.email = email;
     this.phone = phone;
+    this.github = github;
+    this.linkedIn = linkedIn;
     this.jobTitles = jobTitles;
     this.summary = summary;
     this.imgAlt = imgAlt;

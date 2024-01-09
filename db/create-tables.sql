@@ -20,6 +20,8 @@ CREATE TABLE users (
   last_name VARCHAR(20) NOT NULL,
   email VARCHAR(50) NOT NULL UNIQUE,
   phone VARCHAR(25) NOT NULL UNIQUE,
+  github VARCHAR(300) UNIQUE,
+  linked_in VARCHAR(300) UNIQUE,
   location_id INT NOT NULL REFERENCES location (id) ON DELETE RESTRICT
 );
 --
@@ -136,7 +138,6 @@ CREATE TABLE user_project (
   project_id INT REFERENCES project (id) ON DELETE CASCADE,
   PRIMARY KEY (user_id, project_id)
 );
---
 --
 -- Contact Me Button
 CREATE TABLE contact_me_button (

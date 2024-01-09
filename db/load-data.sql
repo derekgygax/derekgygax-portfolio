@@ -22,6 +22,8 @@ INSERT INTO users (
     last_name,
     email,
     phone,
+    github,
+    linked_in,
     location_id
   )
 VALUES (
@@ -30,6 +32,8 @@ VALUES (
     'gygax',
     'derekgygax@gmail.com',
     '+14107778985',
+    'https://github.com/derekgygax',
+    'https://www.linkedin.com/in/derek-gygax-9407a689/',
     1
   );
 --

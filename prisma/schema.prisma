@@ -145,6 +145,8 @@ model users {
   last_name    String         @db.VarChar(20)
   email        String         @unique @db.VarChar(50)
   phone        String         @unique @db.VarChar(25)
+  github       String?        @unique @db.VarChar(300)
+  linked_in    String?        @unique @db.VarChar(300)
   location_id  Int
   user_detail  user_detail[]
   user_job     user_job[]

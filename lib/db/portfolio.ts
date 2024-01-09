@@ -90,6 +90,8 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
       lastName: userInfo.last_name,
       email: userInfo.email,
       phone: userInfo.phone,
+      github: userInfo.github || '',
+      linkedIn: userInfo.linked_in || '',
       jobTitles: userInfo.user_job.map((job) => {
         return job.job_title
       }),
