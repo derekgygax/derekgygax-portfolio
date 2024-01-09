@@ -1,6 +1,6 @@
 import { Technology } from "./Technology";
 import { Link } from "./Link";
-import { MetaData } from "./Metadata";
+import { Metadata } from "./Metadata";
 import { ProjectSkeleton, ProjectTranlation } from "@/types/projects";
 
 export class Project {
@@ -10,10 +10,10 @@ export class Project {
   public summary: string;
   public imgAlt: string;
   public website: string;
-  public isCurrentProject: boolean;
+  public webCurrentProject: boolean;
   public displayOrder: number;
   public link: Link;
-  public metaData: MetaData;
+  public metadata: Metadata;
   public technologies: Technology[];
 
   constructor(
@@ -24,10 +24,10 @@ export class Project {
       summary,
       imgAlt,
       website,
-      isCurrentProject,
+      webCurrentProject,
       displayOrder,
       link,
-      metaData,
+      metadata,
       technologies
     }:
       {
@@ -37,10 +37,10 @@ export class Project {
         summary: string;
         imgAlt: string;
         website: string;
-        isCurrentProject: boolean;
+        webCurrentProject: boolean;
         displayOrder: number;
         link: Link;
-        metaData: MetaData;
+        metadata: Metadata;
         technologies: Technology[];
       }
   ) {
@@ -50,10 +50,10 @@ export class Project {
       this.jobTitle = jobTitle,
       this.summary = summary,
       this.imgAlt = imgAlt,
-      this.isCurrentProject = isCurrentProject,
+      this.webCurrentProject = webCurrentProject,
       this.displayOrder = displayOrder,
       this.link = link,
-      this.metaData = metaData,
+      this.metadata = metadata,
       this.technologies = technologies
   }
 
@@ -68,8 +68,7 @@ export class Project {
       jobTitle: this.jobTitle,
       summary: this.summary,
       imgAlt: this.imgAlt,
-      metaData: this.metaData,
-      projectLink: this.link
+      projectLink: this.link,
     }
   }
 
@@ -77,9 +76,13 @@ export class Project {
     return {
       name: this.name,
       website: this.website,
-      isCurrentProject: this.isCurrentProject,
+      webCurrentProject: this.webCurrentProject,
       displayOrder: this.displayOrder,
       technologies: this.technologies
     }
+  }
+
+  public getMetadata(): Metadata {
+    return this.metadata;
   }
 }

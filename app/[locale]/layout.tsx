@@ -26,7 +26,7 @@ export function generateStaticParams() {
 export async function generateMetadata(
   { params: { locale } }: { params: { locale: string } }
 ): Promise<Metadata> {
-  const t = await getTranslations({ locale: locale, namespace: 'RootLayout.Metadata' });
+  const t = await getTranslations({ locale: locale, namespace: 'Metadata.RootLayout' });
 
   // TODO Does this have all the sections it needs like 57West does
   return {

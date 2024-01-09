@@ -35,9 +35,9 @@ CREATE TABLE user_detail (
 --
 -- User Bio
 CREATE TABLE user_bio (
+  id SERIAL PRIMARY KEY,
   type VARCHAR(20) NOT NULL,
   text TEXT NOT NULL,
-  PRIMARY KEY (type, text),
   user_details_id INT NOT NULL REFERENCES user_detail (id) ON DELETE CASCADE
 );
 --
@@ -60,6 +60,25 @@ CREATE TABLE user_job (
   PRIMARY KEY (user_id, job_title)
 );
 --
+-- Metadata
+CREATE TABLE metadata (
+  id SERIAL PRIMARY KEY,
+  -- Title of the project for metadata (page title at top of tab)
+  title VARCHAR(100) NOT NULL,
+  -- Description of the project for metadata
+  description VARCHAR(200) NOT NULL,
+  -- Keywords of the project for metadata
+  keywords VARCHAR(200) NOT NULL
+);
+--
+-- Open Graph metadata
+CREATE TABLE opengraph_metadata (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  description VARCHAR(300) NOT NULL,
+  metadata_id INT NOT NULL REFERENCES metadata (id) ON DELETE CASCADE
+);
+--
 -- Projects
 CREATE TABLE project (
   -- MySQL
@@ -75,7 +94,7 @@ CREATE TABLE project (
   -- Order displayed on the portfolio page
   display_order SMALLINT NOT NULL,
   -- Reference to the tool tip used when hovering over the project
-  project_links_id INT NOT NULL REFERENCES project_link (id) ON DELETE RESTRICT
+  project_link_id INT NOT NULL REFERENCES project_link (id) ON DELETE RESTRICT
 );
 --
 -- Project Details
@@ -95,15 +114,15 @@ CREATE TABLE project_detail (
 --
 -- Project Metadata
 CREATE TABLE project_metadata (
+  metadata_id INT NOT NULL REFERENCES metadata (id) ON DELETE RESTRICT,
+  project_id INT NOT NULL REFERENCES project (id) ON DELETE CASCADE,
+  PRIMARY KEY (metadata_id, project_id)
+);
+-- Root Layout reference to get the metadata for it
+CREATE TABLE root_layout (
   id SERIAL PRIMARY KEY,
-  -- Title of the project for metadata (page title at top of tab)
-  title VARCHAR(100) NOT NULL,
-  -- Description of the project for metadata
-  description VARCHAR(200) NOT NULL,
-  -- Keywords of the project for metadata
-  keywords VARCHAR(200) NOT NULL,
-  -- Foreign key referencing the project id
-  project_id INT NOT NULL REFERENCES project (id) ON DELETE CASCADE
+  name VARCHAR(50) NOT NULL,
+  metadata_id INT NOT NULL REFERENCES metadata (id) ON DELETE RESTRICT
 );
 --
 -- Icons Alt wording

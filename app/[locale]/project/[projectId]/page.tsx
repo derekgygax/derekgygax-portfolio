@@ -9,7 +9,6 @@ import { Portfolio } from '@/models/Portfolio';
 
 // data
 import { LOCALES } from '@/navigation';
-import projectsData from '@/app/data/projects.json';
 
 // TODO
 // This is a temporary work around that should be removed
@@ -35,14 +34,14 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
   // TODO This section has only been done for RPPA in the JSON files
-  const t = await getTranslations({ locale: locale, namespace: `Project.${projectId}` });
+  const t = await getTranslations({ locale: locale, namespace: `Metadata.${projectId}` });
 
   return {
-    title: t('metaData.title'),
-    description: t('metaData.description'),
+    title: t('title'),
+    description: t('description'),
     // TODO really need to make these better
     // TODO you need to learn about this still
-    keywords: t('metaData.keywords')
+    keywords: t('keywords')
   };
 }
 

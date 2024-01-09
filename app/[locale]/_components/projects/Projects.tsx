@@ -59,7 +59,7 @@ export const Projects: React.FC = async () => {
                 key={`project_${project.name}`}
                 name={project.name}
                 image={images[project.name]}
-                isCurrenProject={project.isCurrentProject}
+                webCurrentProject={project.webCurrentProject}
                 website={project.website}
                 technologies={project.technologies}
               />

@@ -5,7 +5,7 @@ import prisma from "../prisma"
 
 import { ProjectSkeleton } from "@/types/projects";
 import { Link } from "@/models/Link";
-import { MetaData } from "@/models/Metadata";
+import { Metadata } from "@/models/Metadata";
 import { Bio } from "@/models/Bio";
 import { Location } from "@/models/Location";
 import { Contact } from "@/models/Contact";
@@ -72,10 +72,14 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
                   }
                 },
                 project_metadata: {
-                  select: {
-                    title: true,
-                    description: true,
-                    keywords: true
+                  include: {
+                    metadata: {
+                      select: {
+                        title: true,
+                        description: true,
+                        keywords: true
+                      }
+                    }
                   }
                 },
                 project_icon: {
@@ -139,7 +143,7 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
       .map((projectInfo): Project => {
         // TODO in the future you need to fix this for language
         const projectDetails = projectInfo.project.project_detail[0];
-        const projectMetadata = projectInfo.project.project_metadata[0];
+        const projectMetadata = projectInfo.project.project_metadata[0].metadata;
         // TODO this might be stupid and you don't need to do this
         // Because you are still using the translations ... you will see as you get further in
         const projectLink = {
@@ -155,10 +159,13 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
           summary: projectDetails.summary,
           imgAlt: projectDetails.img_alt,
           website: projectInfo.project.url,
-          isCurrentProject: projectInfo.project.current_project,
+          webCurrentProject: projectInfo.project.current_project,
           displayOrder: projectInfo.project.display_order,
           link: new Link(projectLink),
-          metaData: new MetaData(projectMetadata),
+          metadata: new Metadata({
+            ...projectMetadata,
+            title: projectMetadata.title.replace('{USER_FULL_NAME}', user.getFullName())
+          }),
           technologies: projectInfo.project.project_icon.map((iconMeta) => {
             const technology = new Technology({
               name: iconMeta.icon_name,

@@ -24,7 +24,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 export async function generateMetadata(
   { params: { locale } }: { params: { locale: string } }
 ): Promise<Metadata> {
-  const t = await getTranslations({ locale: locale, namespace: 'HomePage.Metadata' });
+  const t = await getTranslations({ locale: locale, namespace: 'Metadata.portfolio' });
 
   return {
     title: t('title'),

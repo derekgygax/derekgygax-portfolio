@@ -3,6 +3,7 @@ import { ProjectSkeleton, ProjectTranlation } from "@/types/projects";
 import { getPortfolioData } from "@/lib/db/portfolio";
 import { User } from "./User";
 import { Location } from "./Location";
+import { Metadata } from "./Metadata";
 
 export class Portfolio {
   private static userEmail = process.env.USER_EMAIL;
@@ -51,6 +52,17 @@ export class Portfolio {
     }
 
     return Portfolio.user?.getTranslations()!;
+  }
+
+  public static async getProjectsMetadata() {
+    if (!Portfolio.projects) {
+      await Portfolio.populatePortfolio();
+    }
+
+    return Portfolio.projects?.reduce((acc: { [key: string]: Metadata }, project: Project) => {
+      acc[project.getName()] = project.getMetadata();
+      return acc;
+    }, {} as { [key: string]: Metadata });
   }
 
   public static async getUserFullName(): Promise<string> {

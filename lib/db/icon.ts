@@ -23,12 +23,12 @@ export const getIconTranlastions = async () => {
       acc[icon.name] = {
         alt: icon.icon_alt.text
           .replace('{ICON_NAME}', icon.name)
-          .replace('{USER_NAME}', `${user.firstName} ${user.lastName}`)
+          .replace('{USER_FULL_NAME}', `${user.fullName}`)
           .replace('{USER_EMAIL}', `${user.email}`)
           .replace('{USER_PHONE}', `${user.phone}`),
         // TODO The [0] is the language thing!!!
         tooltip: icon.icon_tooltip[0].tooltip
-          .replace('{USER_NAME}', `${user.firstName} ${user.lastName}`)
+          .replace('{USER_FULL_NAME}', `${user.fullName}`)
           .replace('{USER_EMAIL}', `${user.email}`)
           .replace('{USER_PHONE}', `${user.phone}`),
       }

@@ -3,14 +3,14 @@ import { useTranslations } from "next-intl";
 import { Link } from '@/navigation';
 
 // components
-import { ProjectConfig, Technology } from "../../../../types/projects";
+import { Technology } from "../../../../types/projects";
 
 import { Icon } from '../icon/Icon';
 
 type ProjectProps = {
   name: string;
   image: StaticImageData;
-  isCurrenProject: boolean;
+  webCurrentProject: boolean;
   website: string;
   technologies: Technology[]
 }
@@ -18,7 +18,7 @@ type ProjectProps = {
 export const Project: React.FC<ProjectProps> = ({
   name,
   image,
-  isCurrenProject,
+  webCurrentProject,
   website,
   technologies
 }) => {
@@ -27,7 +27,7 @@ export const Project: React.FC<ProjectProps> = ({
 
   return (
     <Link
-      target={!isCurrenProject ? "_blank" : "_self"}
+      target={!webCurrentProject ? "_blank" : "_self"}
       // target={data.hasWebsite && !data.isThisProject ? "_blank" : "_self"}
       href={website}
     >

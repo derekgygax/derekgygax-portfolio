@@ -26,7 +26,7 @@ export interface Technology {
 export interface ProjectSkeleton {
   name: string;
   website: string;
-  isCurrentProject: boolean;
+  webCurrentProject: boolean;
   displayOrder: number;
   technologies: Technology[];
 }
@@ -38,7 +38,7 @@ export interface ProjectDetails {
   imgAlt: string,
 };
 
-export interface ProjectMetaData {
+export interface ProjectMetadata {
   title: string;
   description: string;
   keywords: string;
@@ -46,5 +46,4 @@ export interface ProjectMetaData {
 
 export interface ProjectTranlation extends ProjectDetails {
   projectLink: ProjectLink;
-  metaData: ProjectMetaData;
 };

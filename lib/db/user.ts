@@ -16,11 +16,15 @@ export const getUserSkeleton = async () => {
         email: true
       }
     });
+    const firstName = capitalizeFirstLetter(user.first_name);
+    const middleName = capitalizeFirstLetter(user.middle_name || '');
+    const lastName = capitalizeFirstLetter(user.last_name);
 
     return {
-      firstName: capitalizeFirstLetter(user.first_name),
-      middleName: capitalizeFirstLetter(user.middle_name || ''),
-      lastName: capitalizeFirstLetter(user.last_name),
+      firstName: firstName,
+      middleName: middleName,
+      lastName: lastName,
+      fullName: `${firstName} ${lastName}`,
       phone: user.phone,
       email: user.email
     }

@@ -79,16 +79,44 @@ INSERT INTO user_job (user_id, job_title)
 VALUES (1, 'Software Engineer'),
   (1, 'Bioinformatics Engineer');
 --
+-- Metadata
+INSERT INTO metadata (title, description, keywords)
+VALUES ('{USER_FULL_NAME} | 57 West', '', ''),
+  ('{USER_FULL_NAME} | Mendelgen', '', ''),
+  ('{USER_FULL_NAME} | Library of Congress', '', ''),
+  (
+    '{USER_FULL_NAME} | Copyright Recordation',
+    '',
+    ''
+  ),
+  ('{USER_FULL_NAME} | RPPA', '', ''),
+  ('{USER_FULL_NAME} | CRAVAT', '', ''),
+  ('{USER_FULL_NAME} | MuPIT', '', ''),
+  (
+    '{USER_FULL_NAME} | Portfolio',
+    'Portfolio for Derek Gygax working in software development and bioinformatics.',
+    'software developer, software engineer, bioinformatics, genetics, react, next.js, redux, java, python'
+  ),
+  ('ROOT LAYOUT STAND IN', '', '');
+--
+-- Open Graph Metadata
+INSERT INTO opengraph_metadata (title, description, metadata_id)
+VALUES (
+    '{USER_FULL_NAME} Portfolio',
+    'Portfolio Website for {USER_FULL_NAME}',
+    9
+  );
+--
 -- Project
--- -- 57West
 INSERT INTO project (
     name,
     url,
     current_project,
     display_order,
-    project_links_id
+    project_link_id
   )
-VALUES (
+VALUES -- 57West
+  (
     'fiftySevenWest',
     'https://57west.us/',
     false,
@@ -114,7 +142,7 @@ VALUES (
     1
   ),
   -- RPPA
-  ('rppa', '/project/rppa', false, 5, 2),
+  ('rppa', '/project/rppa', true, 5, 2),
   -- CRAVAT
   (
     'cravat',
@@ -201,25 +229,29 @@ VALUES (
   );
 --
 -- Project Metadata
-INSERT INTO project_metadata (title, description, keywords, project_id)
-VALUES ('57 West', '', '', 1),
-  ('Mendelgen', '', '', 2),
-  ('Library of Congress', '', '', 3),
-  ('Copyright Recordation', '', '', 4),
-  ('RPPA', '', '', 5),
-  ('CRAVAT', '', '', 6),
-  ('MuPIT', '', '', 7),
-  ('Portfolio', '', '', 8);
+INSERT INTO project_metadata (metadata_id, project_id)
+VALUES (1, 1),
+  (2, 2),
+  (3, 3),
+  (4, 4),
+  (5, 5),
+  (6, 6),
+  (7, 7),
+  (8, 8);
+--
+-- Root Layout 
+INSERT INTO root_layout (name, metadata_id)
+VALUES ('RootLayout', 9);
 --
 -- Icon Alt
 INSERT INTO icon_alt (text)
 VALUES ('Icon for {ICON_NAME}'),
-  ('Link to {USER_NAME}''s email {USER_EMAIL}'),
-  ('Link to {USER_NAME}''s github'),
-  ('Link to {USER_NAME}''s linkedIn'),
+  ('Link to {USER_FULL_NAME}''s email {USER_EMAIL}'),
+  ('Link to {USER_FULL_NAME}''s github'),
+  ('Link to {USER_FULL_NAME}''s linkedIn'),
   ('Icon for map location'),
   (
-    'Link to call {USER_NAME}''s phone number {USER_PHONE}'
+    'Link to call {USER_FULL_NAME}''s phone number {USER_PHONE}'
   ),
   ('Click to visit the website'),
   ('Click to download');
@@ -268,26 +300,26 @@ VALUES ('angular', 'Angular'),
   ('download', 'Click to download'),
   (
     'email',
-    'Click to send an email to {USER_NAME} at {USER_EMAIL}'
+    'Click to send an email to {USER_FULL_NAME} at {USER_EMAIL}'
   ),
   ('flask', 'Flask'),
   (
     'github',
-    'Click to visit {USER_NAME}''s github'
+    'Click to visit {USER_FULL_NAME}''s github'
   ),
   ('html', 'HTML'),
   ('java', 'Java'),
   ('javascript', 'Javascript'),
   (
     'linkedIn',
-    'Click to visit {USER_NAME}''s LinkedIn'
+    'Click to visit {USER_FULL_NAME}''s LinkedIn'
   ),
   ('mappin', 'MapPin'),
   ('mysql', 'Mysql'),
   ('nextjs', 'Next.js'),
   (
     'phone',
-    'Click to call {USER_NAME}''s phone number {USER_PHONE}'
+    'Click to call {USER_FULL_NAME}''s phone number {USER_PHONE}'
   ),
   ('python', 'Python'),
   ('r', 'R'),
@@ -356,5 +388,5 @@ VALUES (1, 1),
 INSERT INTO contact_me_button (label, tooltip)
 VALUES (
     'Contact Me',
-    'Click to send an email to {USER_NAME} at {USER_EMAIL}'
+    'Click to send an email to {USER_FULL_NAME} at {USER_EMAIL}'
   )

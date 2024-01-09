@@ -1,9 +1,6 @@
 import prisma from "../prisma";
 import { getUserSkeleton } from "./user";
 
-// USER IDENTIFICATION
-const USER_EMAIL = process.env.USER_EMAIL;
-
 export const getContactMeButtonTranslation = async () => {
   try {
 
@@ -13,7 +10,7 @@ export const getContactMeButtonTranslation = async () => {
     return {
       ...buttonTranslations[0],
       tooltip: buttonTranslations[0].tooltip
-        .replace("{USER_NAME}", `${user.firstName} ${user.lastName}`)
+        .replace("{USER_FULL_NAME}", `${user.fullName}`)
         .replace("{USER_EMAIL}", `${user.email}`)
     };
 
