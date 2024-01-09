@@ -6,6 +6,7 @@ import { Location } from "./Location";
 import { Metadata } from "./Metadata";
 import { Section } from "./Section";
 import { SectionTranslation } from "@/types/section";
+import { Footer } from "./Footer";
 
 export class Portfolio {
   private static userEmail = process.env.USER_EMAIL;
@@ -14,6 +15,7 @@ export class Portfolio {
   // For now its needed just to get things to work correctly but you could use it in the future to order the page
   public static sections: Section[] | null;
   private static projects: Project[] | null = null;
+  private static footers: Footer[] | null = null;
 
   // for caching
   private static populatePromise: Promise<void> | null = null;
@@ -31,6 +33,8 @@ export class Portfolio {
           Portfolio.sections = portfolioStuff.sections;
           // Load the projects
           Portfolio.projects = portfolioStuff.projects;
+          // Load the footers
+          Portfolio.footers = portfolioStuff.footers;
 
           // Mark that the populate has finished
           resolve();
@@ -129,6 +133,15 @@ export class Portfolio {
     })!;
   }
 
+  public static async getFooterTranslations() {
+    if (!Portfolio.footers) {
+      await Portfolio.populatePortfolio();
+    }
 
+    return Portfolio.footers?.reduce((acc: { [key: string]: string }, footer: Footer) => {
+      acc[footer.name] = footer.text;
+      return acc;
+    }, {} as { [key: string]: string })
+  }
 
 }

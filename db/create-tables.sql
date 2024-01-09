@@ -187,6 +187,20 @@ CREATE TABLE user_section (
   PRIMARY KEY (user_id, section_id)
 );
 --
+-- Footer: Info for the footer for the user.
+CREATE TABLE footer (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  text VARCHAR(500) NOT NULL
+);
+--
+-- User Footer. Realtion to which footer pieces each user has
+CREATE TABLE user_footer (
+  user_id INT NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+  footer_id INT NOT NULL REFERENCES footer (id) ON DELETE RESTRICT,
+  PRIMARY KEY (user_id, footer_id)
+);
+--
 -- Contact Me Button
 CREATE TABLE contact_me_button (
   label VARCHAR(30) NOT NULL,

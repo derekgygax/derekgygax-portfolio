@@ -392,9 +392,20 @@ VALUES ('projects', 'Projects I''ve worked on');
 INSERT INTO user_section (user_id, section_id)
 VALUES (1, 1);
 --
+-- Footer
+INSERT INTO footer (name, text)
+VALUES (
+    'copyright',
+    'Built by {USER_FULL_NAME} with Next.js and Tailwind'
+  );
+--
+-- User Footer: The footer used by the user
+INSERT INTO user_footer (user_id, footer_id)
+VALUES (1, 1);
+--
 -- Contact Me Button
 INSERT INTO contact_me_button (label, tooltip)
 VALUES (
     'Contact Me',
     'Click to send an email to {USER_FULL_NAME} at {USER_EMAIL}'
-  )
+  );

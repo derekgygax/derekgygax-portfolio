@@ -10,6 +10,7 @@ import { Metadata } from "@/models/Metadata";
 import { Bio } from "@/models/Bio";
 import { Location } from "@/models/Location";
 import { Contact } from "@/models/Contact";
+import { Footer } from "@/models/Footer";
 
 // USER
 const USER_EMAIL = process.env.USER_EMAIL;
@@ -18,6 +19,7 @@ interface PortfolioData {
   user: User | null,
   sections: Section[] | null;
   projects: Project[] | null,
+  footers: Footer[] | null;
 }
 
 // TODO ... this is very limited just for the basics right now!!!
@@ -96,6 +98,11 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
                 }
               }
             }
+          }
+        },
+        user_footer: {
+          include: {
+            footer: true
           }
         }
       }
@@ -192,10 +199,19 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
 
       }).sort((a, b) => a.displayOrder - b.displayOrder);
 
+    // TODO this isn't right if you ever make this able to work with a bunch of people
+    const footers: Footer[] = userInfo.user_footer.map((footer) => {
+      return new Footer({
+        name: footer.footer.name,
+        text: footer.footer.text.replace('{USER_FULL_NAME}', user.getFullName())
+      })
+    });
+
     return {
       user: user,
       sections: sections,
-      projects: projects
+      projects: projects,
+      footers: footers
     };
 
   } catch (err) {

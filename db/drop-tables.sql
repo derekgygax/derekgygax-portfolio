@@ -1,4 +1,6 @@
 DROP TABLE IF EXISTS contact_me_button;
+DROP TABLE IF EXISTS user_footer;
+DROP TABLE IF EXISTS footer;
 DROP TABLE IF EXISTS user_section;
 DROP TABLE IF EXISTS section;
 DROP TABLE IF EXISTS user_project;

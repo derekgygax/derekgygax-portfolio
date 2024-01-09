@@ -18,7 +18,6 @@ export default getRequestConfig(async ({ locale }) => {
     messages: {
       AboutMe: await Portfolio.getUserTranslations(),
       ContactMeButton: await getContactMeButtonTranslation(),
-      ...(await import(`./messages/${locale}/footer.json`)).default,
       Metadata: {
         RootLayout: await getRootLayoutMetadata(),
         ...(await Portfolio.getProjectsMetadata())
@@ -26,9 +25,9 @@ export default getRequestConfig(async ({ locale }) => {
       Sections: await Portfolio.getSectionTranslations(),
       Icons: await getIconTranlastions(),
       ...(await import(`./messages/${locale}/logo.json`)).default,
-      ...(await import(`./messages/${locale}/projects.json`)).default,
       ...(await import(`./messages/${locale}/resume.json`)).default,
-      Project: await Portfolio.getProjectTranslations()
+      Project: await Portfolio.getProjectTranslations(),
+      Footer: await Portfolio.getFooterTranslations()
     }
   }
 });
