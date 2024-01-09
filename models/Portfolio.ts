@@ -12,7 +12,7 @@ export class Portfolio {
   // for caching
   private static populatePromise: Promise<void> | null = null;
 
-  private static populatePortfolio(where: string): Promise<void> {
+  private static populatePortfolio(): Promise<void> {
     if (!Portfolio.populatePromise) {
       Portfolio.populatePromise = new Promise(async (resolve, reject) => {
         try {
@@ -39,22 +39,30 @@ export class Portfolio {
   public static async getUser(): Promise<User> {
 
     if (!Portfolio.user) {
-      await Portfolio.populatePortfolio('getUser');
+      await Portfolio.populatePortfolio();
     }
 
     return Portfolio.user!;
   }
 
+  public static async getUserTranslations() {
+    if (!Portfolio.user) {
+      await Portfolio.populatePortfolio();
+    }
+
+    return Portfolio.user?.getTranslations()!;
+  }
+
   public static async getUserFullName(): Promise<string> {
     if (!Portfolio.user) {
-      await Portfolio.populatePortfolio('getUser');
+      await Portfolio.populatePortfolio();
     }
     return Portfolio.user?.getFullName()!;
   }
 
   public static async getUserLocation(): Promise<Location> {
     if (!Portfolio.user) {
-      await Portfolio.populatePortfolio('getUser');
+      await Portfolio.populatePortfolio();
     }
     return Portfolio.user?.getLocation()!;
   }
@@ -62,7 +70,7 @@ export class Portfolio {
   public static async getProjectSkeletons(): Promise<ProjectSkeleton[]> {
 
     if (!Portfolio.projects) {
-      await Portfolio.populatePortfolio('getProjectSkeletons');
+      await Portfolio.populatePortfolio();
     }
 
     return Portfolio.projects?.map((project: Project) => {
@@ -72,7 +80,7 @@ export class Portfolio {
 
   public static async getProjectTranslations(): Promise<Record<string, ProjectTranlation>> {
     if (!Portfolio.projects) {
-      await Portfolio.populatePortfolio('getProjectTranslations');
+      await Portfolio.populatePortfolio();
     }
 
     return Portfolio.projects?.reduce((accumulator: Record<string, ProjectTranlation>, project: Project) => {
@@ -83,7 +91,7 @@ export class Portfolio {
 
   public static async getProjectNames(): Promise<string[]> {
     if (!Portfolio.projects) {
-      await Portfolio.populatePortfolio('getProjectNames');
+      await Portfolio.populatePortfolio();
     }
 
     return Portfolio.projects?.map((project: Project) => {
@@ -91,12 +99,6 @@ export class Portfolio {
     })!;
   }
 
-  public static async getUserTranslations() {
-    if (!Portfolio.user) {
-      await Portfolio.populatePortfolio('getProjectNames');
-    }
 
-    return Portfolio.user?.getTranslations()!;
-  }
 
 }

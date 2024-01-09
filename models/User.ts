@@ -52,8 +52,21 @@ export class User {
     this.location = location;
   }
 
-  public getFullName() {
-    return `${capitalizeFirstLetter(this.firstName)} ${capitalizeFirstLetter(this.lastName)}`
+  public getEmail() {
+    return this.email;
+  }
+
+  public getPhone() {
+    return this.phone;
+  }
+
+  public getSkeleton() {
+    return {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      phone: this.phone,
+      email: this.email
+    }
   }
 
   public getTranslations() {
@@ -70,6 +83,11 @@ export class User {
       }, {} as { [key: string]: string }),
     }
   }
+
+  public getFullName() {
+    return `${capitalizeFirstLetter(this.firstName)} ${capitalizeFirstLetter(this.lastName)}`
+  }
+
 
   getLocation() {
     return this.location;

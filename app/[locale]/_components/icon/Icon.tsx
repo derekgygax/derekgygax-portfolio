@@ -28,11 +28,6 @@ import tailwindIcon from '@/public/assets/icons/tailwind.svg';
 import typescriptIcon from '@/public/assets/icons/typescript.svg';
 import { WebsiteIcon } from "./WebsiteIcon";
 
-
-// data
-import me from '@/app/data/me.json';
-
-
 type IconProps = {
   id: string;
   alt?: string | undefined;
@@ -82,16 +77,8 @@ export const Icon: React.FC<IconProps> = ({
 
   const t = useTranslations("Icons");
 
-  alt = alt ? alt : t(`${id}.alt`, {
-    email: me.email,
-    myName: me.name,
-    phone: me.phone
-  });
-  tooltip = tooltip ? tooltip : t(`${id}.tooltip`, {
-    email: me.email,
-    myName: me.name,
-    phone: me.phone
-  });
+  alt = alt ? alt : t(`${id}.alt`);
+  tooltip = tooltip ? tooltip : t(`${id}.tooltip`);
 
   const LinkedComponent = isLink ? iconsLinked[id] : null;
 
