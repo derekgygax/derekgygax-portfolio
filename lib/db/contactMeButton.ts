@@ -1,5 +1,5 @@
 import prisma from "../prisma";
-import { getUser } from "./user";
+import { getUserSkeleton } from "./user";
 
 // USER IDENTIFICATION
 const USER_EMAIL = process.env.USER_EMAIL;
@@ -8,7 +8,7 @@ export const getContactMeButtonTranslation = async () => {
   try {
 
     const buttonTranslations = await prisma.contact_me_button.findMany();
-    const user = await getUser();
+    const user = await getUserSkeleton();
     // TODO when you put in the locale it will change!!!
     return {
       ...buttonTranslations[0],

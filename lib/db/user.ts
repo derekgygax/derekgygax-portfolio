@@ -4,7 +4,7 @@ import { capitalizeFirstLetter } from "../utils";
 // USER IDENTIFICATION
 const USER_EMAIL = process.env.USER_EMAIL;
 
-export const getUser = async () => {
+export const getUserSkeleton = async () => {
   try {
     const user = await prisma.users.findUniqueOrThrow({
       where: { email: USER_EMAIL },

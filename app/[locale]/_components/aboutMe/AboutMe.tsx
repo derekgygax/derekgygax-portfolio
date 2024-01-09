@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 // components
 import { Resume } from "../resume/Resume";
@@ -9,17 +9,19 @@ import aboutMe from '@/app/data/aboutMe.json';
 
 // images
 import meHandstand from '@/public/assets/meHandstand.jpg';
+import { Portfolio } from "@/models/Portfolio";
 
-export const AboutMe: React.FC = () => {
+export const AboutMe: React.FC = async () => {
 
-  const t = useTranslations('AboutMe');
+  const t = await getTranslations('AboutMe');
+  const fullName = await Portfolio.getUserFullName();
 
   return (
     <section id={aboutMe.id}>
       <div className="section">
         <header className="pb-4 md:pb-8">
           <h1 className="m-0 text-5xl font-bold pb-2">
-            {t('name')}
+            {fullName}
           </h1>
           <h2 className="m-0 mt-1 font-medium text-2xl">
             {t('jobTitles')}
@@ -28,12 +30,11 @@ export const AboutMe: React.FC = () => {
         <div className="flex flex-row">
           <div className="w-full md:w-2/3 flex flex-col">
             <div className="w-full md:w-11/12 lg:text-xl text-secondary-text">
-              <p className="pb-2">{t("bio.work")}</p>
+              <p className="pb-2">
+                {t("bio.work")}
+              </p>
               <p>
-                {t("bio.personal.general")}
-                <span className="hidden md:inline ml-1">
-                  {t("bio.personal.withHandstand")}
-                </span>
+                {t("bio.personal")}
               </p>
             </div>
             <div className="self-start mt-2">

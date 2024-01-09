@@ -2,6 +2,7 @@ import { Project } from "./Project";
 import { ProjectSkeleton, ProjectTranlation } from "@/types/projects";
 import { getPortfolioData } from "@/lib/db/portfolio";
 import { User } from "./User";
+import { Location } from "./Location";
 
 export class Portfolio {
   private static userEmail = process.env.USER_EMAIL;
@@ -44,6 +45,20 @@ export class Portfolio {
     return Portfolio.user!;
   }
 
+  public static async getUserFullName(): Promise<string> {
+    if (!Portfolio.user) {
+      await Portfolio.populatePortfolio('getUser');
+    }
+    return Portfolio.user?.getFullName()!;
+  }
+
+  public static async getUserLocation(): Promise<Location> {
+    if (!Portfolio.user) {
+      await Portfolio.populatePortfolio('getUser');
+    }
+    return Portfolio.user?.getLocation()!;
+  }
+
   public static async getProjectSkeletons(): Promise<ProjectSkeleton[]> {
 
     if (!Portfolio.projects) {
@@ -74,6 +89,14 @@ export class Portfolio {
     return Portfolio.projects?.map((project: Project) => {
       return project.getName();
     })!;
+  }
+
+  public static async getUserTranslations() {
+    if (!Portfolio.user) {
+      await Portfolio.populatePortfolio('getProjectNames');
+    }
+
+    return Portfolio.user?.getTranslations()!;
   }
 
 }

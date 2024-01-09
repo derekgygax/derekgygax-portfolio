@@ -2,6 +2,16 @@
 --   NOT NULL
 -- missing
 --
+-- Location
+CREATE TABLE location (
+  id SERIAL PRIMARY KEY,
+  city VARCHAR(50) NOT NULL,
+  state_abbr VARCHAR(2) NOT NULL,
+  state_full VARCHAR(50) NOT NULL,
+  country_abbr VARCHAR(5) NOT NULL,
+  country_full VARCHAR(50) NOT NULL
+);
+--
 -- User
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
@@ -9,7 +19,24 @@ CREATE TABLE users (
   middle_name VARCHAR(20),
   last_name VARCHAR(20) NOT NULL,
   email VARCHAR(50) NOT NULL UNIQUE,
-  phone VARCHAR(25) NOT NULL UNIQUE
+  phone VARCHAR(25) NOT NULL UNIQUE,
+  location_id INT NOT NULL REFERENCES location (id) ON DELETE RESTRICT
+);
+--
+-- User Details
+CREATE TABLE user_detail (
+  id SERIAL PRIMARY KEY,
+  summary TEXT NOT NULL,
+  image_alt VARCHAR(100),
+  user_id INT NOT NULL REFERENCES users (id) ON DELETE CASCADE
+);
+--
+-- User Bio
+CREATE TABLE user_bio (
+  type VARCHAR(20) NOT NULL,
+  text TEXT NOT NULL,
+  PRIMARY KEY (type, text),
+  user_details_id INT NOT NULL REFERENCES user_detail (id) ON DELETE CASCADE
 );
 --
 -- Jobs - For Job Titles
@@ -113,7 +140,7 @@ CREATE TABLE user_project (
 --
 -- Contact Me Button
 CREATE TABLE contact_me_button (
-  label VARCHAR(30),
-  tooltip VARCHAR(100),
+  label VARCHAR(30) NOT NULL,
+  tooltip VARCHAR(100) NOT NULL,
   PRIMARY KEY (label, tooltip)
 )

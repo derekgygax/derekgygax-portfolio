@@ -1,7 +1,6 @@
 
 import prisma from "../prisma";
-import { capitalizeFirstLetter } from "../utils";
-import { getUser } from "./user";
+import { getUserSkeleton } from "./user";
 
 // USER
 const USER_EMAIL = process.env.USER_EMAIL;
@@ -15,13 +14,12 @@ export const getIconTranlastions = async () => {
       },
     });
 
-    const user = await getUser();
+    const user = await getUserSkeleton();
 
     return icons.reduce((
       acc: { [key: string]: { alt: string, tooltip: string } },
       icon
     ) => {
-      console.log
       acc[icon.name] = {
         alt: icon.icon_alt.text
           .replace('{ICON_NAME}', icon.name)

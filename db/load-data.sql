@@ -1,21 +1,60 @@
 --
+-- Location
+INSERT INTO location (
+    city,
+    state_abbr,
+    state_full,
+    country_abbr,
+    country_full
+  )
+VALUES (
+    'Severna Park',
+    'MD',
+    'Maryland',
+    'USA',
+    'United States of America'
+  );
+--
 -- Users
 INSERT INTO users (
     first_name,
     middle_name,
     last_name,
     email,
-    phone
+    phone,
+    location_id
   )
 VALUES (
     'derek',
     'michael',
     'gygax',
     'derekgygax@gmail.com',
-    '+14107778985'
+    '+14107778985',
+    1
   );
--- --
--- -- Jobs
+--
+-- User Details
+INSERT INTO user_detail (summary, image_alt, user_id)
+VALUES (
+    'Experienced full stack software developer. Graduated from Virginia Commonwealth University with a MS in Human and Molecular Genetics, and from the College of William and Mary with a BS in Biology. Over 7 years experience as a Bioinformatics Developer and Software Engineer. Traveled abroad while continuing to develop and maintain bioinformatic software and web applications. I have the software development and database design/interaction experience to develop complex computational algorithms. Seeking a challenging position as a software developer where I can develop software with a team in a remote atmosphere, using my skills as an experienced software engineer.',
+    'Derek Gygax doing a handstand with a beautiful view.',
+    1
+  );
+--
+-- User Bio
+INSERT INTO user_bio (type, text, user_details_id)
+VALUES (
+    'work',
+    'I started out as a biologist, specifically genetics, and studied my way to obtaining a Masters in Human and Molecular Genetics. While studying for my masters I had to learn to code as the world of genetics is a huge sum of data. I continued down the road of coding and became a bioinformatician and then eventually jumped back and forth between bioinformatics and software development. Nowadays I tend to focus more on software development, but still love bioinformatics when the opporunity arises.',
+    1
+  ),
+  (
+    'personal',
+    'Outside of work I enjoy seeing new places and having as many experiences I can. My passion is gymnastics and I''ll do a handstand any chance I get.',
+    1
+  );
+--
+-- Jobs
 INSERT INTO job (title)
 VALUES ('Software Engineer'),
   ('Bioinformatics Engineer');

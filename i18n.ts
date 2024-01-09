@@ -18,7 +18,7 @@ export default getRequestConfig(async ({ locale }) => {
 
   return {
     messages: {
-      ...(await import(`./messages/${locale}/aboutMe.json`)).default,
+      AboutMe: await Portfolio.getUserTranslations(),
       ContactMeButton: await getContactMeButtonTranslation(),
       ...(await import(`./messages/${locale}/footer.json`)).default,
       ...(await import(`./messages/${locale}/homePage.json`)).default,
