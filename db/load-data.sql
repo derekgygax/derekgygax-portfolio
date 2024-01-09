@@ -384,6 +384,14 @@ VALUES (1, 1),
   (1, 7),
   (1, 8);
 --
+-- Sections on the portfolio page
+INSERT INTO section (name, title)
+VALUES ('projects', 'Projects I''ve worked on');
+--
+-- User Section sections linking the sections the user has
+INSERT INTO user_section (user_id, section_id)
+VALUES (1, 1);
+--
 -- Contact Me Button
 INSERT INTO contact_me_button (label, tooltip)
 VALUES (

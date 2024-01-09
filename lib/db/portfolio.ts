@@ -2,6 +2,7 @@ import { User } from "@/models/User";
 import { Project } from "@/models/Project";
 import { Technology } from "@/models/Technology";
 import prisma from "../prisma"
+import { Section } from "@/models/Section";
 
 import { ProjectSkeleton } from "@/types/projects";
 import { Link } from "@/models/Link";
@@ -15,6 +16,7 @@ const USER_EMAIL = process.env.USER_EMAIL;
 
 interface PortfolioData {
   user: User | null,
+  sections: Section[] | null;
   projects: Project[] | null,
 }
 
@@ -38,6 +40,11 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
       where: { email: USER_EMAIL },
       include: {
         location: true,
+        user_section: {
+          include: {
+            section: true,
+          }
+        },
         contact: {
           include: {
             icon_link: true
@@ -137,6 +144,13 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
       contacts: userContacts
     });
 
+    const sections = userInfo.user_section.map((section) => {
+      return new Section({
+        name: section.section.name,
+        title: section.section.title
+      })
+    })
+
     // TODO it originally said to use flatMap but idk why?
     // maybe when you put the translations in it will make sense
     const projects: Project[] = userInfo?.user_project
@@ -180,14 +194,21 @@ export const getPortfolioData = async (): Promise<PortfolioData> => {
 
     return {
       user: user,
+      sections: sections,
       projects: projects
     };
 
   } catch (err) {
-    console.error(err);
-    return {
-      user: null,
-      projects: null
-    };
+    console.error("Error retrieving the Portfolio");
+
+    // Check if err is an instance of Error
+    if (err instanceof Error) {
+      console.error(err.message);
+      throw new Error(`Failed to retrieve portfolio: ${err.message}`);
+    } else {
+      // Handle cases where err is not an Error object
+      console.error(err);
+      throw new Error('An unknown error occurred');
+    }
   }
 }

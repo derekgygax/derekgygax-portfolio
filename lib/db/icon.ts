@@ -36,8 +36,16 @@ export const getIconTranlastions = async () => {
     }, {} as { [key: string]: { alt: string, tooltip: string } })
 
   } catch (err) {
-    console.error("Error retrieving the Icon translations");
-    console.error(err);
-    // TODO THROW AN ERROR!!!
+    console.error("Error retrieving the Icons");
+
+    // Check if err is an instance of Error
+    if (err instanceof Error) {
+      console.error(err.message);
+      throw new Error(`Failed to retrieve icons: ${err.message}`);
+    } else {
+      // Handle cases where err is not an Error object
+      console.error(err);
+      throw new Error('An unknown error occurred');
+    }
   }
 }

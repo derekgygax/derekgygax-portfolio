@@ -121,7 +121,7 @@ CREATE TABLE project_metadata (
 -- Root Layout reference to get the metadata for it
 CREATE TABLE root_layout (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(50) NOT NULL,
+  name VARCHAR(50) NOT NULL UNIQUE,
   metadata_id INT NOT NULL REFERENCES metadata (id) ON DELETE RESTRICT
 );
 --
@@ -171,6 +171,20 @@ CREATE TABLE user_project (
   user_id INT REFERENCES users (id) ON DELETE CASCADE,
   project_id INT REFERENCES project (id) ON DELETE CASCADE,
   PRIMARY KEY (user_id, project_id)
+);
+--
+-- Sections: Sections on the portfolio home page
+CREATE TABLE section (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(20) NOT NULL,
+  title VARCHAR(200) NOT NULL
+);
+--
+-- User Sections: Linking a user to the sections they will have
+CREATE TABLE user_section (
+  user_id INT NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+  section_id INT NOT NULL REFERENCES section (id) ON DELETE RESTRICT,
+  PRIMARY KEY (user_id, section_id)
 );
 --
 -- Contact Me Button

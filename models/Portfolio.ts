@@ -4,10 +4,15 @@ import { getPortfolioData } from "@/lib/db/portfolio";
 import { User } from "./User";
 import { Location } from "./Location";
 import { Metadata } from "./Metadata";
+import { Section } from "./Section";
+import { SectionTranslation } from "@/types/section";
 
 export class Portfolio {
   private static userEmail = process.env.USER_EMAIL;
   public static user: User | null = null;
+  // This is for the sections on the home page.
+  // For now its needed just to get things to work correctly but you could use it in the future to order the page
+  public static sections: Section[] | null;
   private static projects: Project[] | null = null;
 
   // for caching
@@ -22,6 +27,8 @@ export class Portfolio {
 
           // Load the user
           Portfolio.user = portfolioStuff.user;
+          // Load the sections
+          Portfolio.sections = portfolioStuff.sections;
           // Load the projects
           Portfolio.projects = portfolioStuff.projects;
 
@@ -52,6 +59,17 @@ export class Portfolio {
     }
 
     return Portfolio.user?.getTranslations()!;
+  }
+
+  public static async getSectionTranslations() {
+    if (!Portfolio.sections) {
+      await Portfolio.populatePortfolio();
+    }
+
+    return Portfolio.sections?.reduce((acc: { [key: string]: SectionTranslation }, section: Section) => {
+      acc[section.name] = section.getTranslations();
+      return acc;
+    }, {} as { [key: string]: SectionTranslation })!;
   }
 
   public static async getProjectsMetadata() {

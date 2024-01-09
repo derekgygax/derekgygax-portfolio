@@ -31,7 +31,7 @@ export const Projects: React.FC = async () => {
   // TODO does the locale need to be passed here OR only in the metadata one??
 
   // TODO does the locale need to be passed here OR only in the metadata one??
-  const t = await getTranslations("Projects");
+  const t = await getTranslations("Sections.projects");
 
   const images: Record<string, StaticImageData> = {
     fiftySevenWest: fiftySevenWestImage,

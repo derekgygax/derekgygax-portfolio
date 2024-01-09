@@ -11,7 +11,6 @@ const locales = LOCALES;
 
 export default getRequestConfig(async ({ locale }) => {
 
-
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
@@ -24,6 +23,7 @@ export default getRequestConfig(async ({ locale }) => {
         RootLayout: await getRootLayoutMetadata(),
         ...(await Portfolio.getProjectsMetadata())
       },
+      Sections: await Portfolio.getSectionTranslations(),
       Icons: await getIconTranlastions(),
       ...(await import(`./messages/${locale}/logo.json`)).default,
       ...(await import(`./messages/${locale}/projects.json`)).default,

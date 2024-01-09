@@ -7,7 +7,7 @@ import prisma from "../prisma";
 export const getRootLayoutMetadata = async (): Promise<Metadata> => {
   try {
 
-    const root_layout = await prisma.root_layout.findFirstOrThrow({
+    const root_layout = await prisma.root_layout.findUniqueOrThrow({
       where: { name: 'RootLayout' },
       include: {
         metadata: {
