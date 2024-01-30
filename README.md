@@ -2,7 +2,12 @@
 
 > Portfolio for Derek Gygax
 
-## Database is postgres on Vercel
+## Database is postgres on Vercel OR local
+
+```
+  To start the local databse
+    brew services start postgresql
+```
 ## Using Prisma as your ORM
 
 ```
@@ -23,7 +28,12 @@
   UPDATE THE CLIENT!
   npx prisma generate
 
+  
+  push the schema to the DB
+  npx prisma db push
 
+  Pushing your load-data.sql up to vercel
+  psql "postgres://default:RxvmfXI46kKp@ep-quiet-butterfly-38559534-pooler.us-east-1.postgres.vercel-storage.com/verceldb" < db/load-data.sql
 
 ```
 
