@@ -7,10 +7,20 @@
 ```
   To start the local databse
     brew services start postgresql
+
+  Log on to postgres on the command line
+    psql postgres
+  List databases
+    \l
+  Choose database 'porfolio'
+    \c portfolio
+  List tables
+    \dt
 ```
 ## Using Prisma as your ORM
 
 ```
+  npx prisma init // First creates the prisma things you need to attach to database
   npx prisma db pull // pull an already made database back into a schema in prisma
   npx prisma studio // shows the database in a webpage so you can pick it apart
   npx prisma generate  // MUST DO EVERY TIME YOU CHANGE THE DB
@@ -39,36 +49,42 @@
 
 ## Prerequisites
 
-- Node 18.8.0+
-- npm 8.18.0+
+- bun 1.0.25+
 
-## Install/Use Node 18
+## Install and use bun 1.0.25
 
 ```
-nvm install 18
-nvm use 18
+curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.25"
+
+-Follow the commands the terminal prints out
 ```
 
 ## Install Dependencies
-### Need to do the extra install next-intl@3.0.0-beta.19 because it is still in beta
-```
-npm install
-```
-
-## Build Project
 
 ```
-npm run build
-```
-
-## Launch built project. After having built
-
-```
-npm start
+bun install
 ```
 
 ## Run Dev Server
 
 ```
-npm run dev
+bun run dev
+```
+
+## Build Project
+
+```
+bun run build
+```
+
+## Start built project
+
+```
+bun start
+```
+
+## Getting Started
+
+```
+bun dev
 ```

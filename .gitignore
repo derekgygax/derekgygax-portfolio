@@ -35,12 +35,18 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# npm or pnpm things
+# package manager things
 pnpm-lock.yaml
 package-lock.json
+bun.lockb
 
 # vs code for connecting to the database
 .vscode
 portfolio.session.sql
 
 settings.json
+
+# ignore robots and sitemap. They are built on the build
+/public/robots.txt
+/public/sitemap-0.xml
+/public/sitemap.xml
