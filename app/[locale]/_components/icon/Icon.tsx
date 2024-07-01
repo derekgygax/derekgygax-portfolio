@@ -18,6 +18,8 @@ import mapPinIcon from '@/public/assets/icons/map-pin.svg';
 import mysqlIcon from '@/public/assets/icons/mysql.svg';
 import nextjsIcon from '@/public/assets/icons/nextjs.svg';
 import { PhoneIcon } from "./PhoneIcon";
+import postgresqlIcon from '@/public/assets/icons/postgresql.svg';
+import prismaIcon from '@/public/assets/icons/prisma.svg';
 import pythonIcon from '@/public/assets/icons/python.svg';
 import rIcon from '@/public/assets/icons/r.svg';
 import reactIcon from '@/public/assets/icons/react.svg';
@@ -57,6 +59,8 @@ export const Icon: React.FC<IconProps> = ({
     mysql: mysqlIcon,
     nextjs: nextjsIcon,
     python: pythonIcon,
+    postgresql: postgresqlIcon,
+    prisma: prismaIcon,
     r: rIcon,
     react: reactIcon,
     redux: reduxIcon,
