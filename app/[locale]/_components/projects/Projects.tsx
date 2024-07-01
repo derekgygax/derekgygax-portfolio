@@ -20,6 +20,7 @@ import rppaImage from '@/public/assets/projects/rppa.png';
 import cravatImage from '@/public/assets/projects/cravat.png';
 import mupitImage from '@/public/assets/projects/mupit.png';
 import portfolioImage from '@/public/assets/projects/portfolio.png';
+import vvaImage from '@/public/assets/projects/vva.png';
 
 export const Projects: React.FC = async () => {
 
@@ -41,7 +42,8 @@ export const Projects: React.FC = async () => {
     rppa: rppaImage,
     cravat: cravatImage,
     mupit: mupitImage,
-    portfolio: portfolioImage
+    portfolio: portfolioImage,
+    vva: vvaImage
   }
 
   return (
